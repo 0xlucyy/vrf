@@ -3,82 +3,67 @@ import hashlib
 import os
 import time
 
+def generate_random_value_and_proof(private_key, alpha, revolver_size, chamber_index, salt):
+    proof = private_key.sign(alpha, hashfunc=hashlib.sha256)
+    beta = hashlib.sha256(proof + salt.encode() + str(chamber_index).encode()).hexdigest()
+    derived_chamber_index = int(beta[:8], 16) % revolver_size
+    return beta, proof, derived_chamber_index
 
-# Generate a random value and its proof using VRF
-# Returns beta (random value), proof, and chamber index
-
-def generate_random_value_and_proof(private_key, alpha, revolver_size):
-    # Generate VRF proof and beta
-    proof = private_key.sign(alpha)
-    beta = hashlib.sha256(proof).hexdigest()
-    chamber_index = int(beta, 16) % revolver_size
-
-    return beta, proof, chamber_index
-
-
-def new_game(revolver_size, chamber_index=None):
-    # Generate a cryptographically secure random salt
+def new_game(revolver_size):
     salt = os.urandom(32).hex()
-    # chamber_index = os.urandom(1)[0] % revolver_size  # Random chamber index
-
-    if chamber_index is None:
-        chamber_index = os.urandom(1)[0] % revolver_size  # Random chamber index
-
+    deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
+    chamber_index = int(deterministic_value[:8], 16) % revolver_size
     initial_hash = hashlib.sha256((str(chamber_index) + salt).encode()).hexdigest()
-
+    print(f"Chamber Index (for newGame): {chamber_index}")  # Print chamber index during new game
     return initial_hash, salt, chamber_index
 
-def end_game(private_key, alpha, revolver_size, chamber_index):
-    beta, proof, _ = generate_random_value_and_proof(private_key, alpha, revolver_size)
-    
-    # Use uncompressed form of the public key
+def end_game(private_key, alpha, revolver_size, salt):
     public_key = private_key.get_verifying_key().to_string(encoding="uncompressed")
-    
-    return beta, proof, public_key, chamber_index
+    beta, proof, _ = generate_random_value_and_proof(private_key, alpha, revolver_size, chamber_index, salt)
+    deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
+    derived_chamber_index = int(deterministic_value[:8], 16) % revolver_size
+    print(f"Chamber Index (for endGame): {derived_chamber_index}")  # Print chamber index during end game
+    return beta, proof, public_key, derived_chamber_index
+
 
 def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size):
-    # Verify the proof
     try:
-        # public_key.verify(proof, alpha)
-        ecdsa.VerifyingKey.from_string(public_key, curve=ecdsa.SECP256k1).verify(proof, alpha)
+        vk = ecdsa.VerifyingKey.from_string(public_key, curve=ecdsa.SECP256k1)
+        vk.verify(proof, alpha, hashfunc=hashlib.sha256)
         proof_validity = True
     except ecdsa.keys.BadSignatureError:
         proof_validity = False
 
-    # Calculate expected hash
-    chamber_index = int(beta, 16) % revolver_size
-    expected_value = hashlib.sha256((str(chamber_index) + salt).encode()).hexdigest()
+    deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
+    chamber_index = int(deterministic_value[:8], 16) % revolver_size
+    print(f"Chamber Index (from Beta): {chamber_index}")
 
-    return proof_validity and expected_value == initial_hash
+    return proof_validity and initial_hash == hashlib.sha256((str(chamber_index) + salt).encode()).hexdigest()
 
 
-# Main execution
 if __name__ == '__main__':
-    # Parameters
     revolver_size = 7
     timestamp = str(int(time.time()))
-    bets = [300, 300, 300, 300, 300]
-    alpha_raw = (timestamp + ''.join(map(str, bets)))#.encode()
+    bets = [30000, 30000, 30000]
+    alpha_raw = (timestamp + ''.join(map(str, bets)))
     alpha = alpha_raw.encode()
 
     print(f'Revolver Size): {revolver_size}')
 
-    # Generate VRF private and public keys
     sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
 
-    # New game
     initial_hash, salt, chamber_index = new_game(revolver_size)
     print(f'Initial Hash (for newGame): {initial_hash}')
     print(f'Salt: {salt}')
 
-    # End game
-    beta, proof, pk, chamber_index = end_game(sk, alpha, revolver_size, chamber_index)
+    beta, proof, pk, chamber_index = end_game(sk, alpha, revolver_size, salt)
     print(f'Alpha_Raw (Timestampe + Bets): {alpha_raw}')
     print(f'Alpha (Input Message): {alpha}')
     print(f'Random Value (Beta): {beta}')
     print(f'Proof: {proof.hex()}')
     print(f'Public Key: {pk.hex()}')
 
-    # Verification
     result = verify(pk, alpha, beta, proof, initial_hash, salt, revolver_size)
+    print(f'Expected Value: {initial_hash}')
+    print(f'Initial Hash: {initial_hash}')
     print(f'Verification Result: {result}')
