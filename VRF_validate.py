@@ -10,7 +10,13 @@ import hashlib
 
 def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size):
     # Convert the public key from hex to bytes and then to VerifyingKey object
+    # Ensure the public key is in uncompressed form
+    if public_key.startswith("0x"):
+        public_key = public_key[2:]
+
+    # vk = ecdsa.VerifyingKey.from_string(bytes.fromhex(public_key)[1:], curve=ecdsa.SECP256k1)
     vk = ecdsa.VerifyingKey.from_string(bytes.fromhex(public_key), curve=ecdsa.SECP256k1)
+
     
     # Verify the proof
     try:
@@ -30,17 +36,19 @@ def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size):
     proof = "YOUR_PROOF_FROM_ENDGAME"
     alpha = b"YOUR_ALPHA_FROM_ENDGAME"
     beta = "YOUR_BETA_FROM_ENDGAME"
-    chamber_index = YOUR_CHAMBER_INDEX_FROM_ENDGAME
+    chamber_index = "YOUR_CHAMBER_INDEX_FROM_ENDGAME"
     salt = "YOUR_SALT_FROM_ENDGAME"
     initial_hash = "YOUR_INITIAL_HASH_FROM_NEWGAME"
+    revolver_size = "SIZE_OF REVOLVER_CHAMBERS"
 '''
-public_key = "9f77a31a6d7185352e3479270dcacb2a46a8868305580c950863ae2a64da1db3072ccbee340faaed082dfa0527cf1a9219edd0b62e8a6d999370e55eb7a39d94"
-proof = "a5d321f1df9be3fbe220f26cee68242a8faa18c92385a044053ed6d75f6ce299596b77aa27981256163008ed351c9e5f668fea98a298d89d779576a4d1982c1c"
-alpha = b'1693941292300300300300300'
-beta = "f73c1b10cedb926c6c1ede536a08f5cab19261a53062f113d1339cda14a3849e"
-salt = "834b3daae46220210c2a3be8d446f5065683c25eaa56be090baabb6dcf00a8e3"
-initial_hash = "01640dad0736379f105311fa756b68b8c247409b93a30d349d83c0b4df962232"
-revolver_size = 2
+public_key = "04b76603e4ccc3f6b8d1207c123a122c3886ba581f7ed739361acf0514abbbb9493b568685cb949cba9d001cde5c8a74ec0a6b1182d3771c0dd722c297e9e33f2b"
+proof = "dfdc62a0c1ea0176ee76c0c56fd76933726a3887eff1605b19ec908a0bd9e5540c245f2293890c4cb3bf3f7851f0598360a37de47a16d35f2fa878bb07e12606"
+alpha = b'1694018275300300300300300'
+beta = "1cf8771db2454b0a9c41cbd01b7c4480bb131f4c1812a24adfecfaedfcc07064"
+salt = "3c628c6503f1750348e9258c26a809a273d40d093804489d69663cb6f0e3ebff"
+initial_hash = "1cda36f5fe85073458143d6424a3ccf4e4358e573f254ec86d75e12154e537a5"
+revolver_size = 7
+
 
 # Verification
 result = verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size)
