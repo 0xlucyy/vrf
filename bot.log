@@ -2267,3 +2267,1425 @@
 2023-09-07 08:35:01,492 - root - INFO - [VRF.py:241] - Expected Value: 8eaea93d0a26bd0237c3df060698268b36cbb1beaf63b93b2ba8ae56b25a7961
 2023-09-07 08:35:01,492 - root - INFO - [VRF.py:242] - Initial Hash: 8eaea93d0a26bd0237c3df060698268b36cbb1beaf63b93b2ba8ae56b25a7961
 2023-09-07 08:35:01,492 - root - INFO - [VRF.py:243] - Verification Result: True
+2023-09-07 08:37:36,723 - root - INFO - [VRF.py:226] - Revolver Size): 50
+2023-09-07 08:37:36,850 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): ca6e13918e5a64df4d5b720e2bd5a398bbd1214eb05ec0d7b7f0b1eb441a98e7b784f55d0840398da561e6d2c843f8af8529ed9dbada40112bb5c6b098e9163c
+2023-09-07 08:37:48,249 - root - INFO - [VRF.py:225] - Revolver Size): 50
+2023-09-07 08:37:48,374 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 086d98a2ae5eb15488d76d65fb3b8b3468c4e15ca148cbcd164da213e3de4738e0715691b8638bd0370ce3631b52e30414e16da0dc56239d7747f75237004c84
+2023-09-07 08:37:48,374 - root - INFO - [VRF.py:162] - Chamber Index (for newGame): 41
+2023-09-07 08:37:48,374 - root - INFO - [VRF.py:231] - Initial Hash (for newGame): 4ba1aacca79eb6ab10dd067091caaa7ee1f53f969e91e42de19f50a00da9d6a0
+2023-09-07 08:37:48,374 - root - INFO - [VRF.py:232] - Salt: 5ac07e4f0b38aaa28141727dd24ad59b335ed086a8a5cecdbff5a7b4e3732cca
+2023-09-07 08:37:48,375 - root - INFO - [VRF.py:183] - Chamber Index (for endGame): 41
+2023-09-07 08:37:48,375 - root - INFO - [VRF.py:235] - Alpha_Raw (Timestampe + Bets): 169410106830000300003000030000
+2023-09-07 08:37:48,375 - root - INFO - [VRF.py:236] - Alpha (Input Message): b'169410106830000300003000030000'
+2023-09-07 08:37:48,375 - root - INFO - [VRF.py:237] - Random Value (Beta): 72aa65264d9387b56ce07860b37cd260b7da46fed72c613869ffcc8d049be664
+2023-09-07 08:37:48,375 - root - INFO - [VRF.py:238] - Proof: b4fb4d93f797e3b160902d4286ca83711fc5415e74062f797f403e8b3d3391c6ef11f7a6a74faf9579dededc93602a94900c2325d490f795d1803d3f3cd3f6db
+2023-09-07 08:37:48,375 - root - INFO - [VRF.py:239] - Public Key: 04ce0c3bd06500e5fa12cf038d53834155c7f133a2b1e39f0df541f767e70db568f84bf90fd27536a89edd1590bde24e72b62d5d21c98dc221624332441a3fd924
+2023-09-07 08:37:48,378 - root - INFO - [VRF.py:212] - Chamber Index (from Beta): 41
+2023-09-07 08:37:48,378 - root - INFO - [VRF.py:242] - Expected Value: 4ba1aacca79eb6ab10dd067091caaa7ee1f53f969e91e42de19f50a00da9d6a0
+2023-09-07 08:37:48,378 - root - INFO - [VRF.py:243] - Initial Hash: 4ba1aacca79eb6ab10dd067091caaa7ee1f53f969e91e42de19f50a00da9d6a0
+2023-09-07 08:37:48,378 - root - INFO - [VRF.py:244] - Verification Result: True
+2023-09-07 08:43:31,999 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 08:43:32,125 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 42e417b49c89141376359c78ff1aaacec9dddf0e3134acbcf52c4d127b5ccce12002874902521024a46a94bb803f2d54d0c7c3ef55e8e4c93b31664c39330d8d
+2023-09-07 08:43:32,126 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 4
+2023-09-07 08:43:32,126 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): 7edd1e61915d229753948ade3f46fd5d53dd5f0d192a5e78a2104ccdc12858a2
+2023-09-07 08:43:32,126 - root - INFO - [VRF.py:234] - Salt: b'\xa8[\xce\x8d\x14\xbb\xf4\xff:P\x83\x1eO\xd2a&\xf5\x83\xeb\xe4\xe7!\xd3ol2U\x18\xa1\xe8\xb7\x15'
+2023-09-07 08:43:33,582 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 08:43:33,708 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 98a1a21152dce20b8092a5ccaa3b4096956c8c1feeb8110fed4a1f6fc6d4b635ebd6b6e759c38b0fd7f245552376200eb87097d505e873c1fac76356597cc957
+2023-09-07 08:43:33,708 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 12
+2023-09-07 08:43:33,708 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): c6282a7906dc69d859c9c61990cbe85e71a5b20726297df966fefeeae0407823
+2023-09-07 08:43:33,708 - root - INFO - [VRF.py:234] - Salt: b"\xec\x04\xdc\x04b\xc4\x96[|\xcf\xc7\xa5|\xe9\xaa\xa5\xcd\x0e\xd3T-\xf4\xb0\x82\xc9'\x85\xf9-\xc9\x05\x07"
+2023-09-07 08:46:40,793 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 08:46:40,918 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 11a2057aa240c44a310136a793c0df08d12cbbf184f0784bb94f1294aec887792d750d1bbb309081334732961f547e63737446cd20df906480527e45ade3445f
+2023-09-07 08:46:40,918 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 28
+2023-09-07 08:46:40,918 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): 009cc80d723a207b5e69ee520c19ee31a932edc87074f320e356975927bf717b
+2023-09-07 08:46:40,918 - root - INFO - [VRF.py:234] - Salt: b'kQZ\xe7\xbed\xe8\xa03\x17\x8el\xad\xb0\x93%\x88\xa7\x85\xdc\xf2\xda\x93\x9a\x8e[\xa5\x05&\x81\xdb\x99'
+2023-09-07 08:48:57,957 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 08:48:58,083 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): f82246fa22740f78b756f6db66326db2fb4267dcb4a2d346fcf375de705ee65c5ef253de30b723a1e3ee7c7db3d4c8dc1761ca44c96e3f5693a6c9ca01122592
+2023-09-07 08:48:58,084 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 20
+2023-09-07 08:48:58,084 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): 7710e051a2b0c77abc74339682d14f4d240334f9acc599407e3b8027f54d1150
+2023-09-07 08:48:58,084 - root - INFO - [VRF.py:234] - Salt: b'\x00\xcd\xe2\xd9\x04\xd6\xff.\xb3\x82NC\xc3\xca.\x9d\x84\xfcd\xfc\xd9tGk\x07\x93 u\xfd\xae\x91k'
+2023-09-07 08:48:58,085 - root - INFO - [VRF.py:185] - Chamber Index (for endGame): 47
+2023-09-07 08:48:58,085 - root - INFO - [VRF.py:237] - Alpha_Raw (Timestampe + Bets): 169410173730000300003000030000
+2023-09-07 08:48:58,085 - root - INFO - [VRF.py:238] - Alpha (Input Message): b'169410173730000300003000030000'
+2023-09-07 08:48:58,085 - root - INFO - [VRF.py:239] - Random Value (Beta): b05eaa42ee205f5fb2dbde240d366ab37374836b783bbc7300e277d661b7d410
+2023-09-07 08:48:58,085 - root - INFO - [VRF.py:240] - Proof: a870c782326e57af7458c582f34bd2ac1017697976bcd42633aa60477ee8eced17f2e29c0ea76c0c2f1045fbf3d72546ced64d06cbae4aaa8228890370485939
+2023-09-07 08:48:58,085 - root - INFO - [VRF.py:241] - Public Key: 045b2ae83f07e0f19de76a6929ec3a5dcdd83e63044220c0b9bf40a225ddefef6e42743ce73daab4afab7f915db93bf587eeb6c45b73d5609969a3d7bfd6edf9d0
+2023-09-07 08:49:13,955 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 08:49:14,091 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 38f594ae65b26efe640a9fd3129f099a614bd0bf5c5cbfae002c02955ccc48e1744dc7fff5f7528c25a8c21b2f1cd6ebbc4dfadb82a47b138b72a21207ddf093
+2023-09-07 08:49:14,092 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 33
+2023-09-07 08:49:14,092 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): aa8a2d632db936968f8b363504feabf918b7bb11419fa9a017bd16db0f7b82db
+2023-09-07 08:49:14,092 - root - INFO - [VRF.py:234] - Salt: b'\xec~\xf9\\!\xa7\xb4=\xb6\x87\x94\x9f\xee\xc1\x9a%RFD\x997\x1d\xbfO\xec\xdf\x0c<\x107b\xe3'
+2023-09-07 08:49:14,093 - root - INFO - [VRF.py:185] - Chamber Index (for endGame): 39
+2023-09-07 08:49:14,093 - root - INFO - [VRF.py:237] - Alpha_Raw (Timestampe + Bets): 169410175330000300003000030000
+2023-09-07 08:49:14,093 - root - INFO - [VRF.py:238] - Alpha (Input Message): b'169410175330000300003000030000'
+2023-09-07 08:49:14,093 - root - INFO - [VRF.py:239] - Random Value (Beta): 6fd9b3d3f71177eba2667084f9ed20f41d8dd4b82d0bfe92993409efbfa8c96d
+2023-09-07 08:49:14,093 - root - INFO - [VRF.py:240] - Proof: 312d09ddb7fe6dfca2fee4f0b1fcfb05bee97b8fd89bdd6d8b983c89a3c053df0b8cfaf0ee8bef4d6f768d7116009701278848870d3af75b3c9f508853036fc7
+2023-09-07 08:49:14,094 - root - INFO - [VRF.py:241] - Public Key: 04fe73f8369b25ab90b67d7ffe1fc956a436e0f7a4d1799f60d30def1e5ce850412fe02ba0f3310cd2227b5315c42339c7f1938be4d0e8c493192d9efdf3b5d186
+2023-09-07 08:49:14,097 - root - INFO - [VRF.py:214] - Chamber Index (from Beta): 39
+2023-09-07 08:49:32,159 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 08:49:32,285 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 81128f78827737c1d4a51c52c76c366c105fbc8ae2a554abb6c5db72cbfaef7c3f9e602fc3baba04b4b2854ac768150c4cbd086b5713e0841d5f6119ea29c2a7
+2023-09-07 08:49:32,286 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 18
+2023-09-07 08:49:32,286 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): 35a11136916ac2b5e96574d089c5e85560ec097ce85c8e9d8db012e6c84c5612
+2023-09-07 08:49:32,286 - root - INFO - [VRF.py:234] - Salt: b'\xb2\xaa\xfb\x88;wp\x19\x92\x07J\xb1\x1aE\xd4]\x98\xdb\xb1\xb4,d\xdc:\xcf\x9b\x88\xf6\xc1\xf2\xc2\xad'
+2023-09-07 08:49:32,287 - root - INFO - [VRF.py:185] - Chamber Index (for endGame): 8
+2023-09-07 08:49:32,287 - root - INFO - [VRF.py:237] - Alpha_Raw (Timestampe + Bets): 169410177230000300003000030000
+2023-09-07 08:49:32,287 - root - INFO - [VRF.py:238] - Alpha (Input Message): b'169410177230000300003000030000'
+2023-09-07 08:49:32,287 - root - INFO - [VRF.py:239] - Random Value (Beta): c62a0cd8955ac016a03513ff04d4e37d31afa587e1aa40aa92ecbb3054d445b2
+2023-09-07 08:49:32,287 - root - INFO - [VRF.py:240] - Proof: 12f6c7a1ffef6a7b825b580aba3284db1ac01527140e9b03117eac5ee431f5a00e08f7dc91ff7236258fa2915078f36fe1ae36b2312bbe0799937c33efae2c74
+2023-09-07 08:49:32,287 - root - INFO - [VRF.py:241] - Public Key: 0421a2672f459701261c39adcdc23983c82294fc654be686f756458c9695db979d079cbb413079e9d18b786b0253c5c5b1dd3c6190ba91f7ae7ba37b6beab20279
+2023-09-07 08:49:32,290 - root - INFO - [VRF.py:214] - Chamber Index (from Beta): 8
+2023-09-07 08:49:33,536 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 08:49:33,675 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 582c4c8aae52d862a3150e2160f6b5541f8a9d722cbcc01e79d41cf43f01d2a406214654798dc0b8997229062373d1ef0b33e9a70af50748156692eb2b41520b
+2023-09-07 08:49:33,675 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 19
+2023-09-07 08:49:33,675 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): 1e985b609f2557a15e8ba0a4ae05af2fe5bf50565387a9243576949bebadf16b
+2023-09-07 08:49:33,675 - root - INFO - [VRF.py:234] - Salt: b'\x8b\xb6:\xe6`kb\x82\x9c\x01#+\x06\xd3LI\xee>\xb5\xbck\xc8=\xa7\xe5\x8a\x14&\xbbB\x9d\xfc'
+2023-09-07 08:49:33,676 - root - INFO - [VRF.py:185] - Chamber Index (for endGame): 11
+2023-09-07 08:49:33,677 - root - INFO - [VRF.py:237] - Alpha_Raw (Timestampe + Bets): 169410177330000300003000030000
+2023-09-07 08:49:33,677 - root - INFO - [VRF.py:238] - Alpha (Input Message): b'169410177330000300003000030000'
+2023-09-07 08:49:33,677 - root - INFO - [VRF.py:239] - Random Value (Beta): 32fa17cf0f47116b686753ae7b423858674398c6a8dd8df95ca3daf9b8887e21
+2023-09-07 08:49:33,677 - root - INFO - [VRF.py:240] - Proof: b7e550c956057396c7a69e0daec0d406d8d930474a540bb659b22745357b443f21a4066d247a56d529e32e903f68e90e6fdb53a8e08a7546eda037d1116ac39c
+2023-09-07 08:49:33,677 - root - INFO - [VRF.py:241] - Public Key: 0413bd2c01652f58f63c035f494a45cc5bc6efc4685f317b6f2532af5ed645217f9065d547740d24cb4a04678a31a1be4e232487a384b9427b3c03151131d55299
+2023-09-07 08:49:33,681 - root - INFO - [VRF.py:214] - Chamber Index (from Beta): 11
+2023-09-07 08:49:35,495 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 08:49:35,618 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): e3a01bbe7cf1a1a8d81bda9215aa32bb9f13b132d866e72d2e508cc274f0c0eea1c8861ff957551042610612b94446f8e13543de1f6120aef189c07b126dfc6c
+2023-09-07 08:49:35,618 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 28
+2023-09-07 08:49:35,618 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): c5d6d17f0ccbeeceabe05f7b202627920f9717de4f3076015338ac4751c6684e
+2023-09-07 08:49:35,618 - root - INFO - [VRF.py:234] - Salt: b'\xb3\xda\xa8\xdc\xeb\xa0\x84|<Tj\xd3\xbcRZ\x1fJ"\x9c\xe5\xcdN\xeba\xa6\xe47\x10\xc0a9\x85'
+2023-09-07 08:49:35,620 - root - INFO - [VRF.py:185] - Chamber Index (for endGame): 39
+2023-09-07 08:49:35,620 - root - INFO - [VRF.py:237] - Alpha_Raw (Timestampe + Bets): 169410177530000300003000030000
+2023-09-07 08:49:35,620 - root - INFO - [VRF.py:238] - Alpha (Input Message): b'169410177530000300003000030000'
+2023-09-07 08:49:35,620 - root - INFO - [VRF.py:239] - Random Value (Beta): e9696b9e0d14b4bbc9dc0383fd0087282698818a53a2fa09ba0e6e3d06f87aee
+2023-09-07 08:49:35,620 - root - INFO - [VRF.py:240] - Proof: dd0b6246839318600c1161cd43ee57ee8d6ca1ded647eb8768562aec186b337e61bf32285fd8d3758614a78c5b66114e824f2e30b796f64b184af4bdab509620
+2023-09-07 08:49:35,620 - root - INFO - [VRF.py:241] - Public Key: 048190351c40e418d9f443ec0d7acea9ec6bfe338bc9f6b3d3bcdf42ae6985610b476a2de945f7d6e8ab7d7d0214e018b0b4fe6e4272941b3ed7bcbe0ac3c14594
+2023-09-07 08:49:35,623 - root - INFO - [VRF.py:214] - Chamber Index (from Beta): 39
+2023-09-07 09:15:01,852 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 09:15:01,978 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 7c5796eb5b8aaa2b30c21de238728edcdd53c1e5527a290fea2d4f159580a69f7c7104926f0c5ffd61681e641999909ff024b13df3c9ecebf625c150658b60f2
+2023-09-07 09:15:01,978 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 18
+2023-09-07 09:15:01,978 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): ca528e18caf0c72f89e677503400e365074d6c9a7aebe9fcca89b7158fde2942
+2023-09-07 09:15:01,979 - root - INFO - [VRF.py:234] - Salt: b'\xc4\xc18\xb6\xb1Rz5\xfc\xaeBLN,C|\xec\xfeW\xea)Jb~ER\x1a\x8aiU\xe8\xb5'
+2023-09-07 09:15:01,980 - root - INFO - [VRF.py:185] - Chamber Index (for endGame): 28
+2023-09-07 09:15:01,980 - root - INFO - [VRF.py:237] - Alpha_Raw (Timestampe + Bets): 169410330130000300003000030000
+2023-09-07 09:15:01,980 - root - INFO - [VRF.py:238] - Alpha (Input Message): b'169410330130000300003000030000'
+2023-09-07 09:15:01,980 - root - INFO - [VRF.py:239] - Random Value (Beta): ecd0553134ba0723ae40e5140b66a7d03cd7a51739a602a7bce54da67c28bcd5
+2023-09-07 09:15:01,980 - root - INFO - [VRF.py:240] - Proof: 6a31312a30543494ea6f82e63d3349c74b80072e0263dc6f4d0b21417711889f260ec37631036bdf0429f7772f94277379ca96d34f5662f271e946e7e5e26973
+2023-09-07 09:15:01,980 - root - INFO - [VRF.py:241] - Public Key: 04cd422568ab7c66f33feb883fa1ff3340f1ad458de3adfb4c2617dafbdf4e74556b248adaa5cdfecb0ae0ccec06ea666dc05c8110749e93a97993aae118889615
+2023-09-07 09:15:01,983 - root - INFO - [VRF.py:214] - Chamber Index (from Beta): 28
+2023-09-07 09:15:03,152 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 09:15:03,278 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): f047f87fa3e339b552628bbe58acec237597682269571153dbd8ab7ad8773f973625ceed8bccc8cfede9f9d3b39bd10b2c6d4a63b8725bb5cb940edc355a489f
+2023-09-07 09:15:03,278 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 17
+2023-09-07 09:15:03,278 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): 353b19c3cedfc9834974ae323528ad7c2ab4f32d3337e6ef192298b2a735885b
+2023-09-07 09:15:03,278 - root - INFO - [VRF.py:234] - Salt: b'\x85\xd7D:\xaa\xfd\xc2\xa3\xd32l\x83\xc6\x13~R\xd1\xe1\xc2\x81\xa6\x9d\xce#\xcc\xd8\x02\x97\xc4$\n\xd7'
+2023-09-07 09:15:03,279 - root - INFO - [VRF.py:185] - Chamber Index (for endGame): 40
+2023-09-07 09:15:03,280 - root - INFO - [VRF.py:237] - Alpha_Raw (Timestampe + Bets): 169410330330000300003000030000
+2023-09-07 09:15:03,280 - root - INFO - [VRF.py:238] - Alpha (Input Message): b'169410330330000300003000030000'
+2023-09-07 09:15:03,280 - root - INFO - [VRF.py:239] - Random Value (Beta): 5a3faade8ac37491a5c1adcb7aef0a9ee25467b6954994da342b7b76993abcdd
+2023-09-07 09:15:03,280 - root - INFO - [VRF.py:240] - Proof: 7b23fca6d8c8652b150d439b05ce20a8d2ec3a8729fab4c7a5997d67f97cb65cea1928add473d9116977a646926cb987073e693e0995e95e03f3b4ee12656cad
+2023-09-07 09:15:03,280 - root - INFO - [VRF.py:241] - Public Key: 04c03c8556679b411f8a80887e3ff8508cb1ae13ab2d6d537a41238ecca5b3acf496f1db12f82eef2679f48c45e07386a10357baa85b51e58db37f0c1964e01d79
+2023-09-07 09:15:03,283 - root - INFO - [VRF.py:214] - Chamber Index (from Beta): 40
+2023-09-07 09:15:29,935 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 09:15:30,057 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 9abe19d13135fd51781418c692bb05be5e5c4090781c0ed302bcfaa3757e1ac228d3ff4b10049652bcd3277b34ea422e23254decc4efb00ab78c2d821a757d24
+2023-09-07 09:15:30,057 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 10
+2023-09-07 09:15:30,057 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): 2d4c243ffaf95cff83bf3f088c9082c612b2c1ae2890273f4c38a27cb15a1c80
+2023-09-07 09:15:30,057 - root - INFO - [VRF.py:234] - Salt: b'\x9d\xeb\xee\xf7~\xf1\xed\xbd\xa3\xbbU\xc3\xc7\x15*<\xac\xc8\xe3W\x08\x9c2\x9b\x1d5\x0e\xda\x8f\xdc(8'
+2023-09-07 09:15:30,058 - root - INFO - [VRF.py:185] - Chamber Index (for endGame): 35
+2023-09-07 09:15:30,058 - root - INFO - [VRF.py:237] - Alpha_Raw (Timestampe + Bets): 169410332930000300003000030000
+2023-09-07 09:15:30,058 - root - INFO - [VRF.py:238] - Alpha (Input Message): b'169410332930000300003000030000'
+2023-09-07 09:15:30,058 - root - INFO - [VRF.py:239] - Random Value (Beta): 12afd56fab3f07e522d141b7103891efddbd03f9f4a460fa302942fcf4089db7
+2023-09-07 09:15:30,058 - root - INFO - [VRF.py:240] - Proof: d35b4689dd641ebf17720f7510c53583abe09f5139b93a3aab934d0bdeef101fae45e9eb3c06e323b197976e362c507573fdb03b3c0c14c50af0862fb6db1c11
+2023-09-07 09:15:30,059 - root - INFO - [VRF.py:241] - Public Key: 04790d62aa8c900bea7faefd711b1f0ebfbeb023b224fdb2672f97e96f865b808b62bda861c3cc27c58029950b38523c220d87eace27f7149eb57c15ef02d20593
+2023-09-07 09:15:30,061 - root - INFO - [VRF.py:214] - Chamber Index (from Beta): 35
+2023-09-07 09:15:30,062 - root - INFO - [VRF.py:244] - Expected Value: 2d4c243ffaf95cff83bf3f088c9082c612b2c1ae2890273f4c38a27cb15a1c80
+2023-09-07 09:15:30,062 - root - INFO - [VRF.py:245] - Initial Hash: 2d4c243ffaf95cff83bf3f088c9082c612b2c1ae2890273f4c38a27cb15a1c80
+2023-09-07 09:15:30,062 - root - INFO - [VRF.py:246] - Verification Result: False
+2023-09-07 09:15:32,696 - root - INFO - [VRF.py:227] - Revolver Size): 50
+2023-09-07 09:15:32,818 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): e8686956d7db67cd557f3377cbc53880df4e2fd395ead1e35b1309023b43e851d29ff679fd46f6c06325ab09008baa61c57132dfee0a1ad792c22deec560f16f
+2023-09-07 09:15:32,818 - root - INFO - [VRF.py:163] - Chamber Index (for newGame): 35
+2023-09-07 09:15:32,818 - root - INFO - [VRF.py:233] - Initial Hash (for newGame): ba89bf24feea78966968d4df220a7d20dc5c2becd7d7c8547816e30afd415cd9
+2023-09-07 09:15:32,818 - root - INFO - [VRF.py:234] - Salt: b'\x8c{\xddU,\xa9\xf5A\xc1\xe0\x1e\xb6=:g@kuWU\x01\x11\xc1\x82\xc3\xc5\xf1\x06~`\x124'
+2023-09-07 09:15:32,819 - root - INFO - [VRF.py:185] - Chamber Index (for endGame): 20
+2023-09-07 09:15:32,819 - root - INFO - [VRF.py:237] - Alpha_Raw (Timestampe + Bets): 169410333230000300003000030000
+2023-09-07 09:15:32,819 - root - INFO - [VRF.py:238] - Alpha (Input Message): b'169410333230000300003000030000'
+2023-09-07 09:15:32,820 - root - INFO - [VRF.py:239] - Random Value (Beta): c92893a988726423c9159df08e22b2bc19f6bb5ae78334d9638990ad473ea4c7
+2023-09-07 09:15:32,820 - root - INFO - [VRF.py:240] - Proof: 6c1c3e1f0da1ee5baed730f25ad6ae74ed58a053a0e22b1e0c8f7f375eab32ec18e4dcfe35343fcfb44be7be10b310fc9b3c8946e677e8670d4b1b38383ee0bc
+2023-09-07 09:15:32,820 - root - INFO - [VRF.py:241] - Public Key: 04966d437552511713d1f674688189097312e13a64fb19dd3f4711b34ecac596116e930aaeebe49ecff0d0cfcf9f993210a502206718c9dcad234047040166f9e0
+2023-09-07 09:15:32,824 - root - INFO - [VRF.py:214] - Chamber Index (from Beta): 20
+2023-09-07 09:15:32,825 - root - INFO - [VRF.py:244] - Expected Value: ba89bf24feea78966968d4df220a7d20dc5c2becd7d7c8547816e30afd415cd9
+2023-09-07 09:15:32,825 - root - INFO - [VRF.py:245] - Initial Hash: ba89bf24feea78966968d4df220a7d20dc5c2becd7d7c8547816e30afd415cd9
+2023-09-07 09:15:32,825 - root - INFO - [VRF.py:246] - Verification Result: False
+2023-09-07 09:15:45,322 - root - INFO - [VRF.py:224] - Revolver Size): 50
+2023-09-07 09:15:45,445 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 29bb86d53c926d4d5662f7962f875e31615f692bf635341720c0355b3b7d945f777436b766791edec45431784c596638b435f72439f10a91bca65a2c9a2cb908
+2023-09-07 09:15:45,445 - root - INFO - [VRF.py:161] - Chamber Index (for newGame): 34
+2023-09-07 09:15:45,445 - root - INFO - [VRF.py:230] - Initial Hash (for newGame): 693a78ca51fddda80194dd63ec7f8dcda8ad162b9bda457955430a5ffec7cc83
+2023-09-07 09:15:45,445 - root - INFO - [VRF.py:231] - Salt: beaedbdea48f1c8113d6aeda92ef27e89982ac1b0407ab7f09d41d6394cb8ff0
+2023-09-07 09:15:45,446 - root - INFO - [VRF.py:182] - Chamber Index (for endGame): 34
+2023-09-07 09:15:45,446 - root - INFO - [VRF.py:234] - Alpha_Raw (Timestampe + Bets): 169410334530000300003000030000
+2023-09-07 09:15:45,446 - root - INFO - [VRF.py:235] - Alpha (Input Message): b'169410334530000300003000030000'
+2023-09-07 09:15:45,447 - root - INFO - [VRF.py:236] - Random Value (Beta): 6d432162f24f338f331e9d420787d480d619bb5cc05db29dc62b9bf27ded6efa
+2023-09-07 09:15:45,447 - root - INFO - [VRF.py:237] - Proof: ae8e7fdae78e901cda11b8df196f1f06bbc483ab0ec6b711ac77949d4d9507d5b0039d287b6b649e296206f82abe9078a95875d9478f955b0f4884f608726dac
+2023-09-07 09:15:45,447 - root - INFO - [VRF.py:238] - Public Key: 04a3a4f86502de8346e6d7d0dbd7a12f6dca9a8258ad2f2b39645b77b887724c63eec2e0ab4e9d3ef3951d20157f5fafcf22cd3af28ea6f8db65512249f8279926
+2023-09-07 09:15:45,450 - root - INFO - [VRF.py:211] - Chamber Index (from Beta): 34
+2023-09-07 09:15:45,450 - root - INFO - [VRF.py:241] - Expected Value: 693a78ca51fddda80194dd63ec7f8dcda8ad162b9bda457955430a5ffec7cc83
+2023-09-07 09:15:45,450 - root - INFO - [VRF.py:242] - Initial Hash: 693a78ca51fddda80194dd63ec7f8dcda8ad162b9bda457955430a5ffec7cc83
+2023-09-07 09:15:45,450 - root - INFO - [VRF.py:243] - Verification Result: True
+2023-09-07 09:15:47,760 - root - INFO - [VRF.py:224] - Revolver Size): 50
+2023-09-07 09:15:47,884 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): b692d4aee94a9ea2e1aca54242c659898a89e3400138ee8128da47084a3e68807372201b2d7eee77a9f5dd32201309ecbb578f1690da104c2e20428a94066973
+2023-09-07 09:15:47,884 - root - INFO - [VRF.py:161] - Chamber Index (for newGame): 8
+2023-09-07 09:15:47,884 - root - INFO - [VRF.py:230] - Initial Hash (for newGame): 1fdbc78a6ea18df8d5b7d936e987dea04cc2640f8eaf5cebd050191a544b10f3
+2023-09-07 09:15:47,884 - root - INFO - [VRF.py:231] - Salt: 5b0d5b73b985ddc9fad438fc31625f826c39bda90ae103ac2db0c159b55096df
+2023-09-07 09:15:47,885 - root - INFO - [VRF.py:182] - Chamber Index (for endGame): 8
+2023-09-07 09:15:47,885 - root - INFO - [VRF.py:234] - Alpha_Raw (Timestampe + Bets): 169410334730000300003000030000
+2023-09-07 09:15:47,885 - root - INFO - [VRF.py:235] - Alpha (Input Message): b'169410334730000300003000030000'
+2023-09-07 09:15:47,885 - root - INFO - [VRF.py:236] - Random Value (Beta): ae3003ab72897c4be63f1095eb995e4b877521cd0a747b8b4e0cfd0a27f285a4
+2023-09-07 09:15:47,885 - root - INFO - [VRF.py:237] - Proof: 91a5dde08b98bf33ea01bfe262d30b5bd1e47900fc0fe18a3509d32a4da774c1f4db060b7d5592e319ac49ef69c418c3ee83e1473aed5c3436b7a4fff8b2e891
+2023-09-07 09:15:47,885 - root - INFO - [VRF.py:238] - Public Key: 0421ded82c5c2952fcedd8f9b2752814422e39e4ec85050f6dc0ca8c5dae2e3daf28643e0408f13ebeb673bcc114d5d79b370866c6774d810cffd5bfc2b48e1a3b
+2023-09-07 09:15:47,889 - root - INFO - [VRF.py:211] - Chamber Index (from Beta): 8
+2023-09-07 09:15:47,889 - root - INFO - [VRF.py:241] - Expected Value: 1fdbc78a6ea18df8d5b7d936e987dea04cc2640f8eaf5cebd050191a544b10f3
+2023-09-07 09:15:47,889 - root - INFO - [VRF.py:242] - Initial Hash: 1fdbc78a6ea18df8d5b7d936e987dea04cc2640f8eaf5cebd050191a544b10f3
+2023-09-07 09:15:47,889 - root - INFO - [VRF.py:243] - Verification Result: True
+2023-09-07 09:15:49,253 - root - INFO - [VRF.py:224] - Revolver Size): 50
+2023-09-07 09:15:49,378 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 618c3e1f4a71c7af259318d62b5cf5b0c19b99c5c46887647697a4061c3dd27f496c9c48cbe21f2b97efc79b843d84cedb63c86eaff64eb42966ea63bd8b0895
+2023-09-07 09:15:49,378 - root - INFO - [VRF.py:161] - Chamber Index (for newGame): 42
+2023-09-07 09:15:49,378 - root - INFO - [VRF.py:230] - Initial Hash (for newGame): 34294259c95ae5a625b4f55b44145ea384c0d531a9e13599f6b6ec74ddf15a50
+2023-09-07 09:15:49,378 - root - INFO - [VRF.py:231] - Salt: fef5f497a7ee73a9194dc0aa523aa22405bf96769f325fceea93f0cce3e1ad0a
+2023-09-07 09:15:49,379 - root - INFO - [VRF.py:182] - Chamber Index (for endGame): 42
+2023-09-07 09:15:49,379 - root - INFO - [VRF.py:234] - Alpha_Raw (Timestampe + Bets): 169410334930000300003000030000
+2023-09-07 09:15:49,380 - root - INFO - [VRF.py:235] - Alpha (Input Message): b'169410334930000300003000030000'
+2023-09-07 09:15:49,380 - root - INFO - [VRF.py:236] - Random Value (Beta): 28911d7572956118aeffb3d29dd4b05803f1d3204547c8f92d56c27f0622d3d6
+2023-09-07 09:15:49,380 - root - INFO - [VRF.py:237] - Proof: 4b3ad97861a6fd38ce85e388a6ac949513d816b7a475576038e45b724593588079c1da5937320177f49e8042d56d03997b91abb23600b3339939afcfb5a7d057
+2023-09-07 09:15:49,380 - root - INFO - [VRF.py:238] - Public Key: 042fec276d063e67168657d0e3516b6052b46fe24bab4c2fb908c003c7a06c3563378548cb7531356c7ff6ae7f73d5b2c9f369b55c0c3d136d5f81c76605c48218
+2023-09-07 09:15:49,383 - root - INFO - [VRF.py:211] - Chamber Index (from Beta): 42
+2023-09-07 09:15:49,383 - root - INFO - [VRF.py:241] - Expected Value: 34294259c95ae5a625b4f55b44145ea384c0d531a9e13599f6b6ec74ddf15a50
+2023-09-07 09:15:49,383 - root - INFO - [VRF.py:242] - Initial Hash: 34294259c95ae5a625b4f55b44145ea384c0d531a9e13599f6b6ec74ddf15a50
+2023-09-07 09:15:49,383 - root - INFO - [VRF.py:243] - Verification Result: True
+2023-09-07 09:16:04,717 - root - INFO - [VRF.py:224] - Revolver Size): 50
+2023-09-07 09:16:04,839 - root - INFO - [VRF.py:155] - Seed Hash (shared with player): 633002117ec21f1b2f314317bbc633e1cebabeaf11b8b62bc1016a542e4529eea1e8815b3d7dca348fad1f82e83878d51100438c494f66050d297e9c27de0656
+2023-09-07 09:16:04,840 - root - INFO - [VRF.py:161] - Chamber Index (for newGame): 29
+2023-09-07 09:16:04,840 - root - INFO - [VRF.py:230] - Initial Hash (for newGame): c2f3d932cbef288cf7525674143d520c8559a7b7c3b04c45b485426b58f88a11
+2023-09-07 09:16:04,840 - root - INFO - [VRF.py:231] - Salt: e9b4daccdb61a9b06bd072601e1cb6c49a35200d1eb633cb8274d41352e6360d
+2023-09-07 09:16:04,841 - root - INFO - [VRF.py:182] - Chamber Index (for endGame): 29
+2023-09-07 09:16:04,841 - root - INFO - [VRF.py:234] - Alpha_Raw (Timestampe + Bets): 169410336430000300003000030000
+2023-09-07 09:16:04,841 - root - INFO - [VRF.py:235] - Alpha (Input Message): b'169410336430000300003000030000'
+2023-09-07 09:16:04,841 - root - INFO - [VRF.py:236] - Random Value (Beta): 6cdcfd79e375aa5e2c4e0a71190b635579caa60e070f624ad86e2d55a0bb2a10
+2023-09-07 09:16:04,841 - root - INFO - [VRF.py:237] - Proof: f0a22db1356b68887eee5c2dc5258d75dea455805e6cebf9499d923e4e7c44068c8cd5650418165e54c7e6a0b0310b3b0754b1da02f904b9e7e579c7e269888a
+2023-09-07 09:16:04,841 - root - INFO - [VRF.py:238] - Public Key: 04c29190e2048bda780cd83087cdd3407c00f289c439b0faa550cbc496e8bb1c92922ab05990db9e82b5beee29d99f093565bc9d27e4cf7c97dbd93290c24fa479
+2023-09-07 09:16:04,845 - root - INFO - [VRF.py:211] - Chamber Index (from Beta): 29
+2023-09-07 09:16:04,845 - root - INFO - [VRF.py:241] - Expected Value: c2f3d932cbef288cf7525674143d520c8559a7b7c3b04c45b485426b58f88a11
+2023-09-07 09:16:04,845 - root - INFO - [VRF.py:242] - Initial Hash: c2f3d932cbef288cf7525674143d520c8559a7b7c3b04c45b485426b58f88a11
+2023-09-07 09:16:04,845 - root - INFO - [VRF.py:243] - Verification Result: True
+2023-09-07 09:19:49,086 - root - INFO - [VRF.py:230] - Revolver Size): 50
+2023-09-07 09:19:49,210 - root - INFO - [VRF.py:161] - Seed Hash (shared with player): 5bdb9d0c469530fd3580f665ffbc7dbe247fd25f278744e1d5dc090fd88ceeb586dec73837a48d3331b8c7d92d790e1ac718ff3c4f22a4d1e44885e2054e627b
+2023-09-07 09:19:49,210 - root - INFO - [VRF.py:167] - Chamber Index (for newGame): 6
+2023-09-07 09:19:49,210 - root - INFO - [VRF.py:236] - Initial Hash (for newGame): 840219c8134789dd7b8a97f295b265789ed582765ea0f5da611cb1fe863110df
+2023-09-07 09:19:49,210 - root - INFO - [VRF.py:237] - Salt: 17a59ecbb88824824f98f32c79d93c5337e18878b2ce9c51b6f8effbe6f36557
+2023-09-07 09:19:49,211 - root - INFO - [VRF.py:188] - Chamber Index (for endGame): 6
+2023-09-07 09:19:49,211 - root - INFO - [VRF.py:240] - Alpha_Raw (Timestampe + Bets): 169410358930000300003000030000
+2023-09-07 09:19:49,211 - root - INFO - [VRF.py:241] - Alpha (Input Message): b'169410358930000300003000030000'
+2023-09-07 09:19:49,211 - root - INFO - [VRF.py:242] - Random Value (Beta): 893adc134fce1b5147d61f6e7dfa41568ef0f8b2b6f837c3cdb325dd1a2d7a08
+2023-09-07 09:19:49,211 - root - INFO - [VRF.py:243] - Proof: d6b3e488269c495ea242f040d7c5667f27aa77dddf5ca6419db1b6b7a1f648c646f0150cb510b9a20ca02419b05314dec07c54ef34cae35fdd82a1458bffa503
+2023-09-07 09:19:49,212 - root - INFO - [VRF.py:244] - Public Key: 04b5720d098014a3c8b97d4c7ae72406d05af621607b405dd5d21bf2533e3416cd92abc36a952bebdc104de09b8fbca4bc32cb1edf84ff6bae875872d7bfe7ad3d
+2023-09-07 09:19:49,215 - root - INFO - [VRF.py:217] - Chamber Index (from Beta): 6
+2023-09-07 09:19:49,215 - root - INFO - [VRF.py:247] - Expected Value: 840219c8134789dd7b8a97f295b265789ed582765ea0f5da611cb1fe863110df
+2023-09-07 09:19:49,215 - root - INFO - [VRF.py:248] - Initial Hash: 840219c8134789dd7b8a97f295b265789ed582765ea0f5da611cb1fe863110df
+2023-09-07 09:19:49,215 - root - INFO - [VRF.py:249] - Verification Result: True
+2023-09-07 09:30:17,954 - root - INFO - [VRF.py:234] - Revolver Size): 50
+2023-09-07 09:30:18,093 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 74137d69af9ad7e42a85e8265800bc79cdee1fd5ee1f4433d6dbc7f9fe26d57896c283a01bcd75259bb5ee6ed10462c296e023ff420f1d9a13d38ddce28682e3
+2023-09-07 09:30:18,096 - root - INFO - [VRF.py:171] - Chamber Index (for newGame): 19
+2023-09-07 09:30:18,096 - root - INFO - [VRF.py:240] - Initial Hash (for newGame): 784eaa87035457155b27e56b693dc29ee4c5b18bf9103d748c3aa0273bfbbe96
+2023-09-07 09:30:18,096 - root - INFO - [VRF.py:241] - Salt: c8684cc6b015405c17c0257d2d08f09dc17fcebe4042fcc0b9c84d04f420079d
+2023-09-07 09:30:18,193 - root - INFO - [VRF.py:192] - Chamber Index (for endGame): 19
+2023-09-07 09:30:18,193 - root - INFO - [VRF.py:244] - Alpha_Raw (Timestampe + Bets): 169410421730000300003000030000
+2023-09-07 09:30:18,193 - root - INFO - [VRF.py:245] - Alpha (Input Message): b'169410421730000300003000030000'
+2023-09-07 09:30:18,193 - root - INFO - [VRF.py:246] - Random Value (Beta): f9e9bc7c33ea2d21b8d9c5f451c65cf3427ad138d70e83859d5e13b9096a8c5a
+2023-09-07 09:30:18,194 - root - INFO - [VRF.py:247] - Proof: ebf138b95e4ceb544647827420f361b30a70a099e9433624d8e716c226090b0867ffc2bda82ba4b90094b7f70e7e5b141e2b992e1a3734845cb161b44a15d5f2
+2023-09-07 09:30:18,194 - root - INFO - [VRF.py:248] - Public Key: 044062d28c787a45fa928a601ae1545c6e7d82462d30fb6c955e53a24227264e4f29b26e7caf79522d561e4bf409050ff50b9931adfde765e526dc469a916c1205
+2023-09-07 09:30:18,197 - root - INFO - [VRF.py:221] - Chamber Index (from Beta): 19
+2023-09-07 09:30:18,197 - root - INFO - [VRF.py:251] - Expected Value: 784eaa87035457155b27e56b693dc29ee4c5b18bf9103d748c3aa0273bfbbe96
+2023-09-07 09:30:18,197 - root - INFO - [VRF.py:252] - Initial Hash: 784eaa87035457155b27e56b693dc29ee4c5b18bf9103d748c3aa0273bfbbe96
+2023-09-07 09:30:18,197 - root - INFO - [VRF.py:253] - Verification Result: True
+2023-09-07 09:30:19,987 - root - INFO - [VRF.py:234] - Revolver Size): 50
+2023-09-07 09:30:20,139 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 777987897533bd7e8178cfe4fd1f9775d4b8a4fbda2b2bbf1bd2ef09c9d9068884f49ad5de5bb9d7fdaf639d5f1ca57ce2b5af10a49ac1ee7377a32a50dbe562
+2023-09-07 09:30:20,139 - root - INFO - [VRF.py:171] - Chamber Index (for newGame): 11
+2023-09-07 09:30:20,140 - root - INFO - [VRF.py:240] - Initial Hash (for newGame): 885c6f69b0ba6c7f7af8d551fc3da1d3ca9abc7096213478f8e7b88b668f9e59
+2023-09-07 09:30:20,140 - root - INFO - [VRF.py:241] - Salt: 3c7a3ec11033b4d7c289a5786e97a4e5b85fe52d7fb76d5174379f777ad562d6
+2023-09-07 09:30:20,234 - root - INFO - [VRF.py:192] - Chamber Index (for endGame): 11
+2023-09-07 09:30:20,234 - root - INFO - [VRF.py:244] - Alpha_Raw (Timestampe + Bets): 169410421930000300003000030000
+2023-09-07 09:30:20,234 - root - INFO - [VRF.py:245] - Alpha (Input Message): b'169410421930000300003000030000'
+2023-09-07 09:30:20,234 - root - INFO - [VRF.py:246] - Random Value (Beta): 1235e367eddf3d0a933eeaaa2b2ec8d645afc961f0b6c77758ebdcc99ebae35b
+2023-09-07 09:30:20,234 - root - INFO - [VRF.py:247] - Proof: 3a044af988742cb332377093e59bc129cd092cd489d35fbf05f49214542cd9d2cfff314b77573b413c6196fc45ba8ce8210bb99e3c327540a8f88dd64d394434
+2023-09-07 09:30:20,234 - root - INFO - [VRF.py:248] - Public Key: 0413b65d85960b59153ce365719e90b201ea1ea4d332b5fd5407862d826661d7ed34dba2f393484b4485dad0bc5dc7f63eebbd9f3b7637a9204680d32e41c59acb
+2023-09-07 09:30:20,237 - root - INFO - [VRF.py:221] - Chamber Index (from Beta): 11
+2023-09-07 09:30:20,237 - root - INFO - [VRF.py:251] - Expected Value: 885c6f69b0ba6c7f7af8d551fc3da1d3ca9abc7096213478f8e7b88b668f9e59
+2023-09-07 09:30:20,238 - root - INFO - [VRF.py:252] - Initial Hash: 885c6f69b0ba6c7f7af8d551fc3da1d3ca9abc7096213478f8e7b88b668f9e59
+2023-09-07 09:30:20,238 - root - INFO - [VRF.py:253] - Verification Result: True
+2023-09-07 09:30:20,973 - root - INFO - [VRF.py:234] - Revolver Size): 50
+2023-09-07 09:30:21,113 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 1740232100aff3db01ed8a7d2671b2a1bea48f144fe449d1382bcf2bec1842b75ba6a2eff922d413c8a7a97c5726301f1ccbe5412f2f53ac52cd74a4ed5b2032
+2023-09-07 09:30:21,113 - root - INFO - [VRF.py:171] - Chamber Index (for newGame): 24
+2023-09-07 09:30:21,113 - root - INFO - [VRF.py:240] - Initial Hash (for newGame): 18bb463b064f3a319ff9c706f42746e269929b34cece084ea973700ef8acb33f
+2023-09-07 09:30:21,113 - root - INFO - [VRF.py:241] - Salt: c33acec5f00c3770aa6056cdecf0f03be4e76a932e86f3712ccf6d37d0df3de9
+2023-09-07 09:30:21,204 - root - INFO - [VRF.py:192] - Chamber Index (for endGame): 24
+2023-09-07 09:30:21,205 - root - INFO - [VRF.py:244] - Alpha_Raw (Timestampe + Bets): 169410422030000300003000030000
+2023-09-07 09:30:21,205 - root - INFO - [VRF.py:245] - Alpha (Input Message): b'169410422030000300003000030000'
+2023-09-07 09:30:21,205 - root - INFO - [VRF.py:246] - Random Value (Beta): b5dd4d39d50f8a02f602e1ab812f8e1bc7326cefd5c8b1fec3b3b8281fcf8618
+2023-09-07 09:30:21,205 - root - INFO - [VRF.py:247] - Proof: c9caea826475473b39530029c7d1e85cb62b9e40ed0c1b38856938be5761833eaa3d58373e2c7bf04ca348850932a5610355e02b3f249c94efef80ceb2cd8c03
+2023-09-07 09:30:21,205 - root - INFO - [VRF.py:248] - Public Key: 04cfecd8c98182bb03fcacefb7b91d757d1ffa63a79fd14466f8cb2bf5570c3deb57259b799b6b81bba45143800dd12dbd0de5aae00496df7c607328c45577897a
+2023-09-07 09:30:21,208 - root - INFO - [VRF.py:221] - Chamber Index (from Beta): 24
+2023-09-07 09:30:21,208 - root - INFO - [VRF.py:251] - Expected Value: 18bb463b064f3a319ff9c706f42746e269929b34cece084ea973700ef8acb33f
+2023-09-07 09:30:21,208 - root - INFO - [VRF.py:252] - Initial Hash: 18bb463b064f3a319ff9c706f42746e269929b34cece084ea973700ef8acb33f
+2023-09-07 09:30:21,208 - root - INFO - [VRF.py:253] - Verification Result: True
+2023-09-07 09:30:53,142 - root - INFO - [VRF.py:232] - Revolver Size): 50
+2023-09-07 09:30:53,266 - root - INFO - [VRF.py:163] - Seed Hash (shared with player): 6686e0c7b952e1d2e1bcc56dbda1be39121a2262a2a72b9e22d65c3f3dc9b608dcd6afcbedbfe5f9c1d06ec9aeca14af09375aebd4fbcfdcbdc5c8d22cbbd88c
+2023-09-07 09:30:53,266 - root - INFO - [VRF.py:169] - Chamber Index (for newGame): 14
+2023-09-07 09:30:53,267 - root - INFO - [VRF.py:238] - Initial Hash (for newGame): e20521e922cdab0c39230f93ba23e5844ed2662dec1382f1f439f2dfd15efd26
+2023-09-07 09:30:53,267 - root - INFO - [VRF.py:239] - Salt: d2b8a8a766f38907ab8f6bd8f11e058dd10833b555309d438df3dabb6f6c749e
+2023-09-07 09:30:53,362 - root - INFO - [VRF.py:190] - Chamber Index (for endGame): 14
+2023-09-07 09:30:53,362 - root - INFO - [VRF.py:242] - Alpha_Raw (Timestampe + Bets): 169410425330000300003000030000
+2023-09-07 09:30:53,362 - root - INFO - [VRF.py:243] - Alpha (Input Message): b'169410425330000300003000030000'
+2023-09-07 09:30:53,362 - root - INFO - [VRF.py:244] - Random Value (Beta): 790582098af649b41286a7c2c8d205fb5ada0d6f3668d2f0fb75fdaedb5cf505
+2023-09-07 09:30:53,362 - root - INFO - [VRF.py:245] - Proof: 62c41212c4ced6ef85f159397bf102bb3741c6c7b6ef3feadf263db4339324415df2ca3415a1b1510421bd9aee4e4a20ba3329a63bdd8c607c116350f185efed
+2023-09-07 09:30:53,362 - root - INFO - [VRF.py:246] - Public Key: 041ba2a2f528c0eb656a1b0f96d3f7ba9be31fd61cd3bee92f0022f5e755f4ba9fe84f9843d3f15ee1cceaf3c2f37e45a96ac54d9b5acf41684428e132e03d5a50
+2023-09-07 09:30:53,366 - root - INFO - [VRF.py:219] - Chamber Index (from Beta): 14
+2023-09-07 09:30:53,366 - root - INFO - [VRF.py:249] - Expected Value: e20521e922cdab0c39230f93ba23e5844ed2662dec1382f1f439f2dfd15efd26
+2023-09-07 09:30:53,366 - root - INFO - [VRF.py:250] - Initial Hash: e20521e922cdab0c39230f93ba23e5844ed2662dec1382f1f439f2dfd15efd26
+2023-09-07 09:30:53,366 - root - INFO - [VRF.py:251] - Verification Result: True
+2023-09-07 09:31:54,421 - root - INFO - [VRF.py:235] - Revolver Size): 50
+2023-09-07 09:31:54,546 - root - INFO - [VRF.py:166] - Seed Hash (shared with player): badfb82af2c34e2744cca3ce45b6cea120cedf13bfa463e8b56383c37982de26a76a9c7be803bf55ac79204843a7a1e9e940e1c9edfd5b98e444fec9e5ec6a67
+2023-09-07 09:31:54,546 - root - INFO - [VRF.py:172] - Chamber Index (for newGame): 5
+2023-09-07 09:31:54,546 - root - INFO - [VRF.py:241] - Initial Hash (for newGame): faee616b5c1da5dcc1612d1843551af6213de42eafe84a173ade3223edcbefc4
+2023-09-07 09:31:54,547 - root - INFO - [VRF.py:242] - Salt: 4bc0187dfac459f7bc1c72da1c5f2aaa039b1df956daf439fe5dbc02319d8b2d
+2023-09-07 09:31:54,737 - root - INFO - [VRF.py:193] - Chamber Index (for endGame): 5
+2023-09-07 09:31:54,738 - root - INFO - [VRF.py:245] - Alpha_Raw (Timestampe + Bets): 169410431430000300003000030000
+2023-09-07 09:31:54,738 - root - INFO - [VRF.py:246] - Alpha (Input Message): b'169410431430000300003000030000'
+2023-09-07 09:31:54,738 - root - INFO - [VRF.py:247] - Random Value (Beta): 28eb4bfe7488ae814879433c61113de93bbe52a3e06fd68ad26b749ef8dc6ff5
+2023-09-07 09:31:54,738 - root - INFO - [VRF.py:248] - Proof: 7efd7e9183dd33d088a8b4fe466650bc9aa493b23778c1c6221a1187298971c872ff1b16e5fd92f0b0b03d08e552e0b389a9faea470afcf21f2b6b22127692ab
+2023-09-07 09:31:54,738 - root - INFO - [VRF.py:249] - Public Key: 04cec6adb57a3a8e1dd4e1d244b38ed0a92466e5bcbbaaccd9a79a999719605ef5a8159de8f4a8959a90c329a9e8de678a6ef75699d6adfaadc9046e6902be20d0
+2023-09-07 09:31:54,741 - root - INFO - [VRF.py:222] - Chamber Index (from Beta): 5
+2023-09-07 09:31:54,741 - root - INFO - [VRF.py:252] - Expected Value: faee616b5c1da5dcc1612d1843551af6213de42eafe84a173ade3223edcbefc4
+2023-09-07 09:31:54,741 - root - INFO - [VRF.py:253] - Initial Hash: faee616b5c1da5dcc1612d1843551af6213de42eafe84a173ade3223edcbefc4
+2023-09-07 09:31:54,741 - root - INFO - [VRF.py:254] - Verification Result: True
+2023-09-07 09:31:56,250 - root - INFO - [VRF.py:235] - Revolver Size): 50
+2023-09-07 09:31:56,375 - root - INFO - [VRF.py:166] - Seed Hash (shared with player): 3d396cec543554f73f291679f720c01a248dabfb4b8e604e6db56bcb57d80a8fea3f7fe4004bcb65cafcc1cb779e46570202ec6b235078e9300625d9ff2ce157
+2023-09-07 09:31:56,375 - root - INFO - [VRF.py:172] - Chamber Index (for newGame): 9
+2023-09-07 09:31:56,375 - root - INFO - [VRF.py:241] - Initial Hash (for newGame): 8a25cfb0ad0148f87da0de1ae944dfb38d43e72c0c7eb00fc5ec06fe1fc5bb12
+2023-09-07 09:31:56,375 - root - INFO - [VRF.py:242] - Salt: f902af9ad63df28330f29ec0587ec17d62690c309271134bdb4756edc17d6beb
+2023-09-07 09:31:56,558 - root - INFO - [VRF.py:193] - Chamber Index (for endGame): 9
+2023-09-07 09:31:56,558 - root - INFO - [VRF.py:245] - Alpha_Raw (Timestampe + Bets): 169410431630000300003000030000
+2023-09-07 09:31:56,559 - root - INFO - [VRF.py:246] - Alpha (Input Message): b'169410431630000300003000030000'
+2023-09-07 09:31:56,559 - root - INFO - [VRF.py:247] - Random Value (Beta): 76d3958ab472a8189da499a9378832f276c1817484751f4be652e29e6a5a6cd2
+2023-09-07 09:31:56,559 - root - INFO - [VRF.py:248] - Proof: 60dbe09a0ce98a8bf0e14b351ef2f22fa98cae354cc5bee3089fb7d053ab3431b151b703cf4ee7106a26934c81ff283a52e66efc2b5d57316ae5d79d41be451d
+2023-09-07 09:31:56,559 - root - INFO - [VRF.py:249] - Public Key: 043dd02bb0d13528d72460fe91b0b9c0944de7493060271d7c51edea501225bcf639e43adf038c7729131fd028b7fe22e225529362ae58e79d2af7ae3f722a4af3
+2023-09-07 09:31:56,562 - root - INFO - [VRF.py:222] - Chamber Index (from Beta): 9
+2023-09-07 09:31:56,562 - root - INFO - [VRF.py:252] - Expected Value: 8a25cfb0ad0148f87da0de1ae944dfb38d43e72c0c7eb00fc5ec06fe1fc5bb12
+2023-09-07 09:31:56,562 - root - INFO - [VRF.py:253] - Initial Hash: 8a25cfb0ad0148f87da0de1ae944dfb38d43e72c0c7eb00fc5ec06fe1fc5bb12
+2023-09-07 09:31:56,562 - root - INFO - [VRF.py:254] - Verification Result: True
+2023-09-07 09:32:55,025 - root - INFO - [VRF.py:235] - Revolver Size): 50
+2023-09-07 09:32:55,152 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): f567d473959ebece728c896d83bb5ef0ef97de6c54917ae2f7b6efe36ce897ad744ab536d27d8cb073e5b99169b4d378471a966d0fc5cd5e0e5b3ee67657fc44
+2023-09-07 09:32:55,242 - root - INFO - [VRF.py:172] - Chamber Index (for newGame): 30
+2023-09-07 09:32:55,242 - root - INFO - [VRF.py:241] - Initial Hash (for newGame): 72fe620e1dd21c0b9133798ca273676bfcd245f5f8195af5aac5afb883bc3f56
+2023-09-07 09:32:55,242 - root - INFO - [VRF.py:242] - Salt: 524bd6b16a78c6d0c3afe00af4068bda46aebeb77d45219d0f8347a508865929
+2023-09-07 09:32:55,425 - root - INFO - [VRF.py:193] - Chamber Index (for endGame): 16
+2023-09-07 09:32:55,426 - root - INFO - [VRF.py:245] - Alpha_Raw (Timestampe + Bets): 169410437530000300003000030000
+2023-09-07 09:32:55,426 - root - INFO - [VRF.py:246] - Alpha (Input Message): b'169410437530000300003000030000'
+2023-09-07 09:32:55,426 - root - INFO - [VRF.py:247] - Random Value (Beta): d285ae02053c3ba9da55f5a600daa56790d74687d1196367ec9f4c7fdc6e0caf
+2023-09-07 09:32:55,426 - root - INFO - [VRF.py:248] - Proof: 358c9a650f547d9e82b45b10218a7a223af290377befb1a27561ca04cfb037fd8a37964950ee6259b86e41b111852aea4c213f3c9ff710f82dbff30cf535bcfc
+2023-09-07 09:32:55,426 - root - INFO - [VRF.py:249] - Public Key: 0481e4e5cc8cbdcdaf7c2b9f2c6301d82ae6a3055001898528ca8168ed0665483c49b6cfaaecc4466e17969132aefa1cf8c6fb60a8792372be5402c4bffbe5f83f
+2023-09-07 09:32:55,429 - root - INFO - [VRF.py:222] - Chamber Index (from Beta): 16
+2023-09-07 09:32:55,429 - root - INFO - [VRF.py:252] - Expected Value: 72fe620e1dd21c0b9133798ca273676bfcd245f5f8195af5aac5afb883bc3f56
+2023-09-07 09:32:55,429 - root - INFO - [VRF.py:253] - Initial Hash: 72fe620e1dd21c0b9133798ca273676bfcd245f5f8195af5aac5afb883bc3f56
+2023-09-07 09:32:55,429 - root - INFO - [VRF.py:254] - Verification Result: False
+2023-09-07 09:33:03,561 - root - INFO - [VRF.py:234] - Revolver Size): 50
+2023-09-07 09:33:03,686 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): a57f32bf9a1829f6279db7c786998bffc67ea4c115923eceed26aaef3c3619be29be6015f5d72403316fb3ef4e5079521f2b3a949b29106d1700685ef334c9c2
+2023-09-07 09:33:03,686 - root - INFO - [VRF.py:171] - Chamber Index (for newGame): 6
+2023-09-07 09:33:03,686 - root - INFO - [VRF.py:240] - Initial Hash (for newGame): 14d84544e1dbcc8c6debf8eedeab3cde693c5df81bdf77dbdf4a77f27c1b61ae
+2023-09-07 09:33:03,686 - root - INFO - [VRF.py:241] - Salt: ca56b9dbb742358cc039e1d9a8bf045dc0ee0fcc21f6bfc10b5f77fea3e9b403
+2023-09-07 09:33:03,870 - root - INFO - [VRF.py:192] - Chamber Index (for endGame): 6
+2023-09-07 09:33:03,871 - root - INFO - [VRF.py:244] - Alpha_Raw (Timestampe + Bets): 169410438330000300003000030000
+2023-09-07 09:33:03,871 - root - INFO - [VRF.py:245] - Alpha (Input Message): b'169410438330000300003000030000'
+2023-09-07 09:33:03,871 - root - INFO - [VRF.py:246] - Random Value (Beta): f2f8840a48ef617c8419058fb238a4945b75d2ab5555fb2c273381cb3d9c8a1c
+2023-09-07 09:33:03,871 - root - INFO - [VRF.py:247] - Proof: 26f061eedc1cad11cf592573c635c921576d5fd134add54604f086953725383e74895910e390a0c336adc9f3db62575c5ffe2abcc3c821fe81292e61abc5fc08
+2023-09-07 09:33:03,871 - root - INFO - [VRF.py:248] - Public Key: 04aa1361db9bbfd63261d8e27e216ede18f8d4536ea7d44f8f9faddb1f2c4d2fdbcda75e02bd2c7c8ce154e6622c1bbad9725055c6b57b614930b7f38f7e639ddf
+2023-09-07 09:33:03,874 - root - INFO - [VRF.py:221] - Chamber Index (from Beta): 6
+2023-09-07 09:33:03,874 - root - INFO - [VRF.py:251] - Expected Value: 14d84544e1dbcc8c6debf8eedeab3cde693c5df81bdf77dbdf4a77f27c1b61ae
+2023-09-07 09:33:03,874 - root - INFO - [VRF.py:252] - Initial Hash: 14d84544e1dbcc8c6debf8eedeab3cde693c5df81bdf77dbdf4a77f27c1b61ae
+2023-09-07 09:33:03,874 - root - INFO - [VRF.py:253] - Verification Result: True
+2023-09-07 09:33:04,930 - root - INFO - [VRF.py:234] - Revolver Size): 50
+2023-09-07 09:33:05,053 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 65f5a81e85aa3a1fe53d74729eac0d2da5b9120761c878df62d59185c77a23de9f1b33f83e8451444b04218485c7501124e4cafae4afabc79d1a1c4f7a1ee969
+2023-09-07 09:33:05,053 - root - INFO - [VRF.py:171] - Chamber Index (for newGame): 1
+2023-09-07 09:33:05,053 - root - INFO - [VRF.py:240] - Initial Hash (for newGame): e54e028d3c42456f182096881c9c56f2bdfa8a40f74b513d83b45ff73e17cdc5
+2023-09-07 09:33:05,054 - root - INFO - [VRF.py:241] - Salt: 4c6fd2b921a2776e0b416eb79b8fa8c1ac63842ad87940bc14c556ad8886914d
+2023-09-07 09:33:05,238 - root - INFO - [VRF.py:192] - Chamber Index (for endGame): 1
+2023-09-07 09:33:05,239 - root - INFO - [VRF.py:244] - Alpha_Raw (Timestampe + Bets): 169410438430000300003000030000
+2023-09-07 09:33:05,239 - root - INFO - [VRF.py:245] - Alpha (Input Message): b'169410438430000300003000030000'
+2023-09-07 09:33:05,239 - root - INFO - [VRF.py:246] - Random Value (Beta): 77a3b9fe8848bab906803a4c66fc888024256f542d4274c0054bae636e3c8f15
+2023-09-07 09:33:05,239 - root - INFO - [VRF.py:247] - Proof: 46fa6c39b00d49a46c9e99f3fcfe300086c1ab9762d67304ddfd6ea69b773c07c256c488639adf54134629f399c1194ce1e79493f3768d74c4a048935380f806
+2023-09-07 09:33:05,239 - root - INFO - [VRF.py:248] - Public Key: 04f100dd5eb290fef5ff8c37e92223e698e2d1c6e35f31ffbe9b4c538c710c16fa18cabfa2b4db15209e08558f997846b579f75408f4fbe34e77b366fe13c0a3f4
+2023-09-07 09:33:05,242 - root - INFO - [VRF.py:221] - Chamber Index (from Beta): 1
+2023-09-07 09:33:05,242 - root - INFO - [VRF.py:251] - Expected Value: e54e028d3c42456f182096881c9c56f2bdfa8a40f74b513d83b45ff73e17cdc5
+2023-09-07 09:33:05,242 - root - INFO - [VRF.py:252] - Initial Hash: e54e028d3c42456f182096881c9c56f2bdfa8a40f74b513d83b45ff73e17cdc5
+2023-09-07 09:33:05,242 - root - INFO - [VRF.py:253] - Verification Result: True
+2023-09-07 09:33:06,108 - root - INFO - [VRF.py:234] - Revolver Size): 50
+2023-09-07 09:33:06,231 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 71c787531bfa8dd8c990f0908efbca37e2e764da539b75d1eeff6816e81621c2848966337c2a2a79415095a2f5041523610f50de8d8690dbc3ae8f297172f1e9
+2023-09-07 09:33:06,231 - root - INFO - [VRF.py:171] - Chamber Index (for newGame): 15
+2023-09-07 09:33:06,231 - root - INFO - [VRF.py:240] - Initial Hash (for newGame): 7cda9ddd3e13e4049588d4d5815e50b7b290f8654babdc7dc7e777fd391a8755
+2023-09-07 09:33:06,231 - root - INFO - [VRF.py:241] - Salt: 0367ea8d3e61d31033127351b513de9e17905584a1aeaa74730edcead8cff074
+2023-09-07 09:33:06,413 - root - INFO - [VRF.py:192] - Chamber Index (for endGame): 15
+2023-09-07 09:33:06,414 - root - INFO - [VRF.py:244] - Alpha_Raw (Timestampe + Bets): 169410438630000300003000030000
+2023-09-07 09:33:06,414 - root - INFO - [VRF.py:245] - Alpha (Input Message): b'169410438630000300003000030000'
+2023-09-07 09:33:06,414 - root - INFO - [VRF.py:246] - Random Value (Beta): 017b68bf053bcc248cc0880e415efeab9d76ecc5f9da2553d178e075c0e27a87
+2023-09-07 09:33:06,414 - root - INFO - [VRF.py:247] - Proof: e2809a3272dae5980aef22d93ef67a7eeeac2a5921c1e07ddf59084701763e1f7f17d68ab073fe3aaa3323e306f7dea07ebc55b570b016c0061ee1b142fc7da5
+2023-09-07 09:33:06,414 - root - INFO - [VRF.py:248] - Public Key: 04c31eeb42d30ddc2fb2c47cd0045ef8e73f80511a85d70c9e1f44909b04e2df98d093b26a3f165ccdb915400e1f2e096f09f2dae6179d27496ab1f5e48018db00
+2023-09-07 09:33:06,417 - root - INFO - [VRF.py:221] - Chamber Index (from Beta): 15
+2023-09-07 09:33:06,417 - root - INFO - [VRF.py:251] - Expected Value: 7cda9ddd3e13e4049588d4d5815e50b7b290f8654babdc7dc7e777fd391a8755
+2023-09-07 09:33:06,417 - root - INFO - [VRF.py:252] - Initial Hash: 7cda9ddd3e13e4049588d4d5815e50b7b290f8654babdc7dc7e777fd391a8755
+2023-09-07 09:33:06,417 - root - INFO - [VRF.py:253] - Verification Result: True
+2023-09-07 09:33:07,052 - root - INFO - [VRF.py:234] - Revolver Size): 50
+2023-09-07 09:33:07,178 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 1a85ee8585647d8550e92af270bc73c449ff11596b7409603b0c6229681557fd3754e2a6e71b1ade206987fcb4ed4215853243ee65de880483260071e2cfd229
+2023-09-07 09:33:07,178 - root - INFO - [VRF.py:171] - Chamber Index (for newGame): 37
+2023-09-07 09:33:07,178 - root - INFO - [VRF.py:240] - Initial Hash (for newGame): c842523bad0767e24d7e56670b0aa1ea83dd2f80c72aac6dc7870837213dabb6
+2023-09-07 09:33:07,178 - root - INFO - [VRF.py:241] - Salt: 78b6f4bb3512a41deb5bcdcdc170655db668407b0ec1fc114df38d31f9fd8d34
+2023-09-07 09:33:07,366 - root - INFO - [VRF.py:192] - Chamber Index (for endGame): 37
+2023-09-07 09:33:07,366 - root - INFO - [VRF.py:244] - Alpha_Raw (Timestampe + Bets): 169410438730000300003000030000
+2023-09-07 09:33:07,366 - root - INFO - [VRF.py:245] - Alpha (Input Message): b'169410438730000300003000030000'
+2023-09-07 09:33:07,366 - root - INFO - [VRF.py:246] - Random Value (Beta): 6cfbd7c886f84785ce48309affd5a366ee01bef77484ac5257e37620bc3c15bb
+2023-09-07 09:33:07,366 - root - INFO - [VRF.py:247] - Proof: 2c8568a2e4c7ee9814d09cc581b2eaa6a5bceda4904b974a1f2d40e01223f7d1c1ac48f503b83f642b2ca7a55d479f5b66d87306ad0099017d2a3c854b501102
+2023-09-07 09:33:07,366 - root - INFO - [VRF.py:248] - Public Key: 04d82897a2bc56a1f656b26a05ca6ec7897400e0bd9b9a157826e6bd95e6a5501800076e99aaed65b8546f78104294c711b42eeae1265dc797d2a08daab62108aa
+2023-09-07 09:33:07,369 - root - INFO - [VRF.py:221] - Chamber Index (from Beta): 37
+2023-09-07 09:33:07,370 - root - INFO - [VRF.py:251] - Expected Value: c842523bad0767e24d7e56670b0aa1ea83dd2f80c72aac6dc7870837213dabb6
+2023-09-07 09:33:07,370 - root - INFO - [VRF.py:252] - Initial Hash: c842523bad0767e24d7e56670b0aa1ea83dd2f80c72aac6dc7870837213dabb6
+2023-09-07 09:33:07,370 - root - INFO - [VRF.py:253] - Verification Result: True
+2023-09-07 09:33:07,891 - root - INFO - [VRF.py:234] - Revolver Size): 50
+2023-09-07 09:33:08,014 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): f32047cc9d12dec62944b4b45ad5d99c00020cea942a442643c41a5d31f0b6c1e3da64c62f13a6e702f0b37dff5e4322db006c9c34d9d148d3c26be7178e16ef
+2023-09-07 09:33:08,014 - root - INFO - [VRF.py:171] - Chamber Index (for newGame): 15
+2023-09-07 09:33:08,014 - root - INFO - [VRF.py:240] - Initial Hash (for newGame): 34b37b76f08ed62c02dcbb2c3f7e59bffa928c57185eafe4b1e2bce6aca2a031
+2023-09-07 09:33:08,014 - root - INFO - [VRF.py:241] - Salt: 7bccb01b273ab82dfc0c74e9da1ee4c8572d06639ece34148bea75bdfe317713
+2023-09-07 09:33:08,205 - root - INFO - [VRF.py:192] - Chamber Index (for endGame): 15
+2023-09-07 09:33:08,205 - root - INFO - [VRF.py:244] - Alpha_Raw (Timestampe + Bets): 169410438730000300003000030000
+2023-09-07 09:33:08,205 - root - INFO - [VRF.py:245] - Alpha (Input Message): b'169410438730000300003000030000'
+2023-09-07 09:33:08,205 - root - INFO - [VRF.py:246] - Random Value (Beta): d50a0a5a53d9b4bc3a1e57c52f323d4060a0809f2b232640e6512f70c53304c5
+2023-09-07 09:33:08,205 - root - INFO - [VRF.py:247] - Proof: 727fa81094edc1d056cfd5e2f8e945875ffbccbf7823853f81e5f532b75d86855a129fcaf5cdd3ca4acf08128d2e85167ff59c9099d33288271c4ffd87a20295
+2023-09-07 09:33:08,205 - root - INFO - [VRF.py:248] - Public Key: 04ddc67f2c886552da749d1158d5e63fbf3e3b157a67f90a85b7ff79ed2a93ccd849637920c5a1bfdd616615b0c3627f7500db9d000a11e69af3b8939decb426ee
+2023-09-07 09:33:08,208 - root - INFO - [VRF.py:221] - Chamber Index (from Beta): 15
+2023-09-07 09:33:08,208 - root - INFO - [VRF.py:251] - Expected Value: 34b37b76f08ed62c02dcbb2c3f7e59bffa928c57185eafe4b1e2bce6aca2a031
+2023-09-07 09:33:08,209 - root - INFO - [VRF.py:252] - Initial Hash: 34b37b76f08ed62c02dcbb2c3f7e59bffa928c57185eafe4b1e2bce6aca2a031
+2023-09-07 09:33:08,209 - root - INFO - [VRF.py:253] - Verification Result: True
+2023-09-07 09:34:07,016 - root - INFO - [VRF.py:236] - Revolver Size): 50
+2023-09-07 09:34:07,141 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 2e9d8ca1626515421c7e54a678a278bea3ca7a5a57f76f1f0a7560bcf29b0c1c67ac7def403c6c68b3f2f86c0f0491947ea44f620c79f72f08512a324130e5dd
+2023-09-07 09:34:21,819 - root - INFO - [VRF.py:236] - Revolver Size): 50
+2023-09-07 09:34:21,942 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 6b4df4701cb1c1af60cfb5805c2fba67e8551a795505c5d484d9d8fbc3f29b20357d6b2fa85c9e33d78c8d512ca9dd67550aaf5c5c669511ae0fbc5145394b67
+2023-09-07 09:34:22,036 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 13
+2023-09-07 09:34:22,036 - root - INFO - [VRF.py:242] - Initial Hash (for newGame): eaf5bab80f9c1cf70928f58671f8babf71a35641badc6768b0b55bf92e6ca92b
+2023-09-07 09:34:22,036 - root - INFO - [VRF.py:243] - Salt: 35508713106d3086e72c3644ce5ec87df69a4b06946fbac506dc0d2543032d09
+2023-09-07 09:34:22,226 - root - INFO - [VRF.py:194] - Chamber Index (for endGame): 10
+2023-09-07 09:34:22,226 - root - INFO - [VRF.py:246] - Alpha_Raw (Timestampe + Bets): 169410446130000300003000030000
+2023-09-07 09:34:22,226 - root - INFO - [VRF.py:247] - Alpha (Input Message): b'169410446130000300003000030000'
+2023-09-07 09:34:22,226 - root - INFO - [VRF.py:248] - Random Value (Beta): d7f50b85dafa2b17afec7881f3d8a0c59647d290c0b2a073bda1812fa6cb8315
+2023-09-07 09:34:22,227 - root - INFO - [VRF.py:249] - Proof: 2c64f5a64df75a2c903b62b855c994f326aaeb07b7706b1a320e2e21bf3e3220e25dc19a377f38414f6d330bcb2e37dfeccabbc7df711d78a91e877349667ff8
+2023-09-07 09:34:22,227 - root - INFO - [VRF.py:250] - Public Key: 0460f0c6680dfb737eee7bc9e72aadd16ea3613cdf8f3ada506f6cc6f38956bbfe78b9d425de062efafbc1a30bccd66b94db9a43510bf72ae2b939947968b5f0ed
+2023-09-07 09:34:22,232 - root - INFO - [VRF.py:223] - Chamber Index (from Beta): 10
+2023-09-07 09:34:22,232 - root - INFO - [VRF.py:253] - Expected Value: eaf5bab80f9c1cf70928f58671f8babf71a35641badc6768b0b55bf92e6ca92b
+2023-09-07 09:34:22,232 - root - INFO - [VRF.py:254] - Initial Hash: eaf5bab80f9c1cf70928f58671f8babf71a35641badc6768b0b55bf92e6ca92b
+2023-09-07 09:34:22,232 - root - INFO - [VRF.py:255] - Verification Result: False
+2023-09-07 09:34:23,342 - root - INFO - [VRF.py:236] - Revolver Size): 50
+2023-09-07 09:34:23,465 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): e5f446627dbeb43059435b86a7b49d7b3390d322196ac571f79fb818e82ceb7fe2d3634db3df1ed2ebbc2270ee7c98f805203aa284e81ce499cfec05259257b4
+2023-09-07 09:34:23,557 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 33
+2023-09-07 09:34:23,557 - root - INFO - [VRF.py:242] - Initial Hash (for newGame): 7082b0759c54fcc5a79da710920d7d409f9a1dd813d34281e0eb77ccf802fbe5
+2023-09-07 09:34:23,557 - root - INFO - [VRF.py:243] - Salt: 2bc09081e0eaa417809f77c293f2e6afba028fb2e7b066ffef2de93fa0ab963f
+2023-09-07 09:34:23,747 - root - INFO - [VRF.py:194] - Chamber Index (for endGame): 11
+2023-09-07 09:34:23,747 - root - INFO - [VRF.py:246] - Alpha_Raw (Timestampe + Bets): 169410446330000300003000030000
+2023-09-07 09:34:23,748 - root - INFO - [VRF.py:247] - Alpha (Input Message): b'169410446330000300003000030000'
+2023-09-07 09:34:23,748 - root - INFO - [VRF.py:248] - Random Value (Beta): a408aefd4bf03da29127ce59bcd476fbeefc7be5877b18be4c66124005590150
+2023-09-07 09:34:23,748 - root - INFO - [VRF.py:249] - Proof: e566a5297abb4cf5d28bc81fe2a371465666fe3fd3b09d50fc2fa4c16693989df293009f9224fa942d9aea567bf9ea3c5fc42456a0403f55a096a9434488a731
+2023-09-07 09:34:23,748 - root - INFO - [VRF.py:250] - Public Key: 042495c7fdaa2cce9aa151a58aeb2f65e0f7b81cf75533517edce8265da634dced6a8fb6efc3f5ee3b226d4096f53a38688bd119601898b3427b7866bae8100cb0
+2023-09-07 09:34:23,751 - root - INFO - [VRF.py:223] - Chamber Index (from Beta): 11
+2023-09-07 09:34:23,752 - root - INFO - [VRF.py:253] - Expected Value: 7082b0759c54fcc5a79da710920d7d409f9a1dd813d34281e0eb77ccf802fbe5
+2023-09-07 09:34:23,752 - root - INFO - [VRF.py:254] - Initial Hash: 7082b0759c54fcc5a79da710920d7d409f9a1dd813d34281e0eb77ccf802fbe5
+2023-09-07 09:34:23,752 - root - INFO - [VRF.py:255] - Verification Result: False
+2023-09-07 09:34:46,933 - root - INFO - [VRF.py:238] - Revolver Size): 50
+2023-09-07 09:34:47,057 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): df772b82af401e6a2c124451e290912761c8774777a9de840dc77ab495e16675a8a37d236d129b3cbc64e90a7a263963f47255157c09dfa0d6ea6555beb80559
+2023-09-07 09:34:47,156 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 48
+2023-09-07 09:34:47,157 - root - INFO - [VRF.py:244] - Initial Hash (for newGame): 354e2909f96ab000e2d478cd33e9a67a75bccab68d2bc716bce80fc18fff8fe3
+2023-09-07 09:34:47,157 - root - INFO - [VRF.py:245] - Salt: 11835b6c18a2bc74ebaed070552f514133ccdd050aed7ef95f7da86f4fa72d50
+2023-09-07 09:34:47,443 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 48
+2023-09-07 09:34:47,443 - root - INFO - [VRF.py:248] - Alpha_Raw (Timestampe + Bets): 169410448630000300003000030000
+2023-09-07 09:34:47,443 - root - INFO - [VRF.py:249] - Alpha (Input Message): b'169410448630000300003000030000'
+2023-09-07 09:34:47,443 - root - INFO - [VRF.py:250] - Random Value (Beta): 2095dc48419460be50942aa2eee68287ed14f57e642552cda0325fafd330da23
+2023-09-07 09:34:47,443 - root - INFO - [VRF.py:251] - Proof: 86eb42366df6b5de2a9992f995bbbbbffdc12c63719bff9385d44badbeedce73939cc578fbdc1f0fadb58688ff805c389a65150b72c00c1055a3fd3c4af60297
+2023-09-07 09:34:47,443 - root - INFO - [VRF.py:252] - Public Key: 049cdeafac08874b2631ef4244bd30a9205642f471678d39a20b64761b4b00406b511ea37ef360dbc750525f75a465d86be6290cb6de4f29b366b319c3db91c591
+2023-09-07 09:34:47,446 - root - INFO - [VRF.py:225] - Chamber Index (from Beta): 29
+2023-09-07 09:34:47,447 - root - INFO - [VRF.py:255] - Expected Value: 354e2909f96ab000e2d478cd33e9a67a75bccab68d2bc716bce80fc18fff8fe3
+2023-09-07 09:34:47,447 - root - INFO - [VRF.py:256] - Initial Hash: 354e2909f96ab000e2d478cd33e9a67a75bccab68d2bc716bce80fc18fff8fe3
+2023-09-07 09:34:47,447 - root - INFO - [VRF.py:257] - Verification Result: False
+2023-09-07 09:35:01,653 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:01,775 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 0588bd4b5d5155fc84bbbeddaf8c116dbb5fa9f7056dd6f0eb08540d988f82d96058b81efde97f74cfc82835431c6cafd670f6cc8ff10180e9c6b1f05a82538c
+2023-09-07 09:35:01,869 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 11
+2023-09-07 09:35:01,869 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): de9260e1d9f2fce79629b9aeb79c03bb52eb0fc25498ac21345aeed3f54e0c67
+2023-09-07 09:35:01,869 - root - INFO - [VRF.py:247] - Salt: 42e3adf8b582296ba0eb1ba8355f484198ddc0741b9e03f8791853ef167e2ee0
+2023-09-07 09:35:02,154 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 11
+2023-09-07 09:35:02,154 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410450130000300003000030000
+2023-09-07 09:35:02,154 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410450130000300003000030000'
+2023-09-07 09:35:02,154 - root - INFO - [VRF.py:252] - Random Value (Beta): c2284c901a3244be75503de0cc159ca6546cc7889063f8c830e4eb588543cb47
+2023-09-07 09:35:02,154 - root - INFO - [VRF.py:253] - Proof: 1dbaad1c2f7b562e084aa0b50f21e6689bbee8f0ff1241ed43fbf69f86c6156ab909866568c7f7f6dd5a98a62ba099379d4b12255edcd2a4fa075ada5b7e4c7b
+2023-09-07 09:35:02,154 - root - INFO - [VRF.py:254] - Public Key: 0439e4716f2c13f0e7d96723b2bd01a0fa3b91130d23f528b6d26fc5e9582678783668391e47e0aa5c6ab9fb9c718dc84eab860f3e4e328264fa4876d9828f2666
+2023-09-07 09:35:02,250 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 11
+2023-09-07 09:35:02,251 - root - INFO - [VRF.py:257] - Expected Value: de9260e1d9f2fce79629b9aeb79c03bb52eb0fc25498ac21345aeed3f54e0c67
+2023-09-07 09:35:02,251 - root - INFO - [VRF.py:258] - Initial Hash: de9260e1d9f2fce79629b9aeb79c03bb52eb0fc25498ac21345aeed3f54e0c67
+2023-09-07 09:35:02,251 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:35:03,388 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:03,510 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): f1956d7f5e54bf590b1bdaa290d9fe8f20ced8d95d2a36f5d5b3270ae75ec5fc34b09c21c8b617bbdd7d2bd8e6d7c49bfda8cfe7c4cb273a0930bf36dd698e07
+2023-09-07 09:35:03,602 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 40
+2023-09-07 09:35:03,603 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): 1c53fbdbfb22e4761b766a9dc95df3c82c7c0521db95d931a060c6bea2ef42a8
+2023-09-07 09:35:03,603 - root - INFO - [VRF.py:247] - Salt: b826a012106c826fad3f4075beafeb33afe375e4729fbe48fd58186a8a2c6e74
+2023-09-07 09:35:03,878 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 40
+2023-09-07 09:35:03,879 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410450330000300003000030000
+2023-09-07 09:35:03,879 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410450330000300003000030000'
+2023-09-07 09:35:03,879 - root - INFO - [VRF.py:252] - Random Value (Beta): 0a215bcda5a811e07ba08d8d672d6976716e0e9711600e0d285ae4b60d96809b
+2023-09-07 09:35:03,879 - root - INFO - [VRF.py:253] - Proof: 4b642ccf2507b056bee5edc8921d119910096bd77a94eb06b09d9c2f978db15e6c0ba9bbdf82c425933ce0d5a96c12a8cecfc3d6b42b05fcec19ecb017489788
+2023-09-07 09:35:03,879 - root - INFO - [VRF.py:254] - Public Key: 043ebe2ab36aaaa0411679ea8c03b3ab745e64d1a751388a0b68bc43439192c293a0df90b52a994238bc976d9483a4466296c4020995dbbbadbf3b7ecc286264d4
+2023-09-07 09:35:03,972 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 40
+2023-09-07 09:35:03,972 - root - INFO - [VRF.py:257] - Expected Value: 1c53fbdbfb22e4761b766a9dc95df3c82c7c0521db95d931a060c6bea2ef42a8
+2023-09-07 09:35:03,972 - root - INFO - [VRF.py:258] - Initial Hash: 1c53fbdbfb22e4761b766a9dc95df3c82c7c0521db95d931a060c6bea2ef42a8
+2023-09-07 09:35:03,972 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:35:04,702 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:04,827 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): d71694bbca2c85b13aa19857dad3df916af15d0fec760ff1c3ae747ee85d54de91430647c90c19fb44f76bafc1db1f6d326c97921145bcc663d88532029a4d19
+2023-09-07 09:35:04,918 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 34
+2023-09-07 09:35:04,918 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): dfb56c39ab5a04feef22fa02df8bac5d65c10108fea638a55902988f0a23a28a
+2023-09-07 09:35:04,918 - root - INFO - [VRF.py:247] - Salt: f00ca24f7b5b84da964a5bbddd6288a6527b7e6a0fde6842ff423eef5b71f3cf
+2023-09-07 09:35:05,198 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 34
+2023-09-07 09:35:05,198 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410450430000300003000030000
+2023-09-07 09:35:05,198 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410450430000300003000030000'
+2023-09-07 09:35:05,198 - root - INFO - [VRF.py:252] - Random Value (Beta): aa1da35298199d5548ea4db4ea17e3fed8c3f4247b728eae54d2abaa38d78df5
+2023-09-07 09:35:05,198 - root - INFO - [VRF.py:253] - Proof: 7dfde8b64932fa0cbd5e95f4ce939d094d3eba1860ed9aa2ca254714000cd203f5e99227d54d7cd56bbf59592b5c7350476053d16d151304006c0bd03e724364
+2023-09-07 09:35:05,198 - root - INFO - [VRF.py:254] - Public Key: 046d98aecc2db8f6d3c9538e798ddbc0185e8ee18a06c731cd29737b39e5c64377db75a19d98af04da433aac1c2e1b03644fdc19a039410544a28fb0a0cdf6a8e9
+2023-09-07 09:35:05,293 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 34
+2023-09-07 09:35:05,293 - root - INFO - [VRF.py:257] - Expected Value: dfb56c39ab5a04feef22fa02df8bac5d65c10108fea638a55902988f0a23a28a
+2023-09-07 09:35:05,294 - root - INFO - [VRF.py:258] - Initial Hash: dfb56c39ab5a04feef22fa02df8bac5d65c10108fea638a55902988f0a23a28a
+2023-09-07 09:35:05,294 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:35:05,925 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:06,050 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 50d140107e698bc097b855c759e8cbdb6e524788362ce2f96d4da4cf701cd1d46b4f86a586670fee43bf6cddd0d2d3971cc6f45fcb966cb07e176971ffe2ec6b
+2023-09-07 09:35:06,145 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 41
+2023-09-07 09:35:06,145 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): 75875e05ff55a2a0ee6db86152896bfc96c514de91ca6531032375bc3fcd7629
+2023-09-07 09:35:06,145 - root - INFO - [VRF.py:247] - Salt: 460477ec8978f1aeeecd9621e17e8ea6b8e6aa5817b55bdc8665f664c404537e
+2023-09-07 09:35:06,430 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 41
+2023-09-07 09:35:06,430 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410450530000300003000030000
+2023-09-07 09:35:06,430 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410450530000300003000030000'
+2023-09-07 09:35:06,430 - root - INFO - [VRF.py:252] - Random Value (Beta): c57caf5f2b1ef0487d4807044e6befe20d7c0c246fec3428ab9a2562c8a34a45
+2023-09-07 09:35:06,430 - root - INFO - [VRF.py:253] - Proof: 088111a107e04ea12e98d682c79e458b1a1ceb1571222d2fdb85931bfe4ac409adff01244b5769f81f5f91514445dc739e753f278454dab55cb603aac8d0ec77
+2023-09-07 09:35:06,431 - root - INFO - [VRF.py:254] - Public Key: 04591ff12b15fcfc6feb26b1f1cff970ab73901244767b16cf697ea090d7b577f20ba62299979ed0e69949462c25bc955d7bc1dd3ec257d5d264e669ef62700636
+2023-09-07 09:35:06,528 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 41
+2023-09-07 09:35:06,529 - root - INFO - [VRF.py:257] - Expected Value: 75875e05ff55a2a0ee6db86152896bfc96c514de91ca6531032375bc3fcd7629
+2023-09-07 09:35:06,529 - root - INFO - [VRF.py:258] - Initial Hash: 75875e05ff55a2a0ee6db86152896bfc96c514de91ca6531032375bc3fcd7629
+2023-09-07 09:35:06,529 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:35:07,211 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:07,334 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 5e4e2c177b5322e349106f6cc10696c9eb03dd125b6bd2e3ea260ed5ff73159c027a32d1db004e9094055207f60bf3520048dd0f442f2c812c54bad6a87b3e15
+2023-09-07 09:35:07,431 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 30
+2023-09-07 09:35:07,431 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): c65eff0cd392a6928b0c379a645f5c75a68e3ffc256201bffe95f34030adf980
+2023-09-07 09:35:07,431 - root - INFO - [VRF.py:247] - Salt: c499d4dfc7bdc3347c0137ca18375540d756f3538a45584a7886f03c5fdf1bc6
+2023-09-07 09:35:07,710 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 30
+2023-09-07 09:35:07,710 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410450730000300003000030000
+2023-09-07 09:35:07,710 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410450730000300003000030000'
+2023-09-07 09:35:07,710 - root - INFO - [VRF.py:252] - Random Value (Beta): fb1d164b7ac021b472ccff878f5c426592bca178952d006219dc62d84c6f65fd
+2023-09-07 09:35:07,711 - root - INFO - [VRF.py:253] - Proof: 448deeb61370e551780492b8515a5dc6cb32a6fec36cec86028367ea4ebc1e7628629b0caaf6a8b6ea0a2269e51e34d8cf15e05b941d66db1c874c7308d6db2d
+2023-09-07 09:35:07,711 - root - INFO - [VRF.py:254] - Public Key: 04e23130d8f1107451ce03086d70f981d511e42362fd9be12e1653611f2b95cf5efab86564c76bbd1de67046daa36d9ed54a5a4d93f9a7eca6bfa220beaa84dad1
+2023-09-07 09:35:07,806 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 30
+2023-09-07 09:35:07,806 - root - INFO - [VRF.py:257] - Expected Value: c65eff0cd392a6928b0c379a645f5c75a68e3ffc256201bffe95f34030adf980
+2023-09-07 09:35:07,806 - root - INFO - [VRF.py:258] - Initial Hash: c65eff0cd392a6928b0c379a645f5c75a68e3ffc256201bffe95f34030adf980
+2023-09-07 09:35:07,806 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:35:08,454 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:08,578 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): e4c309b5aff90fb30a74a0354a431d3389cd84238453cac0568d43ef09c5bec05e24aeebf9e8a15273a02020905116d742e95a7aaca6cb3bff93eedc86745da1
+2023-09-07 09:35:08,672 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 40
+2023-09-07 09:35:08,672 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): dcae2b0c15047678e5ebfd94b7d082820af7aa234d2110fcac85a34fdea27289
+2023-09-07 09:35:08,672 - root - INFO - [VRF.py:247] - Salt: 20fe65b617a4d0f04c081a6d90c65a00ae3f59b217d8aa052f9105fbcad9e3df
+2023-09-07 09:35:08,951 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 40
+2023-09-07 09:35:08,952 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410450830000300003000030000
+2023-09-07 09:35:08,952 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410450830000300003000030000'
+2023-09-07 09:35:08,952 - root - INFO - [VRF.py:252] - Random Value (Beta): 6d51fd77c0e8700ce7ed58c925c4a4611ee71b648a3e1482f0491a0b9f08a088
+2023-09-07 09:35:08,952 - root - INFO - [VRF.py:253] - Proof: a53cd049b36c0291349173f19a4f12e474d3ac8d974189f8c056ddf00ff000b2696fa2be2a9a8afda0fd09e3b691f48cba72cf5b3424856e7409b3cd66dbbe9e
+2023-09-07 09:35:08,952 - root - INFO - [VRF.py:254] - Public Key: 04aaa6a829574656c41bce8fea6fcd20787cf1903e3436e0945446b271f4beb75613d935abf083529708c3243c305cbbbb54f6701dbb2d3ad47e552082470fdd2e
+2023-09-07 09:35:09,049 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 40
+2023-09-07 09:35:09,050 - root - INFO - [VRF.py:257] - Expected Value: dcae2b0c15047678e5ebfd94b7d082820af7aa234d2110fcac85a34fdea27289
+2023-09-07 09:35:09,050 - root - INFO - [VRF.py:258] - Initial Hash: dcae2b0c15047678e5ebfd94b7d082820af7aa234d2110fcac85a34fdea27289
+2023-09-07 09:35:09,050 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:35:09,689 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:09,810 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): f3f0e40b363b1bb5dd1259b5b2f0d06f338397e49d983720ee68a534359d8eddcfab22e1e0fae08cc47e823da90f67bc1c1a910b9c2a23ce03e403b82172b053
+2023-09-07 09:35:09,908 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 35
+2023-09-07 09:35:09,908 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): 234c99bf733d4fbff3898b3c057132164b48eed633cffd93761fa279ef04f3f7
+2023-09-07 09:35:09,908 - root - INFO - [VRF.py:247] - Salt: 2c73c36e5f1b6ff87750c28df060ea2f7960a6d5cb4e600fd79cb4e62dee7db1
+2023-09-07 09:35:10,182 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 35
+2023-09-07 09:35:10,183 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410450930000300003000030000
+2023-09-07 09:35:10,183 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410450930000300003000030000'
+2023-09-07 09:35:10,183 - root - INFO - [VRF.py:252] - Random Value (Beta): 7cb148d87c2dfd7f8a7044e73f5ddaac06f04ca8aacecb63aaca124baa12526e
+2023-09-07 09:35:10,183 - root - INFO - [VRF.py:253] - Proof: bf4d1f0bed81bcc43e6484a013609294f22c096b64c0c4b8772e2c3f2063e2df0e4e08d4fc5159324069454e65cc27334e79f656fddbcb75c176033076657bd9
+2023-09-07 09:35:10,183 - root - INFO - [VRF.py:254] - Public Key: 04955e466322af03460ea4a1e13b40cb7074930ee532012b407f809145f8b62f1f503f23ac612a5541ab5dbd77b18a5f09a08af22415e80bdba21cda6b9a23c104
+2023-09-07 09:35:10,278 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 35
+2023-09-07 09:35:10,278 - root - INFO - [VRF.py:257] - Expected Value: 234c99bf733d4fbff3898b3c057132164b48eed633cffd93761fa279ef04f3f7
+2023-09-07 09:35:10,278 - root - INFO - [VRF.py:258] - Initial Hash: 234c99bf733d4fbff3898b3c057132164b48eed633cffd93761fa279ef04f3f7
+2023-09-07 09:35:10,278 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:35:11,012 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:11,136 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): b62da05bff44d1df48c4357c058e0b40d86826c2c6649bf63f86d557669424fcd089f431ea5534d60fc602b0c36905ef8b6b8b97298251ed4c5a01d02b31fe58
+2023-09-07 09:35:11,229 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 12
+2023-09-07 09:35:11,229 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): 256a31257ace7962b798e626b270af0fcc0508ef5c0b04e3dfe22cd95e4a402b
+2023-09-07 09:35:11,229 - root - INFO - [VRF.py:247] - Salt: 45fb4aea8d7781c63b697d81c3982e04d8d04ca252ac483e5435cb32e8ca1719
+2023-09-07 09:35:11,511 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 12
+2023-09-07 09:35:11,511 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410451130000300003000030000
+2023-09-07 09:35:11,511 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410451130000300003000030000'
+2023-09-07 09:35:11,511 - root - INFO - [VRF.py:252] - Random Value (Beta): 24979bd5a08b37ad206bc059707d5c8b5a9591b78a90b5aa4229318325574e3d
+2023-09-07 09:35:11,511 - root - INFO - [VRF.py:253] - Proof: c61f9479681608173be400ed7b9f32af3f708e5d402a91c0296f126937ac2fa2f252edfbe6e6f507e799bb8c960e55977e26eedeb267469e5b1aad7f0beefdf8
+2023-09-07 09:35:11,511 - root - INFO - [VRF.py:254] - Public Key: 04b3108485e60f48f523e9aa18e0234626d0eea0311bf80b24d26bace4feb2c85be5d91c9c487040772fe5535a62f9ff41ba38b6eb7deecbe39aa5987530327234
+2023-09-07 09:35:11,607 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 12
+2023-09-07 09:35:11,607 - root - INFO - [VRF.py:257] - Expected Value: 256a31257ace7962b798e626b270af0fcc0508ef5c0b04e3dfe22cd95e4a402b
+2023-09-07 09:35:11,607 - root - INFO - [VRF.py:258] - Initial Hash: 256a31257ace7962b798e626b270af0fcc0508ef5c0b04e3dfe22cd95e4a402b
+2023-09-07 09:35:11,607 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:35:12,193 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:12,320 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): ec953490474b1832aae37db13a7862539407c9f8507fa73ac316c1936862c69011ee1ab680cab75e0043e23d40f499542e06203dfd05b806c0563c7cf965c8aa
+2023-09-07 09:35:12,426 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 2
+2023-09-07 09:35:12,426 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): e7d4645f2a6d47fdebc30144cdeeb9b7c1546b8b6044741e10e78f85d2492d5a
+2023-09-07 09:35:12,426 - root - INFO - [VRF.py:247] - Salt: cdea8e5f1d6709aece82a7611922aa9bc9a148aa5e625a93b43c84e312038fc8
+2023-09-07 09:35:12,724 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 2
+2023-09-07 09:35:12,735 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410451230000300003000030000
+2023-09-07 09:35:12,736 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410451230000300003000030000'
+2023-09-07 09:35:12,736 - root - INFO - [VRF.py:252] - Random Value (Beta): 667d10d94b01ac15cdf3144352942b45b2c2ddc17435104a8c350f0db5697bbb
+2023-09-07 09:35:12,736 - root - INFO - [VRF.py:253] - Proof: d7fca35456661af4e334dc273f42f07d1798c749a825e561ffac6cc1d28589439cede0bf949a04655c5f10489ad3c5e9c0fe07ee490ff609496cc44f1f8c8738
+2023-09-07 09:35:12,755 - root - INFO - [VRF.py:254] - Public Key: 044394b1c0c80c3f5b016f041e91ac9d909a44713c54cec3a0521f039fd626921fc0beaecf1aa70bf638129577488b18bb2310908e1257f9fbd3223a41a040493d
+2023-09-07 09:35:12,861 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 2
+2023-09-07 09:35:12,861 - root - INFO - [VRF.py:257] - Expected Value: e7d4645f2a6d47fdebc30144cdeeb9b7c1546b8b6044741e10e78f85d2492d5a
+2023-09-07 09:35:12,861 - root - INFO - [VRF.py:258] - Initial Hash: e7d4645f2a6d47fdebc30144cdeeb9b7c1546b8b6044741e10e78f85d2492d5a
+2023-09-07 09:35:12,861 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:35:13,369 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:13,509 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): 9f69eae9953bea433da5f1d327ce7875335121251908df0ccc6efe5a933eafcd3152b0e6e3731ee6e8279d658be033b6dd23d46bb01a5d7c6cf292e64ca19148
+2023-09-07 09:35:13,611 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 13
+2023-09-07 09:35:13,616 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): 96201b7a2e267f3a41aa41c61ca246f024df62951d43cb96c30657124224e8c5
+2023-09-07 09:35:13,616 - root - INFO - [VRF.py:247] - Salt: 4e4122b5a05299628a446c28bfe5e8b2f380a4d56aa2b0fe1253e89329c9c843
+2023-09-07 09:35:13,989 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 13
+2023-09-07 09:35:13,989 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410451330000300003000030000
+2023-09-07 09:35:13,989 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410451330000300003000030000'
+2023-09-07 09:35:13,989 - root - INFO - [VRF.py:252] - Random Value (Beta): 121d8e93371910998ca105d423af855b5a382837deea2b33408901c9e314f7be
+2023-09-07 09:35:13,989 - root - INFO - [VRF.py:253] - Proof: bf13eb9b64dc55c0095a8e19e5dd2e9bda97593f3239955deaf025dd0fed5419983e8ede40c228f5ec8b0cb048ca0f37878a3a9bb6564c62fc62fbb8667bbe38
+2023-09-07 09:35:13,989 - root - INFO - [VRF.py:254] - Public Key: 040b24f6d1d29faf40897db8572cf8724753a942e9d24fcf8fb35d63a02fb48197ad44a4624ba5a9e95613657eb4c0763d568d9a418cc5c7c64e58d73dcf710f86
+2023-09-07 09:35:14,115 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 13
+2023-09-07 09:35:14,115 - root - INFO - [VRF.py:257] - Expected Value: 96201b7a2e267f3a41aa41c61ca246f024df62951d43cb96c30657124224e8c5
+2023-09-07 09:35:14,115 - root - INFO - [VRF.py:258] - Initial Hash: 96201b7a2e267f3a41aa41c61ca246f024df62951d43cb96c30657124224e8c5
+2023-09-07 09:35:14,115 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:35:14,595 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:14,724 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): da2c07bf31a3d5b757fe15aef8cf48624045767a53fc36ca9403d61a7815c2adae081c80ac08d9603abf5955f57ca94cc65a1babbc10e68dc0c7b8a23ada93ce
+2023-09-07 09:35:14,837 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 25
+2023-09-07 09:35:14,838 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): 98579a7e029cb866a04da4dfc2fdd0e79001c64702d9cf7df4e907c748426dcf
+2023-09-07 09:35:14,839 - root - INFO - [VRF.py:247] - Salt: 059beaa5f4a09f0b115d03e3fbd60f7b66002067c51b5e3e4ff085b2b99b0600
+2023-09-07 09:35:15,140 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 25
+2023-09-07 09:35:15,152 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410451430000300003000030000
+2023-09-07 09:35:15,153 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410451430000300003000030000'
+2023-09-07 09:35:15,153 - root - INFO - [VRF.py:252] - Random Value (Beta): 7f5d2a53d7c083b3b68f788a697ffa1be2d5ac43c631f8455f622fbae688b605
+2023-09-07 09:35:15,154 - root - INFO - [VRF.py:253] - Proof: 9bea3c8233ba8a293366f6a5ab605a9e1a91e9e6e806cbf655e1a026414378e1ba485f1dbf7a74366b057eb69cfd95fcf0a2048b6b592e548d6d1816689bffde
+2023-09-07 09:35:15,154 - root - INFO - [VRF.py:254] - Public Key: 04c4e14c4fb1bfcdd9def88cd63fe3d734b0da42ec4e6d580fd9f644398477ffe0c938d3910c26924083cc036c1113ffd20a950292676fee15763c61e8551243ad
+2023-09-07 09:35:15,261 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 25
+2023-09-07 09:35:15,261 - root - INFO - [VRF.py:257] - Expected Value: 98579a7e029cb866a04da4dfc2fdd0e79001c64702d9cf7df4e907c748426dcf
+2023-09-07 09:35:15,261 - root - INFO - [VRF.py:258] - Initial Hash: 98579a7e029cb866a04da4dfc2fdd0e79001c64702d9cf7df4e907c748426dcf
+2023-09-07 09:35:15,261 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:35:15,817 - root - INFO - [VRF.py:240] - Revolver Size): 50
+2023-09-07 09:35:15,982 - root - INFO - [VRF.py:165] - Seed Hash (shared with player): aafce232ed89169dce59515bb11353827dbe8475a70b6a8b0875221ed4730b15d84390f72c5d5cb1a535f07cc5c668d3f93be568261f38eda3d612f28314aac6
+2023-09-07 09:35:16,089 - root - INFO - [VRF.py:173] - Chamber Index (for newGame): 29
+2023-09-07 09:35:16,093 - root - INFO - [VRF.py:246] - Initial Hash (for newGame): ca52fd807fbfc5edd858b91d899cbd30d4ef7ee7e97838e97caaf570f751058f
+2023-09-07 09:35:16,093 - root - INFO - [VRF.py:247] - Salt: 408ab7e01a261e5ec17dcfa5e50318ddb87a58f3274b11b70705ad31a910aa2b
+2023-09-07 09:35:16,399 - root - INFO - [VRF.py:196] - Chamber Index (for endGame): 29
+2023-09-07 09:35:16,399 - root - INFO - [VRF.py:250] - Alpha_Raw (Timestampe + Bets): 169410451530000300003000030000
+2023-09-07 09:35:16,399 - root - INFO - [VRF.py:251] - Alpha (Input Message): b'169410451530000300003000030000'
+2023-09-07 09:35:16,399 - root - INFO - [VRF.py:252] - Random Value (Beta): 3bb8102199d762050cfe9e4b9fdcb95efac8f5ccc20ac454a5d657b9af96fdec
+2023-09-07 09:35:16,399 - root - INFO - [VRF.py:253] - Proof: 58dbd9dc3d29bbdfe08dea0865fee2f7ef67237f82dccb4ab1a457e784ccb903200c674f9882d58612b49e876d94320352e66f299986127f25de08b76092b5a9
+2023-09-07 09:35:16,400 - root - INFO - [VRF.py:254] - Public Key: 0498dfce65731e1e12f059bea2d9efcd35ec5b6fe9ade368ef7a190fbd7dcf930af705bcfdfa8393c384640f7b52498189de3494582f64167b8cf94b58304a16fd
+2023-09-07 09:35:16,507 - root - INFO - [VRF.py:227] - Chamber Index (from Beta): 29
+2023-09-07 09:35:16,507 - root - INFO - [VRF.py:257] - Expected Value: ca52fd807fbfc5edd858b91d899cbd30d4ef7ee7e97838e97caaf570f751058f
+2023-09-07 09:35:16,507 - root - INFO - [VRF.py:258] - Initial Hash: ca52fd807fbfc5edd858b91d899cbd30d4ef7ee7e97838e97caaf570f751058f
+2023-09-07 09:35:16,507 - root - INFO - [VRF.py:259] - Verification Result: True
+2023-09-07 09:39:34,183 - root - INFO - [VRF.py:247] - Revolver Size): 50
+2023-09-07 09:39:34,195 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): 16d6cdbb5ba748f1d964d3e4eab4189aca6b8683eada8f409a662ccde017f5f1fd96e1e439d21a6a8a2e4adf48102f4ec3a720d614b099507d7a5de18855f834
+2023-09-07 09:39:34,201 - root - INFO - [VRF.py:180] - Chamber Index (for newGame): 5
+2023-09-07 09:39:34,201 - root - INFO - [VRF.py:253] - Initial Hash (for newGame): a60a2efbbcbfc7464de787e1d370186effb2bf89dc6813c75cbde2d24b586fbf
+2023-09-07 09:39:34,201 - root - INFO - [VRF.py:254] - Salt: 0c522dd489d986cf00797a7fc1d496afaae202de65cacb5d39652836193fb1f3
+2023-09-07 09:39:34,296 - root - INFO - [VRF.py:203] - Chamber Index (for endGame): 25
+2023-09-07 09:39:34,296 - root - INFO - [VRF.py:257] - Alpha_Raw (Timestampe + Bets): 169410477430000300003000030000
+2023-09-07 09:39:34,296 - root - INFO - [VRF.py:258] - Alpha (Input Message): b'169410477430000300003000030000'
+2023-09-07 09:39:34,296 - root - INFO - [VRF.py:259] - Random Value (Beta): c2d7400c64d3600de907713350e4ebf6f120296bf15c71aa489a801295565a88
+2023-09-07 09:39:34,297 - root - INFO - [VRF.py:260] - Proof: 96ad2fd59754443207177d7745767a9815500b865539cf72ecb37f8068cd3f1e246b8ba3f99f7ef743864ac1ede73e01aa96bb69745ed111ffbb9179666e7d96
+2023-09-07 09:39:34,297 - root - INFO - [VRF.py:261] - Public Key: 0440dad5a45803845fe0a3639bcff68b2868c2312e610dd0daa8b2e10ce5befb86d44d1a5ef999e7e97f61829462471df8636fc9ba4e2a02ba9545262da2c3bcd4
+2023-09-07 09:39:34,392 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 25
+2023-09-07 09:39:34,393 - root - INFO - [VRF.py:264] - Expected Value: a60a2efbbcbfc7464de787e1d370186effb2bf89dc6813c75cbde2d24b586fbf
+2023-09-07 09:39:34,393 - root - INFO - [VRF.py:265] - Initial Hash: a60a2efbbcbfc7464de787e1d370186effb2bf89dc6813c75cbde2d24b586fbf
+2023-09-07 09:39:34,393 - root - INFO - [VRF.py:266] - Verification Result: False
+2023-09-07 09:39:35,602 - root - INFO - [VRF.py:247] - Revolver Size): 50
+2023-09-07 09:39:35,612 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): 674620a8897e571363eb93881254ac6c3baf8641a9ad3a264780745bb826b14596797819b754473c3799bc4225962eed4ac5fb98dfa5426096a914ac8e8b1518
+2023-09-07 09:39:35,613 - root - INFO - [VRF.py:180] - Chamber Index (for newGame): 20
+2023-09-07 09:39:35,613 - root - INFO - [VRF.py:253] - Initial Hash (for newGame): 604f8202219713924a2b7f8700ad01dcc113451cfcb5fc29d754454a526a7a72
+2023-09-07 09:39:35,613 - root - INFO - [VRF.py:254] - Salt: 44d9e9f310e0318899dd298282372c29481498442d5e05cce328dc1e75eb7bf4
+2023-09-07 09:39:35,708 - root - INFO - [VRF.py:203] - Chamber Index (for endGame): 19
+2023-09-07 09:39:35,708 - root - INFO - [VRF.py:257] - Alpha_Raw (Timestampe + Bets): 169410477530000300003000030000
+2023-09-07 09:39:35,708 - root - INFO - [VRF.py:258] - Alpha (Input Message): b'169410477530000300003000030000'
+2023-09-07 09:39:35,708 - root - INFO - [VRF.py:259] - Random Value (Beta): 050a893692c36ee6aed039c3fa350257442e1f86170e5e2718f88dc21f4c6ec8
+2023-09-07 09:39:35,708 - root - INFO - [VRF.py:260] - Proof: 5cb8f1e0fe66083ba3db21954273ba36ae37861cfc4304ec826bc567b682a3753a4bf361818bcfc1c5ebbe3300740d27af7296b83776294c1fcc34d9e5f2d615
+2023-09-07 09:39:35,708 - root - INFO - [VRF.py:261] - Public Key: 048a0ab053e37f087bb976285b2024c2d002d238bdfed1d51d42620b537112db013dcf5611c823be78f5e47ac8bd521a392b1f0f6d95eebbdb0a3e336e06cdd1e5
+2023-09-07 09:39:35,803 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 19
+2023-09-07 09:39:35,803 - root - INFO - [VRF.py:264] - Expected Value: 604f8202219713924a2b7f8700ad01dcc113451cfcb5fc29d754454a526a7a72
+2023-09-07 09:39:35,803 - root - INFO - [VRF.py:265] - Initial Hash: 604f8202219713924a2b7f8700ad01dcc113451cfcb5fc29d754454a526a7a72
+2023-09-07 09:39:35,803 - root - INFO - [VRF.py:266] - Verification Result: False
+2023-09-07 09:39:36,347 - root - INFO - [VRF.py:247] - Revolver Size): 50
+2023-09-07 09:39:36,357 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): 6624bf484a19b41eafb253b8b5cf957950aaa7e8f727c5d0a1ad0225b69cb1c34f7643067fdeb39ee7d801b0e7c3f4c4cea480e7698ffb3e9d17b037f1faeda6
+2023-09-07 09:39:36,357 - root - INFO - [VRF.py:180] - Chamber Index (for newGame): 10
+2023-09-07 09:39:36,358 - root - INFO - [VRF.py:253] - Initial Hash (for newGame): d3aa4e2816b8c472c7128a2a31cec7ceb3514c86e323a6cfd931ea336f13757a
+2023-09-07 09:39:36,358 - root - INFO - [VRF.py:254] - Salt: 0590fbdac09db442d9bedd95cdd00b35913a881206827016a4183326d412ac7f
+2023-09-07 09:39:36,454 - root - INFO - [VRF.py:203] - Chamber Index (for endGame): 42
+2023-09-07 09:39:36,454 - root - INFO - [VRF.py:257] - Alpha_Raw (Timestampe + Bets): 169410477630000300003000030000
+2023-09-07 09:39:36,454 - root - INFO - [VRF.py:258] - Alpha (Input Message): b'169410477630000300003000030000'
+2023-09-07 09:39:36,454 - root - INFO - [VRF.py:259] - Random Value (Beta): d5247dfa7e1168cf427a1ecff87e617cf31effcf91c7320524cad03378746f72
+2023-09-07 09:39:36,454 - root - INFO - [VRF.py:260] - Proof: 781d2adc4bedeaa6f2f74bd81408686e50b0e37bbc9bac74cc4d073bd05ba4eca4ccf2e6e467f91da7249b29b2d648879084a6b23766964dae46a29bb6f5148c
+2023-09-07 09:39:36,455 - root - INFO - [VRF.py:261] - Public Key: 04fde8a5369f03368b400cf73ebe5db3fbc318627e6f827a2e0d941c7fb55ac253da936799269acba4b9c8d0958a932530a609a3027b0fb20edad4b1c2daa6ea85
+2023-09-07 09:39:36,554 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 42
+2023-09-07 09:39:36,554 - root - INFO - [VRF.py:264] - Expected Value: d3aa4e2816b8c472c7128a2a31cec7ceb3514c86e323a6cfd931ea336f13757a
+2023-09-07 09:39:36,554 - root - INFO - [VRF.py:265] - Initial Hash: d3aa4e2816b8c472c7128a2a31cec7ceb3514c86e323a6cfd931ea336f13757a
+2023-09-07 09:39:36,554 - root - INFO - [VRF.py:266] - Verification Result: False
+2023-09-07 09:39:43,413 - root - INFO - [VRF.py:247] - Revolver Size): 50
+2023-09-07 09:39:43,424 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): a2e338cea28db2fea5fcbedbc4cfdd36b394655a02b9bb8cefb1a112f0703065beec85eac9b3ad0f2364e776c157a49efd526b941da587a224b6b2f867c007d4
+2023-09-07 09:39:43,424 - root - INFO - [VRF.py:180] - Chamber Index (for newGame): 31
+2023-09-07 09:39:43,424 - root - INFO - [VRF.py:253] - Initial Hash (for newGame): 308b1b0eb2902f9dcd8c59ba46d00087c5b80aa8ee0bf502cd2f7ae45b6b66ba
+2023-09-07 09:39:43,424 - root - INFO - [VRF.py:254] - Salt: 1cc3fb865ef237284194f75c1d5565f3120614bda836a64d94b0313190f82ff1
+2023-09-07 09:39:43,516 - root - INFO - [VRF.py:203] - Chamber Index (for endGame): 17
+2023-09-07 09:39:43,516 - root - INFO - [VRF.py:257] - Alpha_Raw (Timestampe + Bets): 169410478330000300003000030000
+2023-09-07 09:39:43,516 - root - INFO - [VRF.py:258] - Alpha (Input Message): b'169410478330000300003000030000'
+2023-09-07 09:39:43,516 - root - INFO - [VRF.py:259] - Random Value (Beta): 0968f200b5294f5f26692ac1f6d9b5a06aee0b55674f32960a1aff069a22da3a
+2023-09-07 09:39:43,516 - root - INFO - [VRF.py:260] - Proof: cfc36b5158a779fffed273dde4746607083f591df38d84ac0835810dd1d3f8431e12ccde72b00a071895a1926d178fd3a3cc12de6e6f2e5fd96cd3aa7ff20aef
+2023-09-07 09:39:43,517 - root - INFO - [VRF.py:261] - Public Key: 04cb9305b3f858bb94cf488a067aab6bc44274e62e6a4fce6064872fdf1f89ce5c8d2a31559deda67475cc20db77e552c5c0c12114c5947cc610153356db48d1b4
+2023-09-07 09:39:43,616 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 17
+2023-09-07 09:39:43,616 - root - INFO - [VRF.py:264] - Expected Value: 308b1b0eb2902f9dcd8c59ba46d00087c5b80aa8ee0bf502cd2f7ae45b6b66ba
+2023-09-07 09:39:43,616 - root - INFO - [VRF.py:265] - Initial Hash: 308b1b0eb2902f9dcd8c59ba46d00087c5b80aa8ee0bf502cd2f7ae45b6b66ba
+2023-09-07 09:39:43,616 - root - INFO - [VRF.py:266] - Verification Result: False
+2023-09-07 09:39:44,335 - root - INFO - [VRF.py:247] - Revolver Size): 50
+2023-09-07 09:39:44,345 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): cd05abc8f39fc8591bf004dcb74d47631f865dcc901ccd696d6b1e31389b5ff273e1c6350f7440fc6e2f92450819db10a0ac118d2e689afca1449ed2437a0d3e
+2023-09-07 09:39:44,346 - root - INFO - [VRF.py:180] - Chamber Index (for newGame): 49
+2023-09-07 09:39:44,346 - root - INFO - [VRF.py:253] - Initial Hash (for newGame): b128eeafa679d20df0b6aeb09711a1e4008fd33bdf908d2e72cf590b37cb24a6
+2023-09-07 09:39:44,346 - root - INFO - [VRF.py:254] - Salt: ea15841c95876a62c3805542d5e1993c30b9868efabcd5b644636bae7bf97345
+2023-09-07 09:39:44,441 - root - INFO - [VRF.py:203] - Chamber Index (for endGame): 46
+2023-09-07 09:39:44,441 - root - INFO - [VRF.py:257] - Alpha_Raw (Timestampe + Bets): 169410478430000300003000030000
+2023-09-07 09:39:44,441 - root - INFO - [VRF.py:258] - Alpha (Input Message): b'169410478430000300003000030000'
+2023-09-07 09:39:44,441 - root - INFO - [VRF.py:259] - Random Value (Beta): 692bce5b9bea50e6c7070713b64c02b23db939f8255e9b43de7fe30a16a357f6
+2023-09-07 09:39:44,441 - root - INFO - [VRF.py:260] - Proof: 7db00302edf4bde0e0508b6a1a14e0d53745a0e8b338115f33a2ad4cd83c16e384902b775e9cf0889fb823c78e93ac4ad77aef3ad02246d0ebeda43f730f7137
+2023-09-07 09:39:44,441 - root - INFO - [VRF.py:261] - Public Key: 046cbae65587ebbfa06a597b279c15c28383a9f48a30cd5d430d8877d4892f3f19670ee2081fac4401da209ae2f0cb62735bccd6f43217fde0714b8caabc79b2c5
+2023-09-07 09:39:44,538 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 46
+2023-09-07 09:39:44,539 - root - INFO - [VRF.py:264] - Expected Value: b128eeafa679d20df0b6aeb09711a1e4008fd33bdf908d2e72cf590b37cb24a6
+2023-09-07 09:39:44,539 - root - INFO - [VRF.py:265] - Initial Hash: b128eeafa679d20df0b6aeb09711a1e4008fd33bdf908d2e72cf590b37cb24a6
+2023-09-07 09:39:44,539 - root - INFO - [VRF.py:266] - Verification Result: False
+2023-09-07 09:39:45,281 - root - INFO - [VRF.py:247] - Revolver Size): 50
+2023-09-07 09:39:45,292 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): d73624b7f6fca7d2f9bca9f5ec48a399aa03a194e97a62375e54f3f83bc16054efd926a608ee1bb3c9bed6fdfd3d72c46812877cd944dd4fd57bb8707c34f559
+2023-09-07 09:39:45,292 - root - INFO - [VRF.py:180] - Chamber Index (for newGame): 4
+2023-09-07 09:39:45,292 - root - INFO - [VRF.py:253] - Initial Hash (for newGame): 76a0cde0a970e8862bbe23c0ee94dba18a5df330143249428c795e49a659799a
+2023-09-07 09:39:45,292 - root - INFO - [VRF.py:254] - Salt: 2c68aadeefab44dcebd57f035a7d471ffecc1a625f2ee3e0579d00b920694210
+2023-09-07 09:39:45,386 - root - INFO - [VRF.py:203] - Chamber Index (for endGame): 3
+2023-09-07 09:39:45,386 - root - INFO - [VRF.py:257] - Alpha_Raw (Timestampe + Bets): 169410478530000300003000030000
+2023-09-07 09:39:45,386 - root - INFO - [VRF.py:258] - Alpha (Input Message): b'169410478530000300003000030000'
+2023-09-07 09:39:45,386 - root - INFO - [VRF.py:259] - Random Value (Beta): 5383ce6f1b4b71e66800b650e38c6f6b3629a3ae022dd1d94d43657b47170c0a
+2023-09-07 09:39:45,387 - root - INFO - [VRF.py:260] - Proof: a5728fe756e70d7ad041c33895c6a3631366c24b37a68f0a4546f0c46ec21362be7218eecc8901ef6376eae7af12a39256c190de8b871536c0dd8bf9326c44a5
+2023-09-07 09:39:45,387 - root - INFO - [VRF.py:261] - Public Key: 04f746a1262f00ea7d48c7746ab18f9d86304c9c58d49f9fd988e87fc41add143013f9b76cbe082a2f0cdbe66e4ad783d814c7d8ca2b3706326093685807d8e36e
+2023-09-07 09:39:45,482 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 3
+2023-09-07 09:39:45,482 - root - INFO - [VRF.py:264] - Expected Value: 76a0cde0a970e8862bbe23c0ee94dba18a5df330143249428c795e49a659799a
+2023-09-07 09:39:45,482 - root - INFO - [VRF.py:265] - Initial Hash: 76a0cde0a970e8862bbe23c0ee94dba18a5df330143249428c795e49a659799a
+2023-09-07 09:39:45,482 - root - INFO - [VRF.py:266] - Verification Result: False
+2023-09-07 09:39:46,034 - root - INFO - [VRF.py:247] - Revolver Size): 50
+2023-09-07 09:39:46,045 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): 1b1a95abe4fd56e071b63089d43e018bbab797c56a0a01ec1fb6f871ec059d95995cc7f57025cbb0c4276769ff039cc1fdafb8c2504d2e7c540ff6b44bdc4f39
+2023-09-07 09:39:46,045 - root - INFO - [VRF.py:180] - Chamber Index (for newGame): 39
+2023-09-07 09:39:46,046 - root - INFO - [VRF.py:253] - Initial Hash (for newGame): cc2698692383fb8e716719026a3f0bef39954973318077fa034bb525b07dc55e
+2023-09-07 09:39:46,046 - root - INFO - [VRF.py:254] - Salt: eb4ae43f9df23a20acd4b990ca56551c072f5f198f54469a4a68efe1e60c00c9
+2023-09-07 09:39:46,138 - root - INFO - [VRF.py:203] - Chamber Index (for endGame): 32
+2023-09-07 09:39:46,139 - root - INFO - [VRF.py:257] - Alpha_Raw (Timestampe + Bets): 169410478630000300003000030000
+2023-09-07 09:39:46,139 - root - INFO - [VRF.py:258] - Alpha (Input Message): b'169410478630000300003000030000'
+2023-09-07 09:39:46,139 - root - INFO - [VRF.py:259] - Random Value (Beta): 141f6894494eee8d16ce377b39da48c6ac78a0cea73f6ff541184883121466a1
+2023-09-07 09:39:46,139 - root - INFO - [VRF.py:260] - Proof: acef372794b18e9b481fe883e4e5623e8ac76791a61c7ef46203decdd9349a067ed8908ac5f1e237af6050cd98c080b40711d916614b29c7eee2bedf611231fa
+2023-09-07 09:39:46,139 - root - INFO - [VRF.py:261] - Public Key: 04910026af050c24c9304395d1c18bd064b0f677cf9b347699fb5ffd809a36cfb21e7bf73c204ad4e5b0cf6a1b24892ea365120a18f672d42f6bdc8e7afb465bb0
+2023-09-07 09:39:46,236 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 32
+2023-09-07 09:39:46,236 - root - INFO - [VRF.py:264] - Expected Value: cc2698692383fb8e716719026a3f0bef39954973318077fa034bb525b07dc55e
+2023-09-07 09:39:46,236 - root - INFO - [VRF.py:265] - Initial Hash: cc2698692383fb8e716719026a3f0bef39954973318077fa034bb525b07dc55e
+2023-09-07 09:39:46,236 - root - INFO - [VRF.py:266] - Verification Result: False
+2023-09-07 09:39:52,019 - root - INFO - [VRF.py:247] - Revolver Size): 50
+2023-09-07 09:39:52,029 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): c15228c3df1c5f9eccbc13a5df42dcd05f63325b9fdc8646a9d86f81118a59813e3b3388f42df104231eabbae4b2da6c6dafc6a3ef9546ba06d8ae56bfd0e951
+2023-09-07 09:39:52,029 - root - INFO - [VRF.py:180] - Chamber Index (for newGame): 17
+2023-09-07 09:39:52,029 - root - INFO - [VRF.py:253] - Initial Hash (for newGame): 8939698428609ae6ff3305cd54db4b717c3f39d70d9228c3e8bf918e8929b606
+2023-09-07 09:39:52,029 - root - INFO - [VRF.py:254] - Salt: 2208f41cb7b6413387eb11130fd3011b97cedaa9b19e2b06b3c79a3252633719
+2023-09-07 09:39:52,121 - root - INFO - [VRF.py:203] - Chamber Index (for endGame): 36
+2023-09-07 09:39:52,122 - root - INFO - [VRF.py:257] - Alpha_Raw (Timestampe + Bets): 169410479230000300003000030000
+2023-09-07 09:39:52,122 - root - INFO - [VRF.py:258] - Alpha (Input Message): b'169410479230000300003000030000'
+2023-09-07 09:39:52,122 - root - INFO - [VRF.py:259] - Random Value (Beta): 048b0345bf249784af843d0d090d692c28160ebfeb3998b216113cae01f22f02
+2023-09-07 09:39:52,122 - root - INFO - [VRF.py:260] - Proof: 4bf3412c9f9a96fa16f3aec6cdd13659fa3a10e44b238022dcdd3803e6457aa6858f1022d3b7d23d408f539405c870a522886b9e4516b76a5ff58f65d6556ab4
+2023-09-07 09:39:52,122 - root - INFO - [VRF.py:261] - Public Key: 04df44909f58ec905e8b528fa2102199122e38db3da94a4001214f710a772519f229a91f676f55b4da7ae90a1de1b2cf3c4347428b7f05274e4387f07a9c7b191f
+2023-09-07 09:39:52,215 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 36
+2023-09-07 09:39:52,215 - root - INFO - [VRF.py:264] - Expected Value: 8939698428609ae6ff3305cd54db4b717c3f39d70d9228c3e8bf918e8929b606
+2023-09-07 09:39:52,215 - root - INFO - [VRF.py:265] - Initial Hash: 8939698428609ae6ff3305cd54db4b717c3f39d70d9228c3e8bf918e8929b606
+2023-09-07 09:39:52,215 - root - INFO - [VRF.py:266] - Verification Result: False
+2023-09-07 09:39:53,033 - root - INFO - [VRF.py:247] - Revolver Size): 50
+2023-09-07 09:39:53,045 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): 77e88220e5867e3cc6b6b5b69a3bfab4e6605d9ff142d3033fb14fdc8602f3a96eaa6fdd69ac391002493229c1cdaf94bf6ec9ac4a0f2d6dab2a066497eaaa71
+2023-09-07 09:39:53,045 - root - INFO - [VRF.py:180] - Chamber Index (for newGame): 1
+2023-09-07 09:39:53,045 - root - INFO - [VRF.py:253] - Initial Hash (for newGame): 9c206a2c40aa067811e2ae5a30792b2e9b0ad66a648707b91188fc4d3f898049
+2023-09-07 09:39:53,046 - root - INFO - [VRF.py:254] - Salt: fb29c7eb4277e48b4b71d47816fd69b3c51fa6eef77041c78a7f4483429d568b
+2023-09-07 09:39:53,142 - root - INFO - [VRF.py:203] - Chamber Index (for endGame): 9
+2023-09-07 09:39:53,143 - root - INFO - [VRF.py:257] - Alpha_Raw (Timestampe + Bets): 169410479330000300003000030000
+2023-09-07 09:39:53,143 - root - INFO - [VRF.py:258] - Alpha (Input Message): b'169410479330000300003000030000'
+2023-09-07 09:39:53,143 - root - INFO - [VRF.py:259] - Random Value (Beta): 443b69b74c560352f187b4ad67059ce2fac2f1b89b9673c407e11cc6f6d6c8a4
+2023-09-07 09:39:53,143 - root - INFO - [VRF.py:260] - Proof: c0ce8fbaa16af62de0d246e310c4d76eb0d2f94b5db7658addf52ad3600c5aa7590b841ec32614e5e2ab034371281e29a418bc43923f33c2fefd44141aeb070c
+2023-09-07 09:39:53,143 - root - INFO - [VRF.py:261] - Public Key: 0470bcfa838643cef4ed168107265130999bf1edf071ad817e0357ae6f9b8f740fb4469deafe1dd978515f3627df7c2a7f0501b9b1ff19df5e8799728831fdc385
+2023-09-07 09:39:53,242 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 9
+2023-09-07 09:39:53,242 - root - INFO - [VRF.py:264] - Expected Value: 9c206a2c40aa067811e2ae5a30792b2e9b0ad66a648707b91188fc4d3f898049
+2023-09-07 09:39:53,242 - root - INFO - [VRF.py:265] - Initial Hash: 9c206a2c40aa067811e2ae5a30792b2e9b0ad66a648707b91188fc4d3f898049
+2023-09-07 09:39:53,242 - root - INFO - [VRF.py:266] - Verification Result: False
+2023-09-07 09:39:53,737 - root - INFO - [VRF.py:247] - Revolver Size): 50
+2023-09-07 09:39:53,747 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): ec466b382604ad02ffd78a662bb0cdc57dbbbc0f854bc7751b6e831ade6c96af2716752eb342fb81784d57de145a3a188b0eed8b6c6303841caecc61c6628eb2
+2023-09-07 09:39:53,748 - root - INFO - [VRF.py:180] - Chamber Index (for newGame): 46
+2023-09-07 09:39:53,748 - root - INFO - [VRF.py:253] - Initial Hash (for newGame): 65f04a899d8420ee328c436f64ccd880c195293f31f5c5f3b70e316c41cbefad
+2023-09-07 09:39:53,748 - root - INFO - [VRF.py:254] - Salt: b1868263720fead10cae19a14919329fee0308099f581af938e7a67b66d83da1
+2023-09-07 09:39:53,840 - root - INFO - [VRF.py:203] - Chamber Index (for endGame): 11
+2023-09-07 09:39:53,841 - root - INFO - [VRF.py:257] - Alpha_Raw (Timestampe + Bets): 169410479330000300003000030000
+2023-09-07 09:39:53,841 - root - INFO - [VRF.py:258] - Alpha (Input Message): b'169410479330000300003000030000'
+2023-09-07 09:39:53,841 - root - INFO - [VRF.py:259] - Random Value (Beta): 04ffe1979305a982ed847b5c107db7ebd83d615511e6e5760415106bfe247ee8
+2023-09-07 09:39:53,841 - root - INFO - [VRF.py:260] - Proof: 6c3fa5da00e1674067a663b5848168995b39b0630f4be1c73aa578f13d9481860cd132c37df6b8a2c9370d4e5a97746ce52ab047a3668b358860e54117bc9344
+2023-09-07 09:39:53,841 - root - INFO - [VRF.py:261] - Public Key: 04fe2e1e860c1a229f3f164a1896c5ed3a5036d0114f3f0b051afaa2eaca9b85de10438daa1c8ec6ec2d6d342b05d54bfac48f7434fa3560b8b505ee1901d3dcfc
+2023-09-07 09:39:53,934 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 11
+2023-09-07 09:39:53,935 - root - INFO - [VRF.py:264] - Expected Value: 65f04a899d8420ee328c436f64ccd880c195293f31f5c5f3b70e316c41cbefad
+2023-09-07 09:39:53,935 - root - INFO - [VRF.py:265] - Initial Hash: 65f04a899d8420ee328c436f64ccd880c195293f31f5c5f3b70e316c41cbefad
+2023-09-07 09:39:53,935 - root - INFO - [VRF.py:266] - Verification Result: False
+2023-09-07 09:39:54,324 - root - INFO - [VRF.py:247] - Revolver Size): 50
+2023-09-07 09:39:54,334 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): 4e91b6f21e18efafc25321f393f6569c9dcd1a2f26726d7b5644a178fdbc3c32a1cc2a7b8aec79983b3530bcfa9e16c053bbf5f93c46b4ee58601238bf6161d2
+2023-09-07 09:39:54,334 - root - INFO - [VRF.py:180] - Chamber Index (for newGame): 39
+2023-09-07 09:39:54,335 - root - INFO - [VRF.py:253] - Initial Hash (for newGame): ff2e467644e01a9bf54db012aa257a028f0ff5b18ae6fdbe65e6fa238311c5c7
+2023-09-07 09:39:54,335 - root - INFO - [VRF.py:254] - Salt: 397775247a2064f31c0d3d52634202c70156814e757a692a6f3416f8925c128b
+2023-09-07 09:39:54,429 - root - INFO - [VRF.py:203] - Chamber Index (for endGame): 6
+2023-09-07 09:39:54,429 - root - INFO - [VRF.py:257] - Alpha_Raw (Timestampe + Bets): 169410479430000300003000030000
+2023-09-07 09:39:54,429 - root - INFO - [VRF.py:258] - Alpha (Input Message): b'169410479430000300003000030000'
+2023-09-07 09:39:54,429 - root - INFO - [VRF.py:259] - Random Value (Beta): c92d6675f9e07c879090ae9e191b07b129f43fb9a83c2bc02a0c9d1a5ffe58b6
+2023-09-07 09:39:54,429 - root - INFO - [VRF.py:260] - Proof: d7dc0ce011513c0a92bd8e9d7e6e11b36f868658bf410b23a2ca6541ee1f08c46e4604ffa19d973334015a4259fe8ee064a9a21a2e5792c139d49d0fec6b69a9
+2023-09-07 09:39:54,429 - root - INFO - [VRF.py:261] - Public Key: 04cf9bbc72d49333c36333cc84653cf66379b2f3557d89f941edcec633c830232257f50248aca0dedb113369a9f022292307d4f6f4b01b8eda0057f36eb1d29782
+2023-09-07 09:39:54,525 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 6
+2023-09-07 09:39:54,525 - root - INFO - [VRF.py:264] - Expected Value: ff2e467644e01a9bf54db012aa257a028f0ff5b18ae6fdbe65e6fa238311c5c7
+2023-09-07 09:39:54,525 - root - INFO - [VRF.py:265] - Initial Hash: ff2e467644e01a9bf54db012aa257a028f0ff5b18ae6fdbe65e6fa238311c5c7
+2023-09-07 09:39:54,525 - root - INFO - [VRF.py:266] - Verification Result: False
+2023-09-07 09:40:05,795 - root - INFO - [VRF.py:246] - Revolver Size): 50
+2023-09-07 09:40:05,805 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): d6c4dab6868f0616d6b156b3c151556206c4a07ec5d3e9e7663189445b58ed5baaddfcb14619bac69708421ab58a0a267059a8fb93da5deaaa3e884c4e0d3d46
+2023-09-07 09:40:05,904 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 13
+2023-09-07 09:40:05,904 - root - INFO - [VRF.py:252] - Initial Hash (for newGame): c16b496a01b617936d54ea7211d6e1ff70f9fa061679e24edfe9d3d07f37bda9
+2023-09-07 09:40:05,904 - root - INFO - [VRF.py:253] - Salt: 9ea85ec9d5b938e7ca6197156fa9de4aa300038599d9116e90ce78768e0aa480
+2023-09-07 09:40:05,996 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 13
+2023-09-07 09:40:05,996 - root - INFO - [VRF.py:256] - Alpha_Raw (Timestampe + Bets): 169410480530000300003000030000
+2023-09-07 09:40:05,997 - root - INFO - [VRF.py:257] - Alpha (Input Message): b'169410480530000300003000030000'
+2023-09-07 09:40:05,997 - root - INFO - [VRF.py:258] - Random Value (Beta): 2355752f1b79f4e6cae286124021b51bae057a4ff39ded516d0c6716fc3b8a62
+2023-09-07 09:40:05,997 - root - INFO - [VRF.py:259] - Proof: d6202bb3df52a436d837574fdb2ee9b31431a23b1de43ee46ff146928a7685b2c4a0c4a9f95bad710b7864fd67e87e3a768e8b03476be4cbb06045e895d8ecf1
+2023-09-07 09:40:05,997 - root - INFO - [VRF.py:260] - Public Key: 048c902c4e6044625382ec6eb6e94f4f0bc1ae6b4813061a92d96e99f91b0d08e74e4ae09e7ae5d0415525b2b820bd282df53aa547cc858008c365cb9d13e3929f
+2023-09-07 09:40:06,094 - root - INFO - [VRF.py:233] - Chamber Index (from Beta): 13
+2023-09-07 09:40:06,094 - root - INFO - [VRF.py:263] - Expected Value: c16b496a01b617936d54ea7211d6e1ff70f9fa061679e24edfe9d3d07f37bda9
+2023-09-07 09:40:06,094 - root - INFO - [VRF.py:264] - Initial Hash: c16b496a01b617936d54ea7211d6e1ff70f9fa061679e24edfe9d3d07f37bda9
+2023-09-07 09:40:06,094 - root - INFO - [VRF.py:265] - Verification Result: True
+2023-09-07 09:40:08,258 - root - INFO - [VRF.py:246] - Revolver Size): 50
+2023-09-07 09:40:08,270 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): c2fddc8d374915c1e474ce863c65480f37ea133910f22c6510fac4005716853ce62c328e035d8b3202deb43e3e33c90c4cae4d5b426f5c330b14ffeb1d57affb
+2023-09-07 09:40:08,368 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 20
+2023-09-07 09:40:08,368 - root - INFO - [VRF.py:252] - Initial Hash (for newGame): e1e1e5b291f2997fa692e8acfd6717791cf61f5fd168bae807d0dea7a5f11631
+2023-09-07 09:40:08,368 - root - INFO - [VRF.py:253] - Salt: b925e8d34145f31bcbb4998878ae03a663bde85fae60443c68a7436ffb03ac93
+2023-09-07 09:40:08,462 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 20
+2023-09-07 09:40:08,462 - root - INFO - [VRF.py:256] - Alpha_Raw (Timestampe + Bets): 169410480830000300003000030000
+2023-09-07 09:40:08,462 - root - INFO - [VRF.py:257] - Alpha (Input Message): b'169410480830000300003000030000'
+2023-09-07 09:40:08,462 - root - INFO - [VRF.py:258] - Random Value (Beta): 9cf60bd3378244fd63436ee0f0464bfce7c4677232627fcf633747c3937e7f45
+2023-09-07 09:40:08,463 - root - INFO - [VRF.py:259] - Proof: a8214b05a9a8d5289927be959e0794cfa43170d5d269795ffde1fdd4e371185953d981222be9ee7766826df58ca4e378ae439c9fb05586e4134c889d92712230
+2023-09-07 09:40:08,463 - root - INFO - [VRF.py:260] - Public Key: 045ef5d84ef22bcd26267fc58b26e5570c56e8738a2154b72f3b124ff793444a92d4888ddd787e8eedcbc83fbe45659cb260e355c6f60815a1c88ad850334486d2
+2023-09-07 09:40:08,559 - root - INFO - [VRF.py:233] - Chamber Index (from Beta): 20
+2023-09-07 09:40:08,559 - root - INFO - [VRF.py:263] - Expected Value: e1e1e5b291f2997fa692e8acfd6717791cf61f5fd168bae807d0dea7a5f11631
+2023-09-07 09:40:08,559 - root - INFO - [VRF.py:264] - Initial Hash: e1e1e5b291f2997fa692e8acfd6717791cf61f5fd168bae807d0dea7a5f11631
+2023-09-07 09:40:08,559 - root - INFO - [VRF.py:265] - Verification Result: True
+2023-09-07 09:40:09,152 - root - INFO - [VRF.py:246] - Revolver Size): 50
+2023-09-07 09:40:09,163 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): 36198e95ba827c90e0729457b7b00ef6f0058f51c6ba4316de055a3c82185b5760baf691ddaa205e7438086903b7cdeebad06fbc180f017502e2c3d329671863
+2023-09-07 09:40:09,259 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 47
+2023-09-07 09:40:09,259 - root - INFO - [VRF.py:252] - Initial Hash (for newGame): 45e055a360791adc4ef31a8c0ca3b08042723bcdfdbaf503f690d093f8ad9faf
+2023-09-07 09:40:09,259 - root - INFO - [VRF.py:253] - Salt: f76b150dea37efc4bb05d07f102e2bdaed6d7e4326c7566c35e0ec06d34b4960
+2023-09-07 09:40:09,354 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 47
+2023-09-07 09:40:09,354 - root - INFO - [VRF.py:256] - Alpha_Raw (Timestampe + Bets): 169410480930000300003000030000
+2023-09-07 09:40:09,354 - root - INFO - [VRF.py:257] - Alpha (Input Message): b'169410480930000300003000030000'
+2023-09-07 09:40:09,354 - root - INFO - [VRF.py:258] - Random Value (Beta): 28fc2952389146a6f37cf798948667d3814640e132639334d435fdb26e3d2dc8
+2023-09-07 09:40:09,355 - root - INFO - [VRF.py:259] - Proof: a94e20cd689ec55f7c2b16dcd760b1148f0f4d48ec7c29ec64c6154e77b971853703abb756c3e599f7a07fce44698b4a4f8c21c86f7b7c7ac695f0b743cee565
+2023-09-07 09:40:09,355 - root - INFO - [VRF.py:260] - Public Key: 042e599fbe8e8e053204a65f310090cb4a8e60adf67baa79427b4900d6a2f9b2a6a29b9e4a17a6a608b9b825b7a9a8dd62b7be11cd18fae18f0b649a7a7f0d4b8a
+2023-09-07 09:40:09,451 - root - INFO - [VRF.py:233] - Chamber Index (from Beta): 47
+2023-09-07 09:40:09,451 - root - INFO - [VRF.py:263] - Expected Value: 45e055a360791adc4ef31a8c0ca3b08042723bcdfdbaf503f690d093f8ad9faf
+2023-09-07 09:40:09,451 - root - INFO - [VRF.py:264] - Initial Hash: 45e055a360791adc4ef31a8c0ca3b08042723bcdfdbaf503f690d093f8ad9faf
+2023-09-07 09:40:09,451 - root - INFO - [VRF.py:265] - Verification Result: True
+2023-09-07 09:40:09,932 - root - INFO - [VRF.py:246] - Revolver Size): 50
+2023-09-07 09:40:09,942 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): b16c0d44702b3617fb8eef68eefc079ab99124ad7d46422da337e370af7671b70ef04c090b56d9150a7e5bcaec980c18ab680f008d053fc01a4fa354af056e94
+2023-09-07 09:40:10,035 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 43
+2023-09-07 09:40:10,036 - root - INFO - [VRF.py:252] - Initial Hash (for newGame): d027754798e1e2776d4156c59c01ae9e917a9f279ca616a27eea37e6362105e6
+2023-09-07 09:40:10,036 - root - INFO - [VRF.py:253] - Salt: 6e488c015aa0d60369f5dd16cf285f1371792cd2eac67a22a0649dbc5dedbf68
+2023-09-07 09:40:10,129 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 43
+2023-09-07 09:40:10,129 - root - INFO - [VRF.py:256] - Alpha_Raw (Timestampe + Bets): 169410480930000300003000030000
+2023-09-07 09:40:10,129 - root - INFO - [VRF.py:257] - Alpha (Input Message): b'169410480930000300003000030000'
+2023-09-07 09:40:10,129 - root - INFO - [VRF.py:258] - Random Value (Beta): c2ed101ba908dcd9cf575138af95c4a2ba8535b01bd95c1d0a349fbe626607dc
+2023-09-07 09:40:10,130 - root - INFO - [VRF.py:259] - Proof: 075ee9695be32fd9d296783725262c57d4a1f9481e21398075287d1a9fb229c19647eefea34f489138ad93a34b08bdb61a24f6d28d96b4b3f83c4f8b7529b6bb
+2023-09-07 09:40:10,130 - root - INFO - [VRF.py:260] - Public Key: 04f5e91bc802487dac16ab7c802af6fa52d344b8f27ec2d807e27c9e53934871f0b5d12ca754667bf564cfcea19ac7eb9729a240f8fdba92cbc0d4161a0d418baf
+2023-09-07 09:40:10,228 - root - INFO - [VRF.py:233] - Chamber Index (from Beta): 43
+2023-09-07 09:40:10,228 - root - INFO - [VRF.py:263] - Expected Value: d027754798e1e2776d4156c59c01ae9e917a9f279ca616a27eea37e6362105e6
+2023-09-07 09:40:10,228 - root - INFO - [VRF.py:264] - Initial Hash: d027754798e1e2776d4156c59c01ae9e917a9f279ca616a27eea37e6362105e6
+2023-09-07 09:40:10,228 - root - INFO - [VRF.py:265] - Verification Result: True
+2023-09-07 09:40:10,639 - root - INFO - [VRF.py:246] - Revolver Size): 50
+2023-09-07 09:40:10,649 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): f45bd809868491dbaf232668386cff2219a8694d8d84a999f7a9b0b25b96d5750a908892ae523b772e49be7ff3dc3f265cb56795b8e056291a58001ae13bfb18
+2023-09-07 09:40:10,742 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 47
+2023-09-07 09:40:10,743 - root - INFO - [VRF.py:252] - Initial Hash (for newGame): f64e7612a6da4556d27a46095da222c6510bf348445fb34ee7f14489b859f5cf
+2023-09-07 09:40:10,743 - root - INFO - [VRF.py:253] - Salt: 0a91aaadd3c951e69a9cdabf962fcd4c416ea7a863512654468c140e24a297e0
+2023-09-07 09:40:10,836 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 47
+2023-09-07 09:40:10,836 - root - INFO - [VRF.py:256] - Alpha_Raw (Timestampe + Bets): 169410481030000300003000030000
+2023-09-07 09:40:10,836 - root - INFO - [VRF.py:257] - Alpha (Input Message): b'169410481030000300003000030000'
+2023-09-07 09:40:10,836 - root - INFO - [VRF.py:258] - Random Value (Beta): e5d9f61737a5f61bfa72b027a2612766f37af29f7c106ef3af16fa7e0340869c
+2023-09-07 09:40:10,837 - root - INFO - [VRF.py:259] - Proof: 69a27b42804c7f89d8728676e46078ab92d3e8d6cdd7f777256831953d5bea68bffdebe9c51c2df0aae73effaf4f715db419eb21fbc915f2673b30bc64e6be2d
+2023-09-07 09:40:10,837 - root - INFO - [VRF.py:260] - Public Key: 04978f90aaff514b7239e2b96cf20264499f36d5f3dbc943c166ac90bcbc5ac714d18d657d02a4a4f05e01b58ebdcaa86ac8adb4a68fde175669336271989bd4c3
+2023-09-07 09:40:10,933 - root - INFO - [VRF.py:233] - Chamber Index (from Beta): 47
+2023-09-07 09:40:10,933 - root - INFO - [VRF.py:263] - Expected Value: f64e7612a6da4556d27a46095da222c6510bf348445fb34ee7f14489b859f5cf
+2023-09-07 09:40:10,933 - root - INFO - [VRF.py:264] - Initial Hash: f64e7612a6da4556d27a46095da222c6510bf348445fb34ee7f14489b859f5cf
+2023-09-07 09:40:10,934 - root - INFO - [VRF.py:265] - Verification Result: True
+2023-09-07 09:40:11,259 - root - INFO - [VRF.py:246] - Revolver Size): 50
+2023-09-07 09:40:11,269 - root - INFO - [VRF.py:171] - Seed Hash (shared with player): 13ebe22ee96b838176c0bea613339585cf8bb859dee8b1e91d79bf41d3deb5b7c6985897f930f436aff5a5b3ae5ff96f7ab37c2af6f6472cd0a9e3f119caf32a
+2023-09-07 09:40:11,363 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 8
+2023-09-07 09:40:11,363 - root - INFO - [VRF.py:252] - Initial Hash (for newGame): 1a1134a3a7e83e23de716149d29a356a1d132303e57a8c403cf6b367d8af6156
+2023-09-07 09:40:11,363 - root - INFO - [VRF.py:253] - Salt: c679143d5e8a59130d95a91bc116e6141ca0b512f24491ea62d5101aa7af57da
+2023-09-07 09:40:11,458 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 8
+2023-09-07 09:40:11,458 - root - INFO - [VRF.py:256] - Alpha_Raw (Timestampe + Bets): 169410481130000300003000030000
+2023-09-07 09:40:11,458 - root - INFO - [VRF.py:257] - Alpha (Input Message): b'169410481130000300003000030000'
+2023-09-07 09:40:11,458 - root - INFO - [VRF.py:258] - Random Value (Beta): 08fcc45dd91cc81ff90251d60d98c07af98ee8fc608ffdb33d9e610c498d3bd6
+2023-09-07 09:40:11,458 - root - INFO - [VRF.py:259] - Proof: f8fa7f33f62ca228d880376f797a8fa6f8b091a1b53e60e5134bf5636f7cbc3201b0dfde1de6c28371b47ffab8b37700c2d5c21f963318844c1585eb38bbea47
+2023-09-07 09:40:11,458 - root - INFO - [VRF.py:260] - Public Key: 04cb9761e0a60909752820f7b1b67682d5bdfef1186b60d3b1b4790f7b80e35a7e657c5d2dd5dc675c9aaf841997eb4dccef39cd5d5add6c790129dd88436883c6
+2023-09-07 09:40:11,555 - root - INFO - [VRF.py:233] - Chamber Index (from Beta): 8
+2023-09-07 09:40:11,555 - root - INFO - [VRF.py:263] - Expected Value: 1a1134a3a7e83e23de716149d29a356a1d132303e57a8c403cf6b367d8af6156
+2023-09-07 09:40:11,556 - root - INFO - [VRF.py:264] - Initial Hash: 1a1134a3a7e83e23de716149d29a356a1d132303e57a8c403cf6b367d8af6156
+2023-09-07 09:40:11,556 - root - INFO - [VRF.py:265] - Verification Result: True
+2023-09-07 09:41:50,351 - root - INFO - [VRF.py:245] - Revolver Size): 50
+2023-09-07 09:41:50,362 - root - INFO - [VRF.py:170] - Seed Hash (shared with player): 3018d7237c31f6a34b022d11435ac5c8fa09ead61c2d3e41905f5dc6f36508cd8940f30371f78e794561f7b88c8191dcf125293f20dfaad4dc229d0a5b0b12b6
+2023-09-07 09:41:50,362 - root - INFO - [VRF.py:178] - Chamber Index (for newGame): 47
+2023-09-07 09:41:50,363 - root - INFO - [VRF.py:251] - Initial Hash (for newGame): 6cded92f38408847e0fb11e8c2f9aed1f6dac028749ebaed8e1eff09f3d65f85
+2023-09-07 09:41:50,363 - root - INFO - [VRF.py:252] - Salt: 609dacdbb319df7715019ba18aa20a902da589be7404d6280798f124d1cb7d35
+2023-09-07 09:41:50,460 - root - INFO - [VRF.py:201] - Chamber Index (for endGame): 46
+2023-09-07 09:41:50,460 - root - INFO - [VRF.py:255] - Alpha_Raw (Timestampe + Bets): 169410491030000300003000030000
+2023-09-07 09:41:50,460 - root - INFO - [VRF.py:256] - Alpha (Input Message): b'169410491030000300003000030000'
+2023-09-07 09:41:50,460 - root - INFO - [VRF.py:257] - Random Value (Beta): 227b73306fa10f19cc5291fbe8a8c3531170ee1d8944beedf741f4bbb1cdfee7
+2023-09-07 09:41:50,461 - root - INFO - [VRF.py:258] - Proof: d724e192136567816859716e3574de9871ac8143f5e805ca8edb7451bf3b3257fb9d55c904b1f1117a0dec5183a90ed1f516dd8a10ec8bad2ea3de0548cbc2c7
+2023-09-07 09:41:50,461 - root - INFO - [VRF.py:259] - Public Key: 04b339dde17656f2b46b07d2c398b35dd0f102aafd61737766d3feaced9e4efbb04013626bd4250bfc79672e49bb2000f4874fe6305535f713e8194353ed9e32b4
+2023-09-07 09:41:50,557 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 46
+2023-09-07 09:41:50,558 - root - INFO - [VRF.py:262] - Expected Value: 6cded92f38408847e0fb11e8c2f9aed1f6dac028749ebaed8e1eff09f3d65f85
+2023-09-07 09:41:50,558 - root - INFO - [VRF.py:263] - Initial Hash: 6cded92f38408847e0fb11e8c2f9aed1f6dac028749ebaed8e1eff09f3d65f85
+2023-09-07 09:41:50,558 - root - INFO - [VRF.py:264] - Verification Result: False
+2023-09-07 09:42:07,507 - root - INFO - [VRF.py:245] - Revolver Size): 50
+2023-09-07 09:42:07,519 - root - INFO - [VRF.py:170] - Seed Hash (shared with player): b79ce2ad0289b11b47280d1fc8adb707771553af106c7c15e1fb0e1b20b61f0047911963cfd00326a44912a3194df265b8f6a419d853b288b7c0d0401d97ebe2
+2023-09-07 09:42:07,519 - root - INFO - [VRF.py:178] - Chamber Index (for newGame): 19
+2023-09-07 09:42:07,519 - root - INFO - [VRF.py:251] - Initial Hash (for newGame): c4380e474b39ceff7101388d0eed2b4b59000684e36ef79c0818970ae47de06a
+2023-09-07 09:42:07,519 - root - INFO - [VRF.py:252] - Salt: 43dd01edacdb08f2e157d9aac5f60b3d5a26de432ffe5c19924701a182d1410f
+2023-09-07 09:42:07,521 - root - INFO - [VRF.py:201] - Chamber Index (for endGame): 19
+2023-09-07 09:42:07,521 - root - INFO - [VRF.py:255] - Alpha_Raw (Timestampe + Bets): 169410492730000300003000030000
+2023-09-07 09:42:07,521 - root - INFO - [VRF.py:256] - Alpha (Input Message): b'169410492730000300003000030000'
+2023-09-07 09:42:07,521 - root - INFO - [VRF.py:257] - Random Value (Beta): e9350574187ed2868a16b816dda2870ca135f4f527158deed65ea24746196d05
+2023-09-07 09:42:07,521 - root - INFO - [VRF.py:258] - Proof: 953dc3009b744a7fa71b72ac0d6007e1f953cee4a0c885fb2dbb5a33df77528e05d5bd5c9d038f5b727cb077d22d29061676e0c22378d823ef2d40d658d77bfc
+2023-09-07 09:42:07,521 - root - INFO - [VRF.py:259] - Public Key: 048432d92b22d33ac8d5dec01dcf547b1b580e84cc904485fd2a273ee2e406e0d06987ecf4af191995a7fef300e4f51396f67e7c5964b327ba5c78386c59692998
+2023-09-07 09:42:07,524 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 19
+2023-09-07 09:42:07,525 - root - INFO - [VRF.py:262] - Expected Value: c4380e474b39ceff7101388d0eed2b4b59000684e36ef79c0818970ae47de06a
+2023-09-07 09:42:07,525 - root - INFO - [VRF.py:263] - Initial Hash: c4380e474b39ceff7101388d0eed2b4b59000684e36ef79c0818970ae47de06a
+2023-09-07 09:42:07,525 - root - INFO - [VRF.py:264] - Verification Result: True
+2023-09-07 09:42:08,871 - root - INFO - [VRF.py:245] - Revolver Size): 50
+2023-09-07 09:42:08,881 - root - INFO - [VRF.py:170] - Seed Hash (shared with player): 946004df9fd7e9ea684ad325f6238e07b045977ec6c0e5f089918ee29161a9f49697265a5132ab058c7e75c63f7ebc4b8ae00efe247e4a80172650c2d234d650
+2023-09-07 09:42:08,882 - root - INFO - [VRF.py:178] - Chamber Index (for newGame): 46
+2023-09-07 09:42:08,882 - root - INFO - [VRF.py:251] - Initial Hash (for newGame): 3df4ac07ab2830c6b0e947af4f33327577b8a427ed13d097d643375fb784505a
+2023-09-07 09:42:08,882 - root - INFO - [VRF.py:252] - Salt: 7ba112be73ae2738dfac0d293e249ad758eb06182d2b283b0517f95872a3dcd4
+2023-09-07 09:42:08,883 - root - INFO - [VRF.py:201] - Chamber Index (for endGame): 46
+2023-09-07 09:42:08,883 - root - INFO - [VRF.py:255] - Alpha_Raw (Timestampe + Bets): 169410492830000300003000030000
+2023-09-07 09:42:08,883 - root - INFO - [VRF.py:256] - Alpha (Input Message): b'169410492830000300003000030000'
+2023-09-07 09:42:08,883 - root - INFO - [VRF.py:257] - Random Value (Beta): e78f9eb85bbfcaa9f73d748f7e0b5141ddc8128194596a0b5942498ef4858c87
+2023-09-07 09:42:08,883 - root - INFO - [VRF.py:258] - Proof: f3304713df0a24d2885bbf7753a440c4a16a3ed16fec39e04bc11c1213929227aad76b8017f5c0c0c496fb33f92c2895b76959b4fdf9ab00055f84f02ee51248
+2023-09-07 09:42:08,883 - root - INFO - [VRF.py:259] - Public Key: 04f674863017eff5fae634cc439ff4c3446cb47388f946e7569f397de7d8c7c5fc6f20e06d083f23fd60164b278005a79f038de54e0a1fa6d3918791151143d43f
+2023-09-07 09:42:08,886 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 46
+2023-09-07 09:42:08,886 - root - INFO - [VRF.py:262] - Expected Value: 3df4ac07ab2830c6b0e947af4f33327577b8a427ed13d097d643375fb784505a
+2023-09-07 09:42:08,886 - root - INFO - [VRF.py:263] - Initial Hash: 3df4ac07ab2830c6b0e947af4f33327577b8a427ed13d097d643375fb784505a
+2023-09-07 09:42:08,886 - root - INFO - [VRF.py:264] - Verification Result: True
+2023-09-07 09:42:09,480 - root - INFO - [VRF.py:245] - Revolver Size): 50
+2023-09-07 09:42:09,491 - root - INFO - [VRF.py:170] - Seed Hash (shared with player): 4cdf11703e20a73b9eac377d75138c608a8940d65f8c420db46799d50e4f1a16e5e80437f28e750b0c47a89792ca840fa94976b825b906f275846029264650ef
+2023-09-07 09:42:09,491 - root - INFO - [VRF.py:178] - Chamber Index (for newGame): 49
+2023-09-07 09:42:09,492 - root - INFO - [VRF.py:251] - Initial Hash (for newGame): db13dc6ad2e93ca9c3875aaac5fab9b871c4ab73a4247ca60c2611ca661a382d
+2023-09-07 09:42:09,492 - root - INFO - [VRF.py:252] - Salt: 8c4be16ea1e0c511d543d76543935d0fda5c0d78fe10d34f054d489f5fc6a42b
+2023-09-07 09:42:09,493 - root - INFO - [VRF.py:201] - Chamber Index (for endGame): 49
+2023-09-07 09:42:09,493 - root - INFO - [VRF.py:255] - Alpha_Raw (Timestampe + Bets): 169410492930000300003000030000
+2023-09-07 09:42:09,494 - root - INFO - [VRF.py:256] - Alpha (Input Message): b'169410492930000300003000030000'
+2023-09-07 09:42:09,494 - root - INFO - [VRF.py:257] - Random Value (Beta): e1f7eeeef410566ffe0afa754758b360985eee9619b932a9d2e562fad6e56ec0
+2023-09-07 09:42:09,494 - root - INFO - [VRF.py:258] - Proof: c06db4211434a0cceec6b8139e533516c1503b9d4b539b7044b6fc42fac6142ae26e93b9fb0a05c1a7624d4f7fee2d120d836d72b2c831d3e067c2bffebf1430
+2023-09-07 09:42:09,494 - root - INFO - [VRF.py:259] - Public Key: 04683f2984ef1d7a3951355e4769ba338ff3713903c334b342a5484d97a0bdf3ded1146dd9c314206c116ce6b9d397a81d1d26bd5e79fff8a9af61b50e8daa9d78
+2023-09-07 09:42:09,498 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 49
+2023-09-07 09:42:09,498 - root - INFO - [VRF.py:262] - Expected Value: db13dc6ad2e93ca9c3875aaac5fab9b871c4ab73a4247ca60c2611ca661a382d
+2023-09-07 09:42:09,498 - root - INFO - [VRF.py:263] - Initial Hash: db13dc6ad2e93ca9c3875aaac5fab9b871c4ab73a4247ca60c2611ca661a382d
+2023-09-07 09:42:09,498 - root - INFO - [VRF.py:264] - Verification Result: True
+2023-09-07 09:42:09,934 - root - INFO - [VRF.py:245] - Revolver Size): 50
+2023-09-07 09:42:09,945 - root - INFO - [VRF.py:170] - Seed Hash (shared with player): 19ecb7d7a127981fdb7c40cd183e8ee8fe62734a00951a29e93f0b80e50b6a564926a68b9a25044dc064b2ea676b6b2c650b7be9979f31541d6bfb0dadd66f9b
+2023-09-07 09:42:09,945 - root - INFO - [VRF.py:178] - Chamber Index (for newGame): 38
+2023-09-07 09:42:09,945 - root - INFO - [VRF.py:251] - Initial Hash (for newGame): 71031e564065d1ac11a3a26b65206ca6eefb21bad11922c816ec43bd2f1154eb
+2023-09-07 09:42:09,945 - root - INFO - [VRF.py:252] - Salt: 5bc6d65da9378c1dc2be0e6cd05aed6ebb52c48c1a8720556d7d071f732e571e
+2023-09-07 09:42:09,946 - root - INFO - [VRF.py:201] - Chamber Index (for endGame): 38
+2023-09-07 09:42:09,946 - root - INFO - [VRF.py:255] - Alpha_Raw (Timestampe + Bets): 169410492930000300003000030000
+2023-09-07 09:42:09,947 - root - INFO - [VRF.py:256] - Alpha (Input Message): b'169410492930000300003000030000'
+2023-09-07 09:42:09,947 - root - INFO - [VRF.py:257] - Random Value (Beta): 6cbf58565d2d3424b6de54f8796b76cc13cfa0a937bdcf968bb9de3466dab617
+2023-09-07 09:42:09,947 - root - INFO - [VRF.py:258] - Proof: 88a6f0975396e852aac16bfaf82e437d3e70f2d913baaa2ccee2e243af2102840e4021a1474cf6fbe52e700910256a5d44e2bef43ae7c1528fda4984bbd02da3
+2023-09-07 09:42:09,947 - root - INFO - [VRF.py:259] - Public Key: 04e406d3f2e676032d757d1aad34ef45662d2c3bff797e583ff5c061fa49124c2ecbb8aa92690fa0c236918bc5ca967666194b1d88b51f277ec131fc791c846f1b
+2023-09-07 09:42:09,950 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 38
+2023-09-07 09:42:09,951 - root - INFO - [VRF.py:262] - Expected Value: 71031e564065d1ac11a3a26b65206ca6eefb21bad11922c816ec43bd2f1154eb
+2023-09-07 09:42:09,951 - root - INFO - [VRF.py:263] - Initial Hash: 71031e564065d1ac11a3a26b65206ca6eefb21bad11922c816ec43bd2f1154eb
+2023-09-07 09:42:09,951 - root - INFO - [VRF.py:264] - Verification Result: True
+2023-09-07 09:42:10,279 - root - INFO - [VRF.py:245] - Revolver Size): 50
+2023-09-07 09:42:10,290 - root - INFO - [VRF.py:170] - Seed Hash (shared with player): 7f970b1f3cd0f6cf9a2362c76cf9d99b15d3ab925a04a60077d3f29bc1fbb2167772442eb6a826bfcca6040cbc9a5afeec0de39620117e37d30ded2a891d4a5e
+2023-09-07 09:42:10,290 - root - INFO - [VRF.py:178] - Chamber Index (for newGame): 13
+2023-09-07 09:42:10,290 - root - INFO - [VRF.py:251] - Initial Hash (for newGame): 2b82b971a44693259089ab20081fee3c5a79dbd1151610e707b21372cbfd7413
+2023-09-07 09:42:10,291 - root - INFO - [VRF.py:252] - Salt: 6c3f7180b65ee976b6161b01a5e1127c7f4cc50c2609dc623db95127c6b52857
+2023-09-07 09:42:10,292 - root - INFO - [VRF.py:201] - Chamber Index (for endGame): 13
+2023-09-07 09:42:10,292 - root - INFO - [VRF.py:255] - Alpha_Raw (Timestampe + Bets): 169410493030000300003000030000
+2023-09-07 09:42:10,292 - root - INFO - [VRF.py:256] - Alpha (Input Message): b'169410493030000300003000030000'
+2023-09-07 09:42:10,292 - root - INFO - [VRF.py:257] - Random Value (Beta): 8fabb44ca47be5c3a7596a4ac444f6a00648061b86d0e9b82c3be6b044a86c5e
+2023-09-07 09:42:10,292 - root - INFO - [VRF.py:258] - Proof: b3fafbebd6032072536b39486e25c50738f220700b440ef7b595bfb503accdd846e1dd1d18f71d4e85405e1524b064629d0551e77e8873b9d0d08b39dc25e747
+2023-09-07 09:42:10,292 - root - INFO - [VRF.py:259] - Public Key: 04b9b3870a5cbdab0051c9aaa371e3de9300675f863583e2da53db5f3a9af3f28c5a2d941ff57f786df5f3adca505e1a62a1f7c2b236f8e2b3b768faf56d1ace97
+2023-09-07 09:42:10,295 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 13
+2023-09-07 09:42:10,295 - root - INFO - [VRF.py:262] - Expected Value: 2b82b971a44693259089ab20081fee3c5a79dbd1151610e707b21372cbfd7413
+2023-09-07 09:42:10,295 - root - INFO - [VRF.py:263] - Initial Hash: 2b82b971a44693259089ab20081fee3c5a79dbd1151610e707b21372cbfd7413
+2023-09-07 09:42:10,295 - root - INFO - [VRF.py:264] - Verification Result: True
+2023-09-07 09:44:09,070 - root - INFO - [VRF.py:243] - Revolver Size): 50
+2023-09-07 09:44:09,080 - root - INFO - [VRF.py:168] - Seed Hash (shared with player): 382300e3ec7794de3449c0c9d4522c01d71b6e74c602913c15900660e3aabce76b0ff71b065687f029147bba2aa79c8fd3946bacb7d764cd651f924321a7beb9
+2023-09-07 09:44:09,080 - root - INFO - [VRF.py:176] - Chamber Index (for newGame): 46
+2023-09-07 09:44:09,080 - root - INFO - [VRF.py:249] - Initial Hash (for newGame): b5a464034169ebb01227fe2e0584f838d29573c4890fe8c51fe95f4848b895bc
+2023-09-07 09:44:09,081 - root - INFO - [VRF.py:250] - Salt: e11dec794c19ca331b187a3296ecb488589fd95db3ecdc3435e16f056f3932d0
+2023-09-07 09:44:09,082 - root - INFO - [VRF.py:199] - Chamber Index (for endGame): 46
+2023-09-07 09:44:09,082 - root - INFO - [VRF.py:253] - Alpha_Raw (Timestampe + Bets): 169410504930000300003000030000
+2023-09-07 09:44:09,082 - root - INFO - [VRF.py:254] - Alpha (Input Message): b'169410504930000300003000030000'
+2023-09-07 09:44:09,083 - root - INFO - [VRF.py:255] - Random Value (Beta): 3f8f3097a3d872502c8dd64a8e0e92f766631a2bf2faf00788a679ed363237a0
+2023-09-07 09:44:09,083 - root - INFO - [VRF.py:256] - Proof: e8f5d9424d6758d748c6e924dc12731c6b066445276efd3867cd8d07c524962385ee46b3bc09bcf862b2d32ebe9593834ee3e718e00981575568f13c69221a03
+2023-09-07 09:44:09,083 - root - INFO - [VRF.py:257] - Public Key: 0497f75b811fc744dac146e0f1720443abb4e45d337aaeab212182f2696143f61e25d7f285ab5b5172a3c760715d135a8ebbe33488060828f99d7046cb64c37d4a
+2023-09-07 09:44:09,086 - root - INFO - [VRF.py:230] - Chamber Index (from Beta): 46
+2023-09-07 09:44:09,087 - root - INFO - [VRF.py:260] - Expected Value: b5a464034169ebb01227fe2e0584f838d29573c4890fe8c51fe95f4848b895bc
+2023-09-07 09:44:09,087 - root - INFO - [VRF.py:261] - Initial Hash: b5a464034169ebb01227fe2e0584f838d29573c4890fe8c51fe95f4848b895bc
+2023-09-07 09:44:09,087 - root - INFO - [VRF.py:262] - Verification Result: True
+2023-09-07 09:44:09,782 - root - INFO - [VRF.py:243] - Revolver Size): 50
+2023-09-07 09:44:09,793 - root - INFO - [VRF.py:168] - Seed Hash (shared with player): 133d54370cde3036a9e697b5666dd2848de5265c90d2dea375caf8a7c41d015fb4f61017047471be663f79703b959cce7fb22331e7bb80b52f8b58158bb48629
+2023-09-07 09:44:09,793 - root - INFO - [VRF.py:176] - Chamber Index (for newGame): 16
+2023-09-07 09:44:09,793 - root - INFO - [VRF.py:249] - Initial Hash (for newGame): f14f2a4b2825d8d81f4e943426a9a0de675df6e9981cdbbe33f96d42fe4437b4
+2023-09-07 09:44:09,793 - root - INFO - [VRF.py:250] - Salt: 8413b9d24cd97f02e81e87a86e89365c905198b1e23c5385ecf0697bfb847d39
+2023-09-07 09:44:09,794 - root - INFO - [VRF.py:199] - Chamber Index (for endGame): 16
+2023-09-07 09:44:09,794 - root - INFO - [VRF.py:253] - Alpha_Raw (Timestampe + Bets): 169410504930000300003000030000
+2023-09-07 09:44:09,795 - root - INFO - [VRF.py:254] - Alpha (Input Message): b'169410504930000300003000030000'
+2023-09-07 09:44:09,795 - root - INFO - [VRF.py:255] - Random Value (Beta): feb95420a56d98d280eae1934182f3b43eafa082aa2ef545132bdc29e6284f99
+2023-09-07 09:44:09,795 - root - INFO - [VRF.py:256] - Proof: 3eb103b005c8f7ca066e9408518e40322f775de75e2bc079189710bf7ccc058f4c65e33da84b62cbc455fe51b4e3a4f190a6e098eca9d411a1bca0d3af18e5d0
+2023-09-07 09:44:09,795 - root - INFO - [VRF.py:257] - Public Key: 0452ef1f2c631c057ef7b706455b8baff56b035d98861266fbdb8aba03742bb9a94075bcbbe45e0aba0f7166de298ab681c2287056d7bb955a96d000b6999879c5
+2023-09-07 09:44:09,798 - root - INFO - [VRF.py:230] - Chamber Index (from Beta): 16
+2023-09-07 09:44:09,798 - root - INFO - [VRF.py:260] - Expected Value: f14f2a4b2825d8d81f4e943426a9a0de675df6e9981cdbbe33f96d42fe4437b4
+2023-09-07 09:44:09,798 - root - INFO - [VRF.py:261] - Initial Hash: f14f2a4b2825d8d81f4e943426a9a0de675df6e9981cdbbe33f96d42fe4437b4
+2023-09-07 09:44:09,798 - root - INFO - [VRF.py:262] - Verification Result: True
+2023-09-07 09:44:10,346 - root - INFO - [VRF.py:243] - Revolver Size): 50
+2023-09-07 09:44:10,356 - root - INFO - [VRF.py:168] - Seed Hash (shared with player): 24f89be927d96b26b8072e12cbc19ae46fd12d299efac0186d3ead2792957bbfe25281d1e923facefc6fc2771141b23ced35c45096d6cc2a1b7066a782da5ecc
+2023-09-07 09:44:10,357 - root - INFO - [VRF.py:176] - Chamber Index (for newGame): 32
+2023-09-07 09:44:10,357 - root - INFO - [VRF.py:249] - Initial Hash (for newGame): 30f7c1b46c6196445098c31a1fd82f1c08280bc5376e865e6ede87dfa4925943
+2023-09-07 09:44:10,357 - root - INFO - [VRF.py:250] - Salt: 1c038e96c8557b2c87267a77d36ab377a8ba7f6c99ed49cc73702b107be19e0b
+2023-09-07 09:44:10,358 - root - INFO - [VRF.py:199] - Chamber Index (for endGame): 32
+2023-09-07 09:44:10,358 - root - INFO - [VRF.py:253] - Alpha_Raw (Timestampe + Bets): 169410505030000300003000030000
+2023-09-07 09:44:10,358 - root - INFO - [VRF.py:254] - Alpha (Input Message): b'169410505030000300003000030000'
+2023-09-07 09:44:10,358 - root - INFO - [VRF.py:255] - Random Value (Beta): 2d937e0c12a148a0af431fe5de9f4ae66063603d861459b31a40e58b4a320be2
+2023-09-07 09:44:10,358 - root - INFO - [VRF.py:256] - Proof: c2274a3ab66ed8691053213d9118be5f209b34c2d5408b2fbe19ed4d93a9859a82a638a8dc78e5501f20ee3c7a9adf4baac353ce0459a8202e4fd3c49289a6bf
+2023-09-07 09:44:10,358 - root - INFO - [VRF.py:257] - Public Key: 04294aedd3635847548c8679dd047f3e489f08bf510fce24b86dde00bc17b5789c48d4ab66b472882076c8265c563746fec823cc0661988b4649053730678f78ac
+2023-09-07 09:44:10,362 - root - INFO - [VRF.py:230] - Chamber Index (from Beta): 32
+2023-09-07 09:44:10,362 - root - INFO - [VRF.py:260] - Expected Value: 30f7c1b46c6196445098c31a1fd82f1c08280bc5376e865e6ede87dfa4925943
+2023-09-07 09:44:10,362 - root - INFO - [VRF.py:261] - Initial Hash: 30f7c1b46c6196445098c31a1fd82f1c08280bc5376e865e6ede87dfa4925943
+2023-09-07 09:44:10,362 - root - INFO - [VRF.py:262] - Verification Result: True
+2023-09-07 09:44:10,809 - root - INFO - [VRF.py:243] - Revolver Size): 50
+2023-09-07 09:44:10,821 - root - INFO - [VRF.py:168] - Seed Hash (shared with player): 488d9ab7696ae9ee4a60cfa0d49c66b6559e1657aa078690adaa4e0241e97b902ad5baf31ba628f29975dbd37d87d6400d1d0b8f5e3fb3b9577f67544e838add
+2023-09-07 09:44:10,821 - root - INFO - [VRF.py:176] - Chamber Index (for newGame): 39
+2023-09-07 09:44:10,821 - root - INFO - [VRF.py:249] - Initial Hash (for newGame): 797c9d5658fde2c8ad037f5cd8f72855388dbc905b157f9d6ee90cab31d3ed48
+2023-09-07 09:44:10,821 - root - INFO - [VRF.py:250] - Salt: f2b662e5a2d0b9623fd0a633bcfabf05a7ea15ad60b444ebd66199402e29145a
+2023-09-07 09:44:10,822 - root - INFO - [VRF.py:199] - Chamber Index (for endGame): 39
+2023-09-07 09:44:10,822 - root - INFO - [VRF.py:253] - Alpha_Raw (Timestampe + Bets): 169410505030000300003000030000
+2023-09-07 09:44:10,822 - root - INFO - [VRF.py:254] - Alpha (Input Message): b'169410505030000300003000030000'
+2023-09-07 09:44:10,822 - root - INFO - [VRF.py:255] - Random Value (Beta): 25976c4976e16ca2207ccd12c0603d7d1cea5076ecdf73440c2f0dde176940b7
+2023-09-07 09:44:10,822 - root - INFO - [VRF.py:256] - Proof: a63cb27885364d097140ecb275c6a6e07204ff9ca3d7adef44e6cd40280f57ee968bc1cd167eec0a86575480bd167bfe592a485add095a13dbe090e5fbc6c54a
+2023-09-07 09:44:10,822 - root - INFO - [VRF.py:257] - Public Key: 04b2ff7cde7bac7e8bb6a62455b143fc06a483847bc3d93459f56bc797ec04f16fdc774cd385ca9a5e75456fc83d5950eb6b220872c84eee24ff1febdfca79dfab
+2023-09-07 09:44:10,826 - root - INFO - [VRF.py:230] - Chamber Index (from Beta): 39
+2023-09-07 09:44:10,826 - root - INFO - [VRF.py:260] - Expected Value: 797c9d5658fde2c8ad037f5cd8f72855388dbc905b157f9d6ee90cab31d3ed48
+2023-09-07 09:44:10,826 - root - INFO - [VRF.py:261] - Initial Hash: 797c9d5658fde2c8ad037f5cd8f72855388dbc905b157f9d6ee90cab31d3ed48
+2023-09-07 09:44:10,826 - root - INFO - [VRF.py:262] - Verification Result: True
+2023-09-07 09:44:11,221 - root - INFO - [VRF.py:243] - Revolver Size): 50
+2023-09-07 09:44:11,233 - root - INFO - [VRF.py:168] - Seed Hash (shared with player): c8b60982ae94c8be76fb618f6139b3447b47cbe8d8238c88976520075df9f52b2ecab2f8a88ba0b656fed449da6cc488bd903c1df17a8475693b29e57c5f95fb
+2023-09-07 09:44:11,233 - root - INFO - [VRF.py:176] - Chamber Index (for newGame): 12
+2023-09-07 09:44:11,233 - root - INFO - [VRF.py:249] - Initial Hash (for newGame): 25313735aa4af5ae1681be907fe218a00e3d064987b6c2f7638b8e8f9745b878
+2023-09-07 09:44:11,233 - root - INFO - [VRF.py:250] - Salt: 070ac8a1217f3da49d036910c531246fc1ad8e72fbc5d3f95e763521faf5616d
+2023-09-07 09:44:11,234 - root - INFO - [VRF.py:199] - Chamber Index (for endGame): 12
+2023-09-07 09:44:11,235 - root - INFO - [VRF.py:253] - Alpha_Raw (Timestampe + Bets): 169410505130000300003000030000
+2023-09-07 09:44:11,235 - root - INFO - [VRF.py:254] - Alpha (Input Message): b'169410505130000300003000030000'
+2023-09-07 09:44:11,235 - root - INFO - [VRF.py:255] - Random Value (Beta): 56d6072846eb071b72efd5b81662173cec4e099b4d2d81cb9357661ec9911208
+2023-09-07 09:44:11,235 - root - INFO - [VRF.py:256] - Proof: c9b2223ec86867b22edaf0918987742dc41d7ea9c213e57a46dcf8673b087100bdf46bb482f836b66c0c125ed76e654d6772874b50d263506d563fc404e939fd
+2023-09-07 09:44:11,235 - root - INFO - [VRF.py:257] - Public Key: 047c67b2abd5bc3fc0a311418321e57aaa5c975c98f672a7fdef31431b6da24e2cf93cd1421146b523cf3f0a69a782bd64a3b2437d294fdbfa9611b4218afe40ee
+2023-09-07 09:44:11,238 - root - INFO - [VRF.py:230] - Chamber Index (from Beta): 12
+2023-09-07 09:44:11,238 - root - INFO - [VRF.py:260] - Expected Value: 25313735aa4af5ae1681be907fe218a00e3d064987b6c2f7638b8e8f9745b878
+2023-09-07 09:44:11,238 - root - INFO - [VRF.py:261] - Initial Hash: 25313735aa4af5ae1681be907fe218a00e3d064987b6c2f7638b8e8f9745b878
+2023-09-07 09:44:11,238 - root - INFO - [VRF.py:262] - Verification Result: True
+2023-09-07 09:47:45,328 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:47:45,339 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 98281388108ddef3da094cd3e4991fc8efa138f4b825de5ac47bab99c1c67d104beef48b3c02e514276d378d85025d05dc5aee07baedf2d16f0dde46c6bd1356
+2023-09-07 09:47:45,340 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 30
+2023-09-07 09:47:45,340 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): 8f66d45075fe83d76ea89415049ed9b17a237732101c046f138d315826795fa8
+2023-09-07 09:47:45,340 - root - INFO - [VRF.py:255] - Salt: 22d767ad1dd427f36986685fdb0aac0b45ce5738c7082c4a6133603664b7873f
+2023-09-07 09:47:45,342 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 30
+2023-09-07 09:47:45,342 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410526530000300003000030000
+2023-09-07 09:47:45,342 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410526530000300003000030000'
+2023-09-07 09:47:45,342 - root - INFO - [VRF.py:260] - Random Value (Beta): f3b1e89143fcd5f247b996a2336a5eee8dab74c4ca2c2c4a871377e851022d11
+2023-09-07 09:47:45,342 - root - INFO - [VRF.py:261] - Proof: 03c2d724236dd2015405b52280c2dc1ac11b41fee9cc9b0bf036f8acaa930108d49417e6eae22951c97120911c7b09a25ed7359aebd3df3f79333659ded058ee
+2023-09-07 09:47:45,342 - root - INFO - [VRF.py:262] - Public Key: 0481452c925e1a528ba675f919bcbbbfe4192545aac7bf88c4ec3ad00bce967f97023825cad98266f1fee2bc44c02bde21fcaa51e900941e27b1d18603aeb0f63a
+2023-09-07 09:47:45,345 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 30
+2023-09-07 09:47:45,346 - root - INFO - [VRF.py:265] - Expected Value: 8f66d45075fe83d76ea89415049ed9b17a237732101c046f138d315826795fa8
+2023-09-07 09:47:45,346 - root - INFO - [VRF.py:266] - Initial Hash: 8f66d45075fe83d76ea89415049ed9b17a237732101c046f138d315826795fa8
+2023-09-07 09:47:45,346 - root - INFO - [VRF.py:267] - Verification Result: False
+2023-09-07 09:47:46,238 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:47:46,252 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 32015484192552383a12165dec39881895cf38270de2bd28d82efb9339284931765d30a8458637a25cd39e9b838d39e24103011086717e74b35f282bededb7bd
+2023-09-07 09:47:46,252 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 36
+2023-09-07 09:47:46,252 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): 04e71f9c38c7dcb17d7e3ad714a4f447252278e0226d7d09077e5d8592f76906
+2023-09-07 09:47:46,252 - root - INFO - [VRF.py:255] - Salt: f60fbab5a3c06908932d28adf45c22a4d397e20c7fbf0ad29bdc96a9c860b2a4
+2023-09-07 09:47:46,253 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 36
+2023-09-07 09:47:46,253 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410526630000300003000030000
+2023-09-07 09:47:46,253 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410526630000300003000030000'
+2023-09-07 09:47:46,253 - root - INFO - [VRF.py:260] - Random Value (Beta): 0bb71bd3bfcdfcb71e5a5c1ef9d236b6406281f1fb23829656458edf19c09c08
+2023-09-07 09:47:46,253 - root - INFO - [VRF.py:261] - Proof: 583153043c52fe2fb6b55d513c94038e5b92fd1e8d1cc356128ea935f230c1df639f6315c8bd41d64d01a3380cc2728dadec86d981db2a50b6cf244e16db73f9
+2023-09-07 09:47:46,253 - root - INFO - [VRF.py:262] - Public Key: 049f9227f0340122bfaec1c6a8e2d68397658a3a9810339b7b4fa11668bd1590501d5595a08e143ad70c6e281140c74948feabd5c3d00ab6ffd5e0f1553d125dc3
+2023-09-07 09:47:46,257 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 36
+2023-09-07 09:47:46,257 - root - INFO - [VRF.py:265] - Expected Value: 04e71f9c38c7dcb17d7e3ad714a4f447252278e0226d7d09077e5d8592f76906
+2023-09-07 09:47:46,257 - root - INFO - [VRF.py:266] - Initial Hash: 04e71f9c38c7dcb17d7e3ad714a4f447252278e0226d7d09077e5d8592f76906
+2023-09-07 09:47:46,257 - root - INFO - [VRF.py:267] - Verification Result: False
+2023-09-07 09:47:46,751 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:47:46,763 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): bd0ed8d32218aa27809201c00e83fce1b8a78986da98d2d3a26a23e0c3bcc843b823dbc9979c5a412cdb5655d03716c4d3fee9ececf9c0109d3cf54d2f4f94b3
+2023-09-07 09:47:46,763 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 9
+2023-09-07 09:47:46,763 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): cf2c0a588df4327aa63d9ea900763ea0a2de15d47944a4e2d16a3be358b525f2
+2023-09-07 09:47:46,763 - root - INFO - [VRF.py:255] - Salt: 19bc1e70fb456066d6dbd0e6de26affcd462302fa0d4976ef1913276b31319e3
+2023-09-07 09:47:46,764 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 9
+2023-09-07 09:47:46,764 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410526630000300003000030000
+2023-09-07 09:47:46,764 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410526630000300003000030000'
+2023-09-07 09:47:46,765 - root - INFO - [VRF.py:260] - Random Value (Beta): 3a50e201b63b72aa09de42cb1d83f40e7fca29f487c21a6eaeca339c2c643653
+2023-09-07 09:47:46,765 - root - INFO - [VRF.py:261] - Proof: 566876a32bf5357b73cfeef5919ce38918aff3a52b5155d9af6d03dd52587595dc8be1d3e252bc684ab837d71282d4d6ae5afa3c4014196d8a2351193128538a
+2023-09-07 09:47:46,765 - root - INFO - [VRF.py:262] - Public Key: 04c1dea32f3bce6c31e340872fb749b7d8cf540d34fc1c424444924ae3a54127222375eca94fe529b13a0a31a01e11b6e7b8931830da968e9ba0ff771813a6716d
+2023-09-07 09:47:46,768 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 9
+2023-09-07 09:47:46,768 - root - INFO - [VRF.py:265] - Expected Value: cf2c0a588df4327aa63d9ea900763ea0a2de15d47944a4e2d16a3be358b525f2
+2023-09-07 09:47:46,768 - root - INFO - [VRF.py:266] - Initial Hash: cf2c0a588df4327aa63d9ea900763ea0a2de15d47944a4e2d16a3be358b525f2
+2023-09-07 09:47:46,768 - root - INFO - [VRF.py:267] - Verification Result: False
+2023-09-07 09:47:47,210 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:47:47,220 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 3a709911eb73483e9c4000c79e451822f81b9879d69623fe78cb1556c813a5155e960664d57d2a90ddb7290ec3b1a0b6c388f7b29bf96908ee847220bc0fe39c
+2023-09-07 09:47:47,220 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 44
+2023-09-07 09:47:47,220 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): abd85b48f553fce8781286d57add176819d756eeee5710d56d01476aecf1f4c8
+2023-09-07 09:47:47,220 - root - INFO - [VRF.py:255] - Salt: 2f8642b72905e1f2e6cedf5673b5af53987b1ee833949253d10eb070b990d974
+2023-09-07 09:47:47,221 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 44
+2023-09-07 09:47:47,221 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410526730000300003000030000
+2023-09-07 09:47:47,221 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410526730000300003000030000'
+2023-09-07 09:47:47,222 - root - INFO - [VRF.py:260] - Random Value (Beta): 6a631c790b55b92d10ad279294743ae60dd0dfd860f23c8b84a8e52ce3f99d7c
+2023-09-07 09:47:47,222 - root - INFO - [VRF.py:261] - Proof: df99a46cde7737e60179c9a4c9d351e6bb8b969f26079d30b2fd1b729db362d0ca9ccca401a3afee4292bc0e48a9e41337841ab7c4637eae4af5db43b00251a9
+2023-09-07 09:47:47,222 - root - INFO - [VRF.py:262] - Public Key: 045f9a8d08a8c08c6c66fb5330050c4a30a8c9ae67db8d1128a53f004fcd210c33bb9a08ef1acf9974b57fdd767dd0ee10046f43eee5f4a78dab9a730c6c07e289
+2023-09-07 09:47:47,225 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 44
+2023-09-07 09:47:47,225 - root - INFO - [VRF.py:265] - Expected Value: abd85b48f553fce8781286d57add176819d756eeee5710d56d01476aecf1f4c8
+2023-09-07 09:47:47,225 - root - INFO - [VRF.py:266] - Initial Hash: abd85b48f553fce8781286d57add176819d756eeee5710d56d01476aecf1f4c8
+2023-09-07 09:47:47,225 - root - INFO - [VRF.py:267] - Verification Result: False
+2023-09-07 09:47:58,476 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:47:58,491 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 40988a04a183c6bdac628e1059ba8d4bff337b89a715b5c982dafef7608edf7abc412dce14566a0c63fa1c738d20e8089587656ae989e808e9053eed0c562ff0
+2023-09-07 09:47:58,492 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 13
+2023-09-07 09:47:58,492 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): 65091889bf55e3a3fdc37474b732a8794eeb8eb3d95f6908ba4200501fd7a0ad
+2023-09-07 09:47:58,492 - root - INFO - [VRF.py:255] - Salt: 540bbed8be1e30ecc7644a8adab99f36b438da9e4238d944e5d06b00be18e242
+2023-09-07 09:47:58,493 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 13
+2023-09-07 09:47:58,493 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410527830000300003000030000
+2023-09-07 09:47:58,493 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410527830000300003000030000'
+2023-09-07 09:47:58,493 - root - INFO - [VRF.py:260] - Random Value (Beta): 261c430248361d98927dc22ae1d2ec5da62abf71febacaa2ecb87ea81fd0f0a8
+2023-09-07 09:47:58,494 - root - INFO - [VRF.py:261] - Proof: 252c6039b45d5e49ba8e1b95957d696c25da850b16b507b27ba8ad78760c27ca3c88aad057506b9e6a812413079f2f5135d864425587989b04a22737764304b4
+2023-09-07 09:47:58,494 - root - INFO - [VRF.py:262] - Public Key: 04dd0a280753e20d26d55bb3233cdb781e6aea5b1ef9a46c146b54cc0ff237d8f85cad66cfbccdb23af92c49d339660ed5bec7cb8938a1747b46f646b110a6abb7
+2023-09-07 09:47:58,497 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 13
+2023-09-07 09:47:58,497 - root - INFO - [VRF.py:265] - Expected Value: 65091889bf55e3a3fdc37474b732a8794eeb8eb3d95f6908ba4200501fd7a0ad
+2023-09-07 09:47:58,497 - root - INFO - [VRF.py:266] - Initial Hash: 65091889bf55e3a3fdc37474b732a8794eeb8eb3d95f6908ba4200501fd7a0ad
+2023-09-07 09:47:58,498 - root - INFO - [VRF.py:267] - Verification Result: False
+2023-09-07 09:47:59,077 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:47:59,087 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 9d54cfe648643fa9d906aa27035a82a024517713e29caa7485bd66a7850ec54e7c3e851da34d4108dca6decb1a77d0725e916408e4ae28c02cb2065eea17a0ab
+2023-09-07 09:47:59,088 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 16
+2023-09-07 09:47:59,088 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): 5707e23b5e2ce82af1ceb8df1e28e7f5f9d04f9049fc817b2de2ae332c016069
+2023-09-07 09:47:59,088 - root - INFO - [VRF.py:255] - Salt: b0ca5a9020e98873220d6d52d8d633342887961bc3e57c19f178e56670e28405
+2023-09-07 09:47:59,089 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 16
+2023-09-07 09:47:59,090 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410527930000300003000030000
+2023-09-07 09:47:59,090 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410527930000300003000030000'
+2023-09-07 09:47:59,090 - root - INFO - [VRF.py:260] - Random Value (Beta): 6fe1256e380ad1791713b3d7d35a8967d4b37ac71f87c3c806508021d910b2b2
+2023-09-07 09:47:59,090 - root - INFO - [VRF.py:261] - Proof: 736f14a4d556713adc7df30bb08f480a835632be2e23c94c2a66c3b4da6ae73e1173161bb2cf47d88f523ab61245f8627783f0b5347d724034b2aff0bdf92fb0
+2023-09-07 09:47:59,090 - root - INFO - [VRF.py:262] - Public Key: 0485520412037cabc55f293bf1d6c9d89845da32c5efb910e2d5c059c466926d1974eaba4d111a6fe070dc9bfa1f7e40716d0467371205b47dcbcdf3dea318aa60
+2023-09-07 09:47:59,093 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 16
+2023-09-07 09:47:59,093 - root - INFO - [VRF.py:265] - Expected Value: 5707e23b5e2ce82af1ceb8df1e28e7f5f9d04f9049fc817b2de2ae332c016069
+2023-09-07 09:47:59,094 - root - INFO - [VRF.py:266] - Initial Hash: 5707e23b5e2ce82af1ceb8df1e28e7f5f9d04f9049fc817b2de2ae332c016069
+2023-09-07 09:47:59,094 - root - INFO - [VRF.py:267] - Verification Result: False
+2023-09-07 09:48:00,147 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:48:00,158 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): a34d4b97f9a836862dc88fd687204c0eb0e8708b89c98311b539c8e21f6f11ff681448bf42365d532197659ff32e7cef629f74b3b274c4bb5eeea55e74f93e5f
+2023-09-07 09:48:00,159 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 30
+2023-09-07 09:48:00,159 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): f0a5c2a70b576d033889efdf43ede1dd52de0e91f4cb20e4a70bd197bdf021d9
+2023-09-07 09:48:00,159 - root - INFO - [VRF.py:255] - Salt: e116343d1df80448f134dae49a21ca6b16f112483ba98138c214e77afd30fa13
+2023-09-07 09:48:00,160 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 30
+2023-09-07 09:48:00,160 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410528030000300003000030000
+2023-09-07 09:48:00,160 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410528030000300003000030000'
+2023-09-07 09:48:00,160 - root - INFO - [VRF.py:260] - Random Value (Beta): 91c8407c282a6b36a35c65bd3dce5e8f53c4024ffc9e2e80ccb299efcebf0f23
+2023-09-07 09:48:00,161 - root - INFO - [VRF.py:261] - Proof: 4090669b6cbded289f1059c2df6f05b0fd229b222539eb65aa96fab992f2ace99f3ef2319b804637702877b32084ec3435d96f623fd60b2bd1fd2e075795a8f2
+2023-09-07 09:48:00,161 - root - INFO - [VRF.py:262] - Public Key: 048f4cd1197ff77b3149d34d876656532823bb569c119c2d2e1e71cb81cc71de965b75f07a7dd543df72664aece1e17c26554eddfc98c135fcace01234b0ce4175
+2023-09-07 09:48:00,164 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 30
+2023-09-07 09:48:00,164 - root - INFO - [VRF.py:265] - Expected Value: f0a5c2a70b576d033889efdf43ede1dd52de0e91f4cb20e4a70bd197bdf021d9
+2023-09-07 09:48:00,165 - root - INFO - [VRF.py:266] - Initial Hash: f0a5c2a70b576d033889efdf43ede1dd52de0e91f4cb20e4a70bd197bdf021d9
+2023-09-07 09:48:00,165 - root - INFO - [VRF.py:267] - Verification Result: False
+2023-09-07 09:48:00,829 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:48:00,840 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): f11daf1cc4266f82745bd7cba15ab45fc13e10adc9dbaa97c0f4ba0e3a8cc97a85589784401dd0468259923c13182c4f6b7e229064c92423abfb35d1f1f9eaaa
+2023-09-07 09:48:00,841 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 49
+2023-09-07 09:48:00,841 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): 9d8d0fd0e2fe3d50bcc3375aade96920e103e13db24b1d48c53436b9750d0ae6
+2023-09-07 09:48:00,841 - root - INFO - [VRF.py:255] - Salt: 25cc62e68dc56c12bc20c482604c265fe3fb175acb2933eea102cccf932d10b0
+2023-09-07 09:48:00,843 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 49
+2023-09-07 09:48:00,843 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410528030000300003000030000
+2023-09-07 09:48:00,843 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410528030000300003000030000'
+2023-09-07 09:48:00,843 - root - INFO - [VRF.py:260] - Random Value (Beta): 9fa0c927bb3d812aa4af3f0a5f7ed9f267dfa8ec7da85397229b9f549b1b1908
+2023-09-07 09:48:00,843 - root - INFO - [VRF.py:261] - Proof: dc5e4d8a20e6420a5168af0b73321fa05cc618451db4e4f6ded31f6122e8bc92d9c60a8c4eb0dc095b88e929557b09e85bf260abc94f9a4d52f668b185d70405
+2023-09-07 09:48:00,843 - root - INFO - [VRF.py:262] - Public Key: 0425e37eb8a8b0ac6e269fa95d5157c7c63033f80a24174985b7bf995ed54d3d5f11d43340d408b76f3b315891c905dcc38250d3f09edeec5b61a02abd0892380d
+2023-09-07 09:48:00,846 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 49
+2023-09-07 09:48:00,846 - root - INFO - [VRF.py:265] - Expected Value: 9d8d0fd0e2fe3d50bcc3375aade96920e103e13db24b1d48c53436b9750d0ae6
+2023-09-07 09:48:00,847 - root - INFO - [VRF.py:266] - Initial Hash: 9d8d0fd0e2fe3d50bcc3375aade96920e103e13db24b1d48c53436b9750d0ae6
+2023-09-07 09:48:00,847 - root - INFO - [VRF.py:267] - Verification Result: False
+2023-09-07 09:49:50,857 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:49:50,868 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): ffd460b93a79dff0e32f626c78e7331f06b87cea5558bb0f4d790c6cc50fa77a85cb6e779211dc74d09750ead454c386f14b7217ef107b7e6667433a8240785c
+2023-09-07 09:49:50,868 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 35
+2023-09-07 09:49:50,869 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): 4af7996c216d73017e7e6d7b2b972c2cf119415ec633afe03189e69c0e324fe2
+2023-09-07 09:49:50,869 - root - INFO - [VRF.py:255] - Salt: b5f8cc6a2f5378c782d010103431a2dbccfb2e32ca1a20f64270fabc9e484c33
+2023-09-07 09:49:50,870 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 35
+2023-09-07 09:49:50,870 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410539030000300003000030000
+2023-09-07 09:49:50,870 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410539030000300003000030000'
+2023-09-07 09:49:50,870 - root - INFO - [VRF.py:260] - Random Value (Beta): cd99d5d62ea7d81f4fdfc5d3c5a154042325f3aaac6aab897f606c87789a6b41
+2023-09-07 09:49:50,870 - root - INFO - [VRF.py:261] - Proof: 625bd8204ef59812c4135640f912f7e7e83973f8964c9f4a4704317a528ce75ffd7917fe89623af149b2153e36a9189498bd27436b4280a6dcf267ffcd5afa78
+2023-09-07 09:49:50,870 - root - INFO - [VRF.py:262] - Public Key: 044a3440fcaab9518e4b3b98bdbecfb66cb4953031378e3f23c20ec7a14d66323dfeded44191fb21812e0f789b796130a9c4ed32df793deb2595bf1e16b92e1eba
+2023-09-07 09:49:50,873 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 35
+2023-09-07 09:49:50,874 - root - INFO - [VRF.py:265] - Expected Value: 4af7996c216d73017e7e6d7b2b972c2cf119415ec633afe03189e69c0e324fe2
+2023-09-07 09:49:50,874 - root - INFO - [VRF.py:266] - Initial Hash: 4af7996c216d73017e7e6d7b2b972c2cf119415ec633afe03189e69c0e324fe2
+2023-09-07 09:49:50,874 - root - INFO - [VRF.py:267] - Verification Result: True
+2023-09-07 09:49:51,466 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:49:51,477 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 652b73f3168f2cbdc9098d3e2f358da2aff279b78a2d4e3e9670d9509e2761f3460f1dbdc0c121d8c22c8eed7962705ba9f48b2a80262e3825df4f4d813867ea
+2023-09-07 09:49:51,477 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 1
+2023-09-07 09:49:51,477 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): fa2b788fcc35c81cc0e9892ce37ec02e98f81add0c41a62d4ecea65a5f3263c2
+2023-09-07 09:49:51,478 - root - INFO - [VRF.py:255] - Salt: 43c4f3c5f72a5671139b54e570371dd493763eff50cb1c7a4e06492667523d88
+2023-09-07 09:49:51,479 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 1
+2023-09-07 09:49:51,479 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410539130000300003000030000
+2023-09-07 09:49:51,479 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410539130000300003000030000'
+2023-09-07 09:49:51,479 - root - INFO - [VRF.py:260] - Random Value (Beta): fa4c3f149bf9002a8199768a7d0457f47008e09ef3abb680cda01424eb5993f4
+2023-09-07 09:49:51,479 - root - INFO - [VRF.py:261] - Proof: b6d132afcea7aa3418a3c4cd79f598e04899a66c9618f7248bca2841e84b07bce50f8d52a9578348cad3d85009af7437ab4a52e4c215dbc1e59a3fb7ca719fde
+2023-09-07 09:49:51,479 - root - INFO - [VRF.py:262] - Public Key: 04ff3a4f7654c4311574410a0992111fcaba35a785b3979ea3e04d6e6f99c3cb2077679168da008773222a673143a666538a2946d8d5f2226496e468bd0f714705
+2023-09-07 09:49:51,482 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 1
+2023-09-07 09:49:51,482 - root - INFO - [VRF.py:265] - Expected Value: fa2b788fcc35c81cc0e9892ce37ec02e98f81add0c41a62d4ecea65a5f3263c2
+2023-09-07 09:49:51,482 - root - INFO - [VRF.py:266] - Initial Hash: fa2b788fcc35c81cc0e9892ce37ec02e98f81add0c41a62d4ecea65a5f3263c2
+2023-09-07 09:49:51,482 - root - INFO - [VRF.py:267] - Verification Result: True
+2023-09-07 09:49:51,932 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:49:51,945 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 46675455b58cd8077609e5b5c3598acfc014a0b12b3dead037c370b84496a5118c1df1db2b98d4e6958708564951dde34655393faa4702472e257962cf119c58
+2023-09-07 09:49:51,945 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 33
+2023-09-07 09:49:51,945 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): 51046bb0fac29a46a84565f09ff99749d7acf9be8742126797d757042be326d0
+2023-09-07 09:49:51,945 - root - INFO - [VRF.py:255] - Salt: eff168050df64b38ed67e596aca33f33168c3a024f5a91e175446a8cc65a682d
+2023-09-07 09:49:51,947 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 33
+2023-09-07 09:49:51,948 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410539130000300003000030000
+2023-09-07 09:49:51,948 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410539130000300003000030000'
+2023-09-07 09:49:51,948 - root - INFO - [VRF.py:260] - Random Value (Beta): 2acbf27fe86d295a4e1dc1e0afe0e0c10c111d41661fc7cfe0568101a7f8696e
+2023-09-07 09:49:51,948 - root - INFO - [VRF.py:261] - Proof: c228b55b5ace811f18e5129d415b257fb0066a20eb0d9958cf3342ee90c0639b16dc3858826c1f02da378ada4da2367aaacfa8ac6fedcbd8453bc20f3ea200c9
+2023-09-07 09:49:51,948 - root - INFO - [VRF.py:262] - Public Key: 0479defa891f5450f86d3899f74129c0b43783600d5953c50fd0fdd1a6ed4dad292f3bf6525843638279b577fdd77beffccd183e363caa01db24695937498ab30a
+2023-09-07 09:49:51,951 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 33
+2023-09-07 09:49:51,951 - root - INFO - [VRF.py:265] - Expected Value: 51046bb0fac29a46a84565f09ff99749d7acf9be8742126797d757042be326d0
+2023-09-07 09:49:51,951 - root - INFO - [VRF.py:266] - Initial Hash: 51046bb0fac29a46a84565f09ff99749d7acf9be8742126797d757042be326d0
+2023-09-07 09:49:51,951 - root - INFO - [VRF.py:267] - Verification Result: True
+2023-09-07 09:49:52,331 - root - INFO - [VRF.py:248] - Revolver Size): 50
+2023-09-07 09:49:52,342 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 87eb1940e33fcb989d3a2c98a112433ca1cd697d72d551729749fddc6e7f0719e3fbe612d4aa392a61bbf75dba193f3283beb48eecb5b29aa1f8aa9754c6e83d
+2023-09-07 09:49:52,343 - root - INFO - [VRF.py:177] - Chamber Index (for newGame): 32
+2023-09-07 09:49:52,343 - root - INFO - [VRF.py:254] - Initial Hash (for newGame): 7fff00f41b11e61cc8456313b275851469021ea03f07e8617dfc9467bb89b230
+2023-09-07 09:49:52,343 - root - INFO - [VRF.py:255] - Salt: e19a17db870e8f9ad216f5ce095a2f44a1a8a21a7b1b97e1e2bd6c1990bbc37c
+2023-09-07 09:49:52,344 - root - INFO - [VRF.py:200] - Chamber Index (for endGame): 32
+2023-09-07 09:49:52,345 - root - INFO - [VRF.py:258] - Alpha_Raw (Timestampe + Bets): 169410539230000300003000030000
+2023-09-07 09:49:52,345 - root - INFO - [VRF.py:259] - Alpha (Input Message): b'169410539230000300003000030000'
+2023-09-07 09:49:52,345 - root - INFO - [VRF.py:260] - Random Value (Beta): 70e1a0ba7bae803e741cb47b48e301c8f2b324be9456d1f5bfa25d4ba508ac9b
+2023-09-07 09:49:52,345 - root - INFO - [VRF.py:261] - Proof: f61d49d2ff9d9a99e1468c594501c261a0be7ff09dada8a217ae526116786775f29c0bacd9c0078ff40a99c44d00db1cd575e4e92d248c90fb80dca74759341e
+2023-09-07 09:49:52,345 - root - INFO - [VRF.py:262] - Public Key: 0478616efea85bf87860caa4a15272d1bd8c7faa7ed86070d55dde7355fb848950d64181f18800351fa674382c1469c3eb211dd69cfc49849649d5f4fefbd141d5
+2023-09-07 09:49:52,348 - root - INFO - [VRF.py:232] - Chamber Index (from Beta): 32
+2023-09-07 09:49:52,348 - root - INFO - [VRF.py:265] - Expected Value: 7fff00f41b11e61cc8456313b275851469021ea03f07e8617dfc9467bb89b230
+2023-09-07 09:49:52,348 - root - INFO - [VRF.py:266] - Initial Hash: 7fff00f41b11e61cc8456313b275851469021ea03f07e8617dfc9467bb89b230
+2023-09-07 09:49:52,348 - root - INFO - [VRF.py:267] - Verification Result: True
+2023-09-07 09:53:51,020 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 09:53:51,032 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): bfe23f15dcf505fe651eefb5075db54f247658f01f6904d48fd845d6d35d1b3a76a9cb83d221161e5dfe96a72ec580668b0085f2d527f19e2565c4dce4ecc78b
+2023-09-07 09:53:51,032 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 17
+2023-09-07 09:53:51,032 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): 841e5eb929b72925fb369bf836a3996bfe8b893c3bf37d980d4b091b372538ac
+2023-09-07 09:53:51,032 - root - INFO - [VRF.py:257] - Salt: ad7e3f06809c6875248169ed70d100bd6683600dd001e0b26e4064c2290ee205
+2023-09-07 09:53:51,034 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 17
+2023-09-07 09:53:51,034 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410563130000300003000030000
+2023-09-07 09:53:51,034 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410563130000300003000030000'
+2023-09-07 09:53:51,034 - root - INFO - [VRF.py:262] - Random Value (Beta): b2b7645ae02796962f2fd3d6afb3060c509d8edd3f88ecce3ea66e323f4c25bd
+2023-09-07 09:53:51,034 - root - INFO - [VRF.py:263] - Proof: 1573494d581669cd0b13ffd9e7d354c82838fb6f3b8895ff4f24fee228dea5de38c404a60082c869c6bf698b4a8c5b6df490ad799886229bf48b7c3ab0297d41
+2023-09-07 09:53:51,034 - root - INFO - [VRF.py:264] - Public Key: 0486e52c163d883ef91415cb9e0e2dc5d8bb8561bc6ca44ed467a74d9a455ba28ef8afa86b36dd57bdb6b404494eddb902c3e37d5d0700a5b57633897c2e8fc193
+2023-09-07 09:53:51,037 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 17
+2023-09-07 09:53:51,038 - root - INFO - [VRF.py:267] - Expected Value: 841e5eb929b72925fb369bf836a3996bfe8b893c3bf37d980d4b091b372538ac
+2023-09-07 09:53:51,038 - root - INFO - [VRF.py:268] - Initial Hash: 841e5eb929b72925fb369bf836a3996bfe8b893c3bf37d980d4b091b372538ac
+2023-09-07 09:53:51,038 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 09:53:51,857 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 09:53:51,868 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 802549dc5e004bdf4cd80b4add95384a041031945568ad581098f2d680dea4c90d0f69d0c393a1a936eb9283625055afd0fb5053200e204ac42c534cf2447899
+2023-09-07 09:53:51,869 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 36
+2023-09-07 09:53:51,869 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): d5340447b23978b112021640b503f3235d450ffc3ced07eb0841330da0c74bb6
+2023-09-07 09:53:51,869 - root - INFO - [VRF.py:257] - Salt: a46fc5ac7385122d362aa3236a538151c336fa52d2d96d528d3e0a0163127cf0
+2023-09-07 09:53:51,870 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 36
+2023-09-07 09:53:51,870 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410563130000300003000030000
+2023-09-07 09:53:51,870 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410563130000300003000030000'
+2023-09-07 09:53:51,870 - root - INFO - [VRF.py:262] - Random Value (Beta): 98384aa8eb73b30826782eec7e894c37fda13030a6787ef1d9d10ffe80c9e25e
+2023-09-07 09:53:51,870 - root - INFO - [VRF.py:263] - Proof: a32a02ca8fba0958a923769020965974e740a3cbd8ffc6323fb791d53ea33d05f4986cb36b3fa337a668ae6838232f93e8e7fbb069bdb67c45c5bd4a60a0f34b
+2023-09-07 09:53:51,870 - root - INFO - [VRF.py:264] - Public Key: 04edebf4f0cad8681d00a8de03a9587e823c2bc26e663098aac4c1f043b5ac55630ec20b1cdd0744dafa2c0974a7966eb7b1864ee8847a3e2fc27e94a53821b0ad
+2023-09-07 09:53:51,873 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 36
+2023-09-07 09:53:51,874 - root - INFO - [VRF.py:267] - Expected Value: d5340447b23978b112021640b503f3235d450ffc3ced07eb0841330da0c74bb6
+2023-09-07 09:53:51,874 - root - INFO - [VRF.py:268] - Initial Hash: d5340447b23978b112021640b503f3235d450ffc3ced07eb0841330da0c74bb6
+2023-09-07 09:53:51,874 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 09:53:52,607 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 09:53:52,618 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 8472c83e0fb70e204ad41ab7c7242d80c4dd8d15d626de3a5436caa180d48d87b584d9310541c8e2e09317aff4be8271258cb83d8bd7eb557ee633df62047ca4
+2023-09-07 09:53:52,618 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 26
+2023-09-07 09:53:52,618 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): 502b7e7e8454f5c4f5c98f5c3896697eb0034d802c882f7bedb8400fdb2a734e
+2023-09-07 09:53:52,618 - root - INFO - [VRF.py:257] - Salt: a2d823a3ff486f111c14917734ea0e657098ab9e27ad4d56a54e8278f53196a1
+2023-09-07 09:53:52,620 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 26
+2023-09-07 09:53:52,620 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410563230000300003000030000
+2023-09-07 09:53:52,620 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410563230000300003000030000'
+2023-09-07 09:53:52,620 - root - INFO - [VRF.py:262] - Random Value (Beta): b9ed9e0d67a68925f660189f37b2db122255579a7a5dd0e4a9f7151883ca6ae6
+2023-09-07 09:53:52,620 - root - INFO - [VRF.py:263] - Proof: 931468eb1a1ec87b1811430986f24dd5d34ef7ed3fd6e34f3b2489f9ddf3915d51f1c3ca80f20227e38b35f2cb68ae00c4fe3ec827c45b4cac8f740b0659bdbb
+2023-09-07 09:53:52,620 - root - INFO - [VRF.py:264] - Public Key: 04d9838fb6d7bd4f83629f4be0b2f3f6ad63dbcb67f6aadf925acfc186c35c4358bace1d0d7126ed3f16b2ed3870168834e1639d256ea293c281fda9e5c8ab2a01
+2023-09-07 09:53:52,624 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 26
+2023-09-07 09:53:52,624 - root - INFO - [VRF.py:267] - Expected Value: 502b7e7e8454f5c4f5c98f5c3896697eb0034d802c882f7bedb8400fdb2a734e
+2023-09-07 09:53:52,624 - root - INFO - [VRF.py:268] - Initial Hash: 502b7e7e8454f5c4f5c98f5c3896697eb0034d802c882f7bedb8400fdb2a734e
+2023-09-07 09:53:52,624 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 09:53:53,215 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 09:53:53,226 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 15852345b7062a1e905a0459042cb8ff207cae3a9fb8ca52df9a43670da8620925483eac9588c923ad83017307223fea7a41ebaae8e6938c3dbc4f04a2c9ea6e
+2023-09-07 09:53:53,226 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 12
+2023-09-07 09:53:53,227 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): 918b22f8470cd809923c1b13cd2911670064f8bd2fd45a2ef8df8d64e1d49883
+2023-09-07 09:53:53,227 - root - INFO - [VRF.py:257] - Salt: 0cbedf54058abd63c295eff0290fb199571c231129e0178f6d887a114bcbec2e
+2023-09-07 09:53:53,228 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 12
+2023-09-07 09:53:53,228 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410563330000300003000030000
+2023-09-07 09:53:53,229 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410563330000300003000030000'
+2023-09-07 09:53:53,229 - root - INFO - [VRF.py:262] - Random Value (Beta): 0faa80cf96bea9d318019080af7088ce2f7856eeab245b599eb22e879928583d
+2023-09-07 09:53:53,229 - root - INFO - [VRF.py:263] - Proof: ac797d4b97c1481a4840bb1fb317a59aa8fc8f59dd93eb0c60644d277f78de0ca1cbf5c8b97bd799f263f3aa73b3df77ea63acc9dcb0976ec4b4ecf33c7f8927
+2023-09-07 09:53:53,229 - root - INFO - [VRF.py:264] - Public Key: 04778b1ecf64642ebe8d1b818e198154ed0c7d924e0a4904cdfb2c68e9ca463a33f610de34b7eab2d9f3dc9ad5e0a340270e3349eb3a1e166344d48de7aa6b75e4
+2023-09-07 09:53:53,232 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 12
+2023-09-07 09:53:53,233 - root - INFO - [VRF.py:267] - Expected Value: 918b22f8470cd809923c1b13cd2911670064f8bd2fd45a2ef8df8d64e1d49883
+2023-09-07 09:53:53,233 - root - INFO - [VRF.py:268] - Initial Hash: 918b22f8470cd809923c1b13cd2911670064f8bd2fd45a2ef8df8d64e1d49883
+2023-09-07 09:53:53,233 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 09:53:53,700 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 09:53:53,710 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 5d62328bbe303e88fece5e6b64facd63925e7f6a53319cf2320b5add12f599ed74f04a52f5168c9da10f7af2b319570980f2dfb84c27c73e2883aa42a1c38f9d
+2023-09-07 09:53:53,710 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 44
+2023-09-07 09:53:53,711 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): 2ceede557f0c97adc7be1066c5dc0a2d4c530529a7b29e71079a9a0a93d9e272
+2023-09-07 09:53:53,711 - root - INFO - [VRF.py:257] - Salt: 2ce3e9f5d0ccf99366ed18a1e77d9f25a51450b8724e43a95c832669ebb26749
+2023-09-07 09:53:53,712 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 44
+2023-09-07 09:53:53,712 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410563330000300003000030000
+2023-09-07 09:53:53,712 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410563330000300003000030000'
+2023-09-07 09:53:53,712 - root - INFO - [VRF.py:262] - Random Value (Beta): d613479aeded18f8bb83d2614be75bd52e0d8894b70d1c63f810faef2cbb265a
+2023-09-07 09:53:53,712 - root - INFO - [VRF.py:263] - Proof: 315619eb0c6b2036176d711672b49ea14381564ca0166a56f2f9d80d1e70c0cc552d6a1b68cc7dc24eaf874a1b90e143efb5c5fe51ac1587564fa0d52f0555d6
+2023-09-07 09:53:53,712 - root - INFO - [VRF.py:264] - Public Key: 04f6c5d17f039ad74f2d793c5fd25fcfb2b72a0dcffc3a3f7a3ac5cbecaa0e9d31c8b18f297be249ee72a655d7b988bdb1e7de0855ed86cced5c5c0d36b30acae0
+2023-09-07 09:53:53,716 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 44
+2023-09-07 09:53:53,716 - root - INFO - [VRF.py:267] - Expected Value: 2ceede557f0c97adc7be1066c5dc0a2d4c530529a7b29e71079a9a0a93d9e272
+2023-09-07 09:53:53,716 - root - INFO - [VRF.py:268] - Initial Hash: 2ceede557f0c97adc7be1066c5dc0a2d4c530529a7b29e71079a9a0a93d9e272
+2023-09-07 09:53:53,716 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 09:53:54,161 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 09:53:54,171 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 5cfb2443fc3821d6d6d902c18262188681edf66b539e5e808ff2fff8a73dff1f260b2f1279e771ecab65a241620ec36a7c086e6bdee24101bf49f1bc0266e93a
+2023-09-07 09:53:54,172 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 15
+2023-09-07 09:53:54,172 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): b6b41547da0edd25cf6340c8c43eff36252388884f1624bb2093d940d5c8ba16
+2023-09-07 09:53:54,172 - root - INFO - [VRF.py:257] - Salt: 5e343494ed453f401ee967063a8d39d0cb49eca67e965f7fc88b679c6d2b0415
+2023-09-07 09:53:54,173 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 15
+2023-09-07 09:53:54,173 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410563430000300003000030000
+2023-09-07 09:53:54,174 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410563430000300003000030000'
+2023-09-07 09:53:54,174 - root - INFO - [VRF.py:262] - Random Value (Beta): 1ae389e9de833eb7b4aae523b521cde9695f3b5c5d37eabdebaab97ceb748268
+2023-09-07 09:53:54,174 - root - INFO - [VRF.py:263] - Proof: d1d22ca782af884010e1f40cf51ca1c251286c20c950132b46a3cd6274e065ab62cbdb267ad286ea5820e5108478bd74a0d30fc148131ccf0bda8e57c2a0411f
+2023-09-07 09:53:54,174 - root - INFO - [VRF.py:264] - Public Key: 04a2b5ddcca576bc0e7f1cd2bff0ccbb1fccfcd5477cd82b12d4bfdd0d331228b3be2c8283908ce1db36285af70e367aa07906229a218dfbf38426181742030fc7
+2023-09-07 09:53:54,177 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 15
+2023-09-07 09:53:54,178 - root - INFO - [VRF.py:267] - Expected Value: b6b41547da0edd25cf6340c8c43eff36252388884f1624bb2093d940d5c8ba16
+2023-09-07 09:53:54,178 - root - INFO - [VRF.py:268] - Initial Hash: b6b41547da0edd25cf6340c8c43eff36252388884f1624bb2093d940d5c8ba16
+2023-09-07 09:53:54,178 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 09:53:54,584 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 09:53:54,594 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 3fec8df508b5df6dbbcebe0fea6179a9a6c5d5f294951b3994aac4f2e2a26002eda9689b01cd4fdd22e77dd814c7878cef31f56050706c2097072d4e3691978f
+2023-09-07 09:53:54,595 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 29
+2023-09-07 09:53:54,595 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): 02bd94f0c9702f303a25814584f6f461b1cc3cb53bfe0b7b6ff94dd534a415d7
+2023-09-07 09:53:54,595 - root - INFO - [VRF.py:257] - Salt: 48d7c95dc2175cf7dd0eb2d880ca19b302886e138bce6b901f447b49f7ee2723
+2023-09-07 09:53:54,596 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 29
+2023-09-07 09:53:54,596 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410563430000300003000030000
+2023-09-07 09:53:54,597 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410563430000300003000030000'
+2023-09-07 09:53:54,597 - root - INFO - [VRF.py:262] - Random Value (Beta): 16b54682a17ef459b1498a3dfe6b4eef5d14505c2baf64bf50ee6f9593ed50c9
+2023-09-07 09:53:54,597 - root - INFO - [VRF.py:263] - Proof: cdbc6e1b1e74de677b1ce697c7fea2f5c15a5c9a78551d37ebc4e1a690e623b2b73e55598524dc008c5018d1edd87b1b011f8b84648da37143a8c30672fab242
+2023-09-07 09:53:54,597 - root - INFO - [VRF.py:264] - Public Key: 04cb04ca4dfc59891ad5c2e053fa9d72f58d1c9dcb069bf621917a7c2627bf775ea3b08ee75a39ed37d41f9e6bc3c579510af9d61d3bbb66e269112e32735738c3
+2023-09-07 09:53:54,600 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 29
+2023-09-07 09:53:54,600 - root - INFO - [VRF.py:267] - Expected Value: 02bd94f0c9702f303a25814584f6f461b1cc3cb53bfe0b7b6ff94dd534a415d7
+2023-09-07 09:53:54,601 - root - INFO - [VRF.py:268] - Initial Hash: 02bd94f0c9702f303a25814584f6f461b1cc3cb53bfe0b7b6ff94dd534a415d7
+2023-09-07 09:53:54,601 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 09:53:55,049 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 09:53:55,059 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): b77883935188fad678a020881edfe4645d6c0d5051f1af1d55daec0869e27940a04d8a63e28e3689c17d90614f16de98a8526d700687f477130bc2b0b60d726f
+2023-09-07 09:53:55,060 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 27
+2023-09-07 09:53:55,060 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): 8e5fd270ddce6f186b8b43dd199295b4f4c8fe70da7496feb7c37c31f86b6c1f
+2023-09-07 09:53:55,060 - root - INFO - [VRF.py:257] - Salt: 66006960b122274d48953eec3225975200ec9d1940b568f4d0b64a533a96e4d8
+2023-09-07 09:53:55,061 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 27
+2023-09-07 09:53:55,061 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410563530000300003000030000
+2023-09-07 09:53:55,062 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410563530000300003000030000'
+2023-09-07 09:53:55,062 - root - INFO - [VRF.py:262] - Random Value (Beta): 20948f5b2b648faa85c91e5d2624ffd604308523ed40880b3492696366cdbd1e
+2023-09-07 09:53:55,062 - root - INFO - [VRF.py:263] - Proof: 08bf22c3738a9c047e91efa42d63021b1d8240e7333a3fe2702ffa05699481ac23c0f93019d952b7b56020cef672c213a88227210bb18963daf29f2cb685884e
+2023-09-07 09:53:55,062 - root - INFO - [VRF.py:264] - Public Key: 0452ea39c721ce59bbe021be1a91ccccd1fd567dd6e96eed1c550d88d41a0a53d13ea9752eb787efc37a8464f01599c1d991021c7399bfac98c2d76997c34c1e71
+2023-09-07 09:53:55,065 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 27
+2023-09-07 09:53:55,066 - root - INFO - [VRF.py:267] - Expected Value: 8e5fd270ddce6f186b8b43dd199295b4f4c8fe70da7496feb7c37c31f86b6c1f
+2023-09-07 09:53:55,066 - root - INFO - [VRF.py:268] - Initial Hash: 8e5fd270ddce6f186b8b43dd199295b4f4c8fe70da7496feb7c37c31f86b6c1f
+2023-09-07 09:53:55,066 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 09:53:55,451 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 09:53:55,461 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 6f9561065a7b2dbb59968ecc64ee5d0f5bb0e72252d5e0d03eda54eb51e8623a6bf4d8fd6308b827534d59b0fe87669ebc9ea49ee8b0391713d92eba1f6ee966
+2023-09-07 09:53:55,462 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 29
+2023-09-07 09:53:55,462 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): ee6eb7b09e2413f968bc8601a96fd3c9cc388c13ecb0e087f3b9d2ef93c826a0
+2023-09-07 09:53:55,462 - root - INFO - [VRF.py:257] - Salt: e1bdb9bf3eed867a29498cbe48b7a0cfb28dd7270121a5212c89497d028df47a
+2023-09-07 09:53:55,463 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 29
+2023-09-07 09:53:55,463 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410563530000300003000030000
+2023-09-07 09:53:55,463 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410563530000300003000030000'
+2023-09-07 09:53:55,463 - root - INFO - [VRF.py:262] - Random Value (Beta): e7d32e7217735afd95409cc6fc1e6cedbff07b361f4b29b6cc87a6801f9b1ecf
+2023-09-07 09:53:55,463 - root - INFO - [VRF.py:263] - Proof: f65480cf5067d3f997c90fed99cdae233e8740129200fb211efb94d3265cdb2286881935f1d73dd97c2081b4c4e96e3998606bd89465fb7ba83742bccc22e924
+2023-09-07 09:53:55,463 - root - INFO - [VRF.py:264] - Public Key: 04c91fdee4423901ed3b3396aa9fc9894e70b02011672305020b5dd949588f4adb2ca98d276c77b304ba32cb1a0565138e86d1181a47a7d2e5596f405032f3abe6
+2023-09-07 09:53:55,467 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 29
+2023-09-07 09:53:55,467 - root - INFO - [VRF.py:267] - Expected Value: ee6eb7b09e2413f968bc8601a96fd3c9cc388c13ecb0e087f3b9d2ef93c826a0
+2023-09-07 09:53:55,467 - root - INFO - [VRF.py:268] - Initial Hash: ee6eb7b09e2413f968bc8601a96fd3c9cc388c13ecb0e087f3b9d2ef93c826a0
+2023-09-07 09:53:55,467 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 10:11:32,776 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 10:11:32,788 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 24bf2b103aff7ca84994f184213cbab0aa73dfcffe51b287dc6907d649eb9562cb975dacb50cd48d5a7aabec7b62006f4449a3bddd7141875ebee09be25d8a5a
+2023-09-07 10:11:32,789 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 29
+2023-09-07 10:11:32,789 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): 569b327a6b6e7b83a79a0bb9a2ebd71d7405da9a26dfe8dc1bd48a58d8021f36
+2023-09-07 10:11:32,789 - root - INFO - [VRF.py:257] - Salt: d2e4154318a92261ac3f8ae4a66eafe21e46109d72562b6d30360fe20a2836de
+2023-09-07 10:11:32,790 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 29
+2023-09-07 10:11:32,790 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410669230000300003000030000
+2023-09-07 10:11:32,790 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410669230000300003000030000'
+2023-09-07 10:11:32,790 - root - INFO - [VRF.py:262] - Random Value (Beta): 31f94a06298eb27d9e4c00f771f1ea83b5b5fb4ae94196dd91e5745dc6a2afc3
+2023-09-07 10:11:32,791 - root - INFO - [VRF.py:263] - Proof: 4038ebb72b04def94b91beac511192ebce4de63ad8a8314a4825fb5bb451d693941e916707ecafa45a7e7614c5c63840fb02f766078d872957b89b5b35a10cd0
+2023-09-07 10:11:32,791 - root - INFO - [VRF.py:264] - Public Key: 0402460a791b65aabd1c982e7d7b33f5e22cc8708347235d2b9740eb7444dfc26f11ebb895920df874eecbcb9d92d27eca2c0ebf12ed249a4539fe40f9aef7b2a5
+2023-09-07 10:11:32,794 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 29
+2023-09-07 10:11:32,794 - root - INFO - [VRF.py:267] - Expected Value: 569b327a6b6e7b83a79a0bb9a2ebd71d7405da9a26dfe8dc1bd48a58d8021f36
+2023-09-07 10:11:32,794 - root - INFO - [VRF.py:268] - Initial Hash: 569b327a6b6e7b83a79a0bb9a2ebd71d7405da9a26dfe8dc1bd48a58d8021f36
+2023-09-07 10:11:32,794 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 10:19:17,465 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 10:19:17,480 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): d3cbbecdf534f1b664af83d448cb7518909a50710e3daa42bca5dd2b1381a8d5f57917e0ba054e95d8f806fd8ae1483cbfb8839d3ca99267ee0cef4bf3f91d7a
+2023-09-07 10:19:17,480 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 23
+2023-09-07 10:19:17,481 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): 5a807ed9d12bc49c740efff62cd11cfd704eff689fffd2d6c9688b6ecdf5a35c
+2023-09-07 10:19:17,481 - root - INFO - [VRF.py:257] - Salt: 7ddbda5981a7e2625e356c966ea2daa09a17fd4fe7d979ef5845fc2602530ee5
+2023-09-07 10:19:17,482 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 23
+2023-09-07 10:19:17,483 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410715730000300003000030000
+2023-09-07 10:19:17,483 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410715730000300003000030000'
+2023-09-07 10:19:17,483 - root - INFO - [VRF.py:262] - Random Value (Beta): 9d516633a193317056ded0c1b05b20c4b543e4b63fa86b8d038764e84157375c
+2023-09-07 10:19:17,483 - root - INFO - [VRF.py:263] - Proof: 16908d3258e73d686478d26a2db24e4a9f7aea6528edd35397387820f96d89885283e450bfe160427e5b7c15d751ac92f8a8e9f51512f541bc3fc4a0026ee724
+2023-09-07 10:19:17,483 - root - INFO - [VRF.py:264] - Public Key: 045b42b1691d805c79d7da25b5861b8a52d76f6bd17764f3df8f9bfb7954309fb3c4361e232540b13f8c66d262c6d90151f0f12f07e854178eacbed341fd4ab3fa
+2023-09-07 10:19:17,489 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 23
+2023-09-07 10:19:17,489 - root - INFO - [VRF.py:267] - Expected Value: 5a807ed9d12bc49c740efff62cd11cfd704eff689fffd2d6c9688b6ecdf5a35c
+2023-09-07 10:19:17,490 - root - INFO - [VRF.py:268] - Initial Hash: 5a807ed9d12bc49c740efff62cd11cfd704eff689fffd2d6c9688b6ecdf5a35c
+2023-09-07 10:19:17,490 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 10:19:18,176 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 10:19:18,187 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): bd6bb6f46820a0a2dd72cc95559fe3ca0f102e9d81bbcfd3ea980c698550639599cc3fbfe2a5af50ac123e29cabdd6f8dde8862ed677c050b37063036b83d37d
+2023-09-07 10:19:18,187 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 34
+2023-09-07 10:19:18,187 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): b42b92d8acc6caca5702bdffd16546bf08fe9750291d69ece8c825273827d844
+2023-09-07 10:19:18,187 - root - INFO - [VRF.py:257] - Salt: b93b22343a1b811bcab7c31c3d5a71f1a0e7594251f7926524fc81c5452f94ea
+2023-09-07 10:19:18,188 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 34
+2023-09-07 10:19:18,188 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410715830000300003000030000
+2023-09-07 10:19:18,189 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410715830000300003000030000'
+2023-09-07 10:19:18,189 - root - INFO - [VRF.py:262] - Random Value (Beta): cc8ec8948ff3d8da801f62fafb3bee282d9ae79cd07b0773d30ca9bdf1e5cb89
+2023-09-07 10:19:18,189 - root - INFO - [VRF.py:263] - Proof: a0666211d0436597200cc471567a859530797b0eb422e314e1643c2f17574e07dd7a317525e4bda1889034f8092b13f2e91880bf0767bc080985c161dbee4f83
+2023-09-07 10:19:18,189 - root - INFO - [VRF.py:264] - Public Key: 041858042332974eac4dc45ca322a30b48e8b315b954212e72437584911e7f985fb95b947e6c7b81303b16b95c3cbea4f2b00504069f1a893a11de6390796b2bfd
+2023-09-07 10:19:18,193 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 34
+2023-09-07 10:19:18,193 - root - INFO - [VRF.py:267] - Expected Value: b42b92d8acc6caca5702bdffd16546bf08fe9750291d69ece8c825273827d844
+2023-09-07 10:19:18,194 - root - INFO - [VRF.py:268] - Initial Hash: b42b92d8acc6caca5702bdffd16546bf08fe9750291d69ece8c825273827d844
+2023-09-07 10:19:18,194 - root - INFO - [VRF.py:269] - Verification Result: True
+2023-09-07 10:19:18,810 - root - INFO - [VRF.py:250] - Revolver Size): 50
+2023-09-07 10:19:18,821 - root - INFO - [VRF.py:169] - Seed Hash (shared with player): 402be0b8bb2433ca9c32cd73b84772717974f14a5f13ddd0fcc461c6c0c133b1e13d4cf91014a9638e3b43040621abd8cbd0219f02a31bbdcb2b7453a10fd621
+2023-09-07 10:19:18,822 - root - INFO - [VRF.py:179] - Chamber Index (for newGame): 13
+2023-09-07 10:19:18,822 - root - INFO - [VRF.py:256] - Initial Hash (for newGame): 6721aebcb3b349ca35876eedd467783b03b50ad41bb59cd8e6430103dcafcfcf
+2023-09-07 10:19:18,822 - root - INFO - [VRF.py:257] - Salt: ee14d05f15968c06ffe34d6e6ac77a28bf9d6d128a0adbfff9a42e059a7ec650
+2023-09-07 10:19:18,824 - root - INFO - [VRF.py:202] - Chamber Index (for endGame): 13
+2023-09-07 10:19:18,825 - root - INFO - [VRF.py:260] - Alpha_Raw (Timestampe + Bets): 169410715830000300003000030000
+2023-09-07 10:19:18,825 - root - INFO - [VRF.py:261] - Alpha (Input Message): b'169410715830000300003000030000'
+2023-09-07 10:19:18,825 - root - INFO - [VRF.py:262] - Random Value (Beta): 4183d3b35c58a01865f508b420ff89947fee7a7c3102953cba5a9c0a67020dc2
+2023-09-07 10:19:18,825 - root - INFO - [VRF.py:263] - Proof: 6ec2a71bec323201d1a7c781aadfb5bdc49f0ee5a9b8a80447710a2e7adbc0697b4837fecf5e764486ed95783bca1fee017e0217072ec98c2debe2f389d2d482
+2023-09-07 10:19:18,825 - root - INFO - [VRF.py:264] - Public Key: 04f7c842979358c0b3a793a121e1d7cde68b6bd495d96ee34c455ac6f3dea22023c5ecc4c40fde0f9545cc01a40d88059e6cac24d575b9d9c7c94036b0c3c95b66
+2023-09-07 10:19:18,830 - root - INFO - [VRF.py:234] - Chamber Index (from Beta): 13
+2023-09-07 10:19:18,830 - root - INFO - [VRF.py:267] - Expected Value: 6721aebcb3b349ca35876eedd467783b03b50ad41bb59cd8e6430103dcafcfcf
+2023-09-07 10:19:18,830 - root - INFO - [VRF.py:268] - Initial Hash: 6721aebcb3b349ca35876eedd467783b03b50ad41bb59cd8e6430103dcafcfcf
+2023-09-07 10:19:18,830 - root - INFO - [VRF.py:269] - Verification Result: True

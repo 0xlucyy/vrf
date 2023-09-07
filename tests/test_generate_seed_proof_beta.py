@@ -58,23 +58,7 @@ class TestGenerateSeed:
       """
       _, _, salt = generate_seed()
       assert isinstance(salt, bytes)
-
-    def test_generate_seed_iterations_can_be_changed(self):
-      """
-      Test the function generate_seed to ensure the number of iterations
-      used in the PBKDF2 function can be changed.
-
-      Steps:
-      1. Define a custom number of iterations.
-      2. Call the function under test with the custom iterations.
-      3. Assert that the resulting seed_hash is different from the default.
-
-      Expected Outcome:
-      The seed_hash should be different when using a custom number of iterations.
-      """
-      iterations = 500000
-      seed, seed_hash, _ = generate_seed(_iterations=iterations)
-      assert seed_hash != generate_seed()[1]
+  
 
     def test_generate_seed_algorithm_can_be_changed(self):
       """
@@ -176,7 +160,7 @@ class TestGenerateSeed:
         proof = b"proof"
         salt = "salt"
         chamber_index = 1
-        expected_output = "594dc10614580d73010f1760fb3fc85250680b4ca7a04e8226a9969d3e0028ce"
+        expected_output = "5eb56d677d7192313903f2c88bb83037f8373b989e3ecfab29112a269b69ddaf"
         result = generate_beta(proof, salt, chamber_index)
         assert result == expected_output
 

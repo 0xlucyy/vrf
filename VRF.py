@@ -15,7 +15,10 @@ PRIVATE_KEY_ERROR_MSG = 'Private key must be an instance of ecdsa.keys.SigningKe
 PROOF_BETA_ERROR_MSG = 'Failed to generate proof or beta.'
 
 
-def generate_seed(_iterations=100000, _algorithm='sha512'):
+# ITERATIONS = 100000
+ITERATIONS = 100
+
+def generate_seed(_algorithm: str = 'sha512'):
     """
     Generate a random seed and its hash.
 
@@ -32,8 +35,7 @@ def generate_seed(_iterations=100000, _algorithm='sha512'):
     """
     seed = secrets.token_hex(16)
     salt = secrets.token_bytes(32)
-    iterations = _iterations
-    seed_hash = hashlib.pbkdf2_hmac(_algorithm, seed.encode(), salt, iterations).hex()
+    seed_hash = hashlib.pbkdf2_hmac(_algorithm, seed.encode(), salt, ITERATIONS).hex()
     return seed, seed_hash, salt
 
 
@@ -55,6 +57,7 @@ def generate_proof(private_key: ecdsa.keys.SigningKey, alpha: bytes):
         # if alpha == b"" or alpha == "":
         if not alpha:
             raise VerificationError('Alpha cannot be empty.')
+        # not hashing data, used in signature generation process.
         return private_key.sign(alpha, hashfunc=hashlib.sha256)
     except Exception as e:
         raise VerificationError('Failed to generate proof.') from e
@@ -75,13 +78,15 @@ def generate_beta(proof: bytes, salt: str, chamber_index: int) -> str:
     """
     try:
         chamber_index_bytes = str(chamber_index).encode()
-        beta = hashlib.sha256(b''.join([proof, salt.encode(), chamber_index_bytes])).hexdigest()
+        beta = hashlib.pbkdf2_hmac('sha256', b''.join([proof, salt.encode(), chamber_index_bytes]), salt.encode(), ITERATIONS).hex()
         return beta
     except Exception as e:
         raise VerificationError('Failed to generate beta.') from e
 
 
-def generate_random_value_and_proof(private_key: ecdsa.keys.SigningKey, alpha: bytes, chamber_index: int, salt: str, revolver_size: int) -> tuple:
+def generate_random_value_and_proof(private_key: ecdsa.keys.SigningKey,
+                                    alpha: bytes, chamber_index: int,
+                                    salt: str, revolver_size: int) -> tuple:
     """
     Generate a random value and its proof.
 
@@ -130,7 +135,8 @@ def generate_random_value_and_proof(private_key: ecdsa.keys.SigningKey, alpha: b
     calculates derived_chamber_index by hashing beta to produce
     an integer & taking the modulus with revolver_size.
     '''
-    derived_chamber_index = int(hashlib.sha256(beta.encode()).hexdigest(), 16) % revolver_size
+    derived_value = hashlib.pbkdf2_hmac('sha256', beta.encode(), salt.encode(), ITERATIONS).hex()
+    derived_chamber_index = int(derived_value, 16) % revolver_size
 
     return beta, proof, derived_chamber_index
 
@@ -145,9 +151,17 @@ def new_game(revolver_size, bets):
     Returns:
         tuple: A tuple containing initial hash, salt, chamber index, and seed.
     """
+    if not isinstance(revolver_size, int):
+        raise InputError("Invalid input. revolver size must be an int.")
     if not (2 <= revolver_size <= 50):
         raise InputError("Invalid revolver size. It should be between 2 and 50.")
-    
+
+    if not isinstance(bets, list):
+        raise InputError("Invalid input. Bets must be a list.")
+    for bet in bets:
+        if not isinstance(bet, int):
+            raise InputError("Invalid input. Bets must be a list of integers.")
+
     if len(bets) > revolver_size:
         raise InputError("Too many players!")
 
@@ -155,9 +169,13 @@ def new_game(revolver_size, bets):
     logger.info(f'Seed Hash (shared with player): {seed_hash}')
 
     salt = secrets.token_hex(32)
-    deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
+    # deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
+    deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
+
     chamber_index = int(deterministic_value[:8], 16) % revolver_size
-    initial_hash = hashlib.sha256((str(chamber_index) + salt).encode()).hexdigest()
+    # initial_hash = hashlib.sha256((str(chamber_index) + salt).encode()).hexdigest()
+    initial_hash = hashlib.pbkdf2_hmac('sha256', (str(chamber_index) + salt).encode(), salt.encode(), ITERATIONS).hex()
+
     logger.info(f'Chamber Index (for newGame): {chamber_index}')
     return initial_hash, salt, chamber_index
 
@@ -177,7 +195,9 @@ def end_game(private_key, alpha, revolver_size, salt, chamber_index):
     """
     public_key = private_key.get_verifying_key().to_string(encoding='uncompressed')
     beta, proof, _ = generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
-    deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
+    # deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
+    deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
+
     derived_chamber_index = int(deterministic_value[:8], 16) % revolver_size
     logger.info(f'Chamber Index (for endGame): {derived_chamber_index}')
     return beta, proof, public_key, derived_chamber_index
@@ -200,17 +220,23 @@ def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size):
         bool: True if verification is successful, False otherwise.
     """
     try:
+        # Digital signature verification
         vk = ecdsa.VerifyingKey.from_string(public_key, curve=ecdsa.SECP256k1)
         vk.verify(proof, alpha, hashfunc=hashlib.sha256)
         proof_validity = True
     except ecdsa.keys.BadSignatureError:
         raise VerificationError('Verification of the proof failed.')
 
-    deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
+    # deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
+    deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
+
     chamber_index = int(deterministic_value[:8], 16) % revolver_size
     logger.info(f'Chamber Index (from Beta): {chamber_index}')
 
-    return proof_validity and initial_hash == hashlib.sha256((str(chamber_index) + salt).encode()).hexdigest()
+    # return proof_validity and initial_hash == hashlib.sha256((str(chamber_index) + salt).encode()).hexdigest()
+    derived_hash = hashlib.pbkdf2_hmac('sha256', (str(chamber_index) + salt).encode(), salt.encode(), ITERATIONS).hex()
+    return proof_validity and initial_hash == derived_hash
+
 
 
 def run():
