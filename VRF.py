@@ -37,16 +37,48 @@ def generate_seed(_iterations=100000, _algorithm='sha512'):
     return seed, seed_hash, salt
 
 
-def generate_proof(private_key, alpha):
+def generate_proof(private_key: ecdsa.keys.SigningKey, alpha: bytes):
+    """
+    Generate a proof using the private key and input message.
+
+    Args:
+        private_key: The private key for signing.
+        alpha: The input message.
+
+    Returns:
+        The generated proof.
+
+    Raises:
+        VerificationError: If the proof generation fails.
+    """
     try:
+        # if alpha == b"" or alpha == "":
+        if not alpha:
+            raise VerificationError('Alpha cannot be empty.')
         return private_key.sign(alpha, hashfunc=hashlib.sha256)
     except Exception as e:
         raise VerificationError('Failed to generate proof.') from e
 
 
-def generate_beta(proof, salt, chamber_index):
-    beta = hashlib.sha256(b''.join([proof, salt.encode(), str(chamber_index).encode()])).hexdigest()
-    return beta
+def generate_beta(proof: bytes, salt: str, chamber_index: int) -> str:
+    """
+    Generate beta value based on the given proof, salt, and chamber index.
+
+    Args:
+        proof: The proof value.
+        salt: The salt value.
+        chamber_index: The chamber index.
+
+    Returns:
+        str: The generated beta value.
+
+    """
+    try:
+        chamber_index_bytes = str(chamber_index).encode()
+        beta = hashlib.sha256(b''.join([proof, salt.encode(), chamber_index_bytes])).hexdigest()
+        return beta
+    except Exception as e:
+        raise VerificationError('Failed to generate beta.') from e
 
 
 def generate_random_value_and_proof(private_key: ecdsa.keys.SigningKey, alpha: bytes, chamber_index: int, salt: str, revolver_size: int) -> tuple:
