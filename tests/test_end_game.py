@@ -22,7 +22,7 @@ class TestEndGame:
 
         # Call the end_game function with the invalid private key
         with pytest.raises(AttributeError):
-            end_game(private_key_mock, b'alpha', 50, 'salt', 2)
+            end_game(private_key_mock, b'alpha', 50, 'salt', 2, 'seed_hash')
 
 
     # Tests that end_game function raises a VerificationError when the alpha is not of type bytes or the salt is not of type str.
@@ -38,7 +38,7 @@ class TestEndGame:
 
         # Call the end_game function with invalid alpha and salt types
         with pytest.raises(VerificationError):
-            end_game(private_key_mock, 'alpha', 50, 'salt', 2)
+            end_game(private_key_mock, 'alpha', 50, 'salt', 2, 'seed_hash')
 
 
     # Tests that end_game function raises a VerificationError when the alpha or salt is None.
@@ -54,7 +54,7 @@ class TestEndGame:
 
         # Call the end_game function with None alpha and salt
         with pytest.raises(VerificationError):
-            end_game(private_key_mock, None, 50, 'salt', 2)
+            end_game(private_key_mock, None, 50, 'salt', 2, 'seed_hash')
 
 
     # Tests that end_game function raises a VerificationError when the alpha or salt is empty.
@@ -71,7 +71,7 @@ class TestEndGame:
 
         # Call the end_game function with empty alpha and salt
         with pytest.raises(VerificationError):
-            end_game(private_key, b'', 50, '', 2)
+            end_game(private_key, b'', 50, '', 2, 'seed_hash')
 
     # Tests that end_game function raises a VerificationError when the chamber_index or revolver_size is not of type int, or the chamber_index is less than or equal to 1, or the revolver_size is less than or equal to 0.
     def test_end_game_chamber_index_revolver_size_error(self):
@@ -88,19 +88,19 @@ class TestEndGame:
 
         # Call the end_game function with invalid chamber_index and revolver_size
         with pytest.raises(VerificationError):
-            end_game(private_key, b'alpha', '50', 'salt', 2)
+            end_game(private_key, b'alpha', '50', 'salt', 2, 'seed_hash')
 
         with pytest.raises(VerificationError):
-            end_game(private_key, b'alpha', 51, 'salt', '2')
+            end_game(private_key, b'alpha', 51, 'salt', '2', 'seed_hash')
 
         with pytest.raises(VerificationError):
-            end_game(private_key, b'alpha', 0, 'salt', 2)
+            end_game(private_key, b'alpha', 0, 'salt', 2, 'seed_hash')
 
         with pytest.raises(VerificationError):
-            end_game(private_key, b'alpha', -1, 'salt', 0)
+            end_game(private_key, b'alpha', -1, 'salt', 0, 'seed_hash')
 
         with pytest.raises(VerificationError):
-            end_game(private_key, b'alpha', 500, 'salt', 2)
+            end_game(private_key, b'alpha', 500, 'salt', 2, 'seed_hash')
 
 
     # Tests that end_game function returns the expected values when all inputs are valid and the function is executed without any errors.
@@ -118,7 +118,7 @@ class TestEndGame:
         private_key.verifying_key.to_pem = MagicMock(return_value=b'public_key')
 
         # Call the end_game function with valid inputs
-        result = end_game(private_key, b'alpha', 50, 'salt', 2)
+        result = end_game(private_key, b'alpha', 50, 'salt', 2, 'seed_hash')
 
         # Assert that the result is as expected
         assert result == ('beta', 'proof', b'public_key', 0)
@@ -139,4 +139,4 @@ class TestEndGame:
 
         # Call the end_game function with valid inputs
         with pytest.raises(VerificationError):
-            end_game(private_key, b'alpha', 50, 'salt', 2)
+            end_game(private_key, b'alpha', 50, 'salt', 2, 'seed_hash')

@@ -5,7 +5,6 @@ import secrets
 import time
 
 from log import logger
-from utils import deterministic_value
 from error import SeedError, VerificationError, InputError
 
 HEX_BASE = 16
@@ -148,7 +147,8 @@ def new_game(revolver_size: int, bets: list):
         bets (list): bets made by the players.
 
     Returns:
-        tuple: A tuple containing the initial hash, salt, and chamber index.
+        tuple: A tuple containing the initial hash, salt,
+               chamber index and seed_hash.
 
     Raises:
         InputError: If the input parameters are invalid.
@@ -172,21 +172,21 @@ def new_game(revolver_size: int, bets: list):
         if not isinstance(bet, int):
             raise InputError("Invalid input. Bets must be a list of integers.")
 
-    # seed, seed_hash, _ = generate_seed()
-    # logger.info(f'Seed Hash (shared with player): {seed_hash}')
+    _, seed_hash, _ = generate_seed()
+    logger.info(f'Seed Hash (shared with player): {seed_hash}')
 
     salt = secrets.token_hex(32)
-    deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
+    deterministic_value = hashlib.pbkdf2_hmac('sha256', (seed_hash + salt).encode(), salt.encode(), ITERATIONS).hex()
 
     chamber_index = int(deterministic_value[:8], 16) % revolver_size
     initial_hash = hashlib.pbkdf2_hmac('sha256', (str(chamber_index) + salt).encode(), salt.encode(), ITERATIONS).hex()
 
     logger.info(f'Chamber Index (for newGame): {chamber_index}')
-    return initial_hash, salt, chamber_index
+    return initial_hash, salt, chamber_index, seed_hash
 
 
 def end_game(private_key: ecdsa.keys.SigningKey, alpha: bytes,
-             revolver_size: int, salt: str, chamber_index: int):
+             revolver_size: int, salt: str, chamber_index: int, seed_hash):
     """
     End the game and generate necessary values.
     
@@ -210,7 +210,8 @@ def end_game(private_key: ecdsa.keys.SigningKey, alpha: bytes,
     public_key_pem = private_key.verifying_key.to_pem()
 
     beta, proof, _ = generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
-    deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
+    # deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
+    deterministic_value = hashlib.pbkdf2_hmac('sha256', (seed_hash + salt).encode(), salt.encode(), ITERATIONS).hex()
 
     derived_chamber_index = int(deterministic_value[:8], 16) % revolver_size
     logger.info(f'Chamber Index (for endGame): {derived_chamber_index}')
@@ -218,7 +219,7 @@ def end_game(private_key: ecdsa.keys.SigningKey, alpha: bytes,
     return beta, proof, public_key_pem, derived_chamber_index
 
 
-def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size):
+def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size, seed_hash):
     """
     Verify the outcome of a game.
 
@@ -247,7 +248,8 @@ def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size):
         return False
 
     # Generate deterministic value using salt and hash function
-    deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
+    # deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
+    deterministic_value = hashlib.pbkdf2_hmac('sha256', (seed_hash + salt).encode(), salt.encode(), ITERATIONS).hex()
 
     chamber_index = int(deterministic_value[:8], 16) % revolver_size
     logger.info(f'Chamber Index (from Beta): {chamber_index}')
@@ -258,7 +260,7 @@ def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size):
 
 
 
-def run():
+def test():
     revolver_size = 50
     timestamp = str(int(time.time()))
     bets = [30000, 30000, 30000, 30000]
@@ -270,22 +272,23 @@ def run():
 
     sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
 
-    initial_hash, salt, chamber_index = new_game(revolver_size, bets)
-    # logger.info(f"Seed (revealed at end): {seed}")
+    initial_hash, salt, chamber_index, seed_hash = new_game(revolver_size, bets)
+    logger.info(f"Seed Hash: {seed_hash}")
     logger.info(f'Initial Hash (for newGame): {initial_hash}')
     logger.info(f'Salt: {salt}')
 
-    beta, proof, public_key_pem, _ = end_game(sk, alpha, revolver_size, salt, chamber_index)
+    beta, proof, public_key_pem, _ = end_game(sk, alpha, revolver_size, salt, chamber_index, seed_hash)
     logger.info(f'Alpha_Raw (Timestampe + Bets): {alpha_raw}')
     logger.info(f'Alpha (Input Message): {alpha}')
     logger.info(f'Random Value (Beta): {beta}')
     logger.info(f'Proof: {proof.hex()}')
     logger.info(f'Public Key:\n{public_key_pem}')
 
-    result = verify(public_key_pem, alpha, beta, proof, initial_hash, salt, revolver_size)
+    result = verify(public_key_pem, alpha, beta, proof, initial_hash, salt, revolver_size, seed_hash)
     logger.info(f'Expected Value: {initial_hash}')
     logger.info(f'Initial Hash: {initial_hash}')
     logger.info(f'Verification Result: {result}')
 
 if __name__ == '__main__':
-    run()
+    test()
+

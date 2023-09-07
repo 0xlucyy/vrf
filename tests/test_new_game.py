@@ -17,7 +17,7 @@ class TestNewGame:
         """
         revolver_size = 2
         bets = [1, 1]
-        initial_hash, salt, chamber_index = new_game(revolver_size, bets)
+        initial_hash, salt, chamber_index, _ = new_game(revolver_size, bets)
         assert isinstance(initial_hash, str)
         assert isinstance(salt, str)
         assert isinstance(chamber_index, int)
@@ -33,7 +33,7 @@ class TestNewGame:
         """
         revolver_size = 50
         bets = [1, 1, 1, 1]
-        initial_hash, salt, chamber_index = new_game(revolver_size, bets)
+        initial_hash, salt, chamber_index, _ = new_game(revolver_size, bets)
         assert isinstance(initial_hash, str)
         assert isinstance(salt, str)
         assert isinstance(chamber_index, int)
@@ -54,7 +54,7 @@ class TestNewGame:
 
         revolver_size = 10
         bets = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        initial_hash, salt, chamber_index = new_game(revolver_size, bets)
+        initial_hash, salt, chamber_index, _ = new_game(revolver_size, bets)
         assert isinstance(initial_hash, str)
         assert isinstance(salt, str)
         assert isinstance(chamber_index, int)

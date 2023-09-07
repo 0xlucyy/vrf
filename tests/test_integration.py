@@ -67,13 +67,13 @@ class TestIntegration(unittest.TestCase):
       sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
 
       # Step 2c: Initialize a new game to get the initial hash, salt, and chamber index.
-      initial_hash, salt, chamber_index = new_game(scenario["revolver_size"], scenario["bets"])
+      initial_hash, salt, chamber_index, seed_hash = new_game(scenario["revolver_size"], scenario["bets"])
 
       # Step 2d: End the game to get the beta, proof, and public key.
-      beta, proof, public_key_pem, _ = end_game(sk, alpha, scenario["revolver_size"], salt, chamber_index)
+      beta, proof, public_key_pem, _ = end_game(sk, alpha, scenario["revolver_size"], salt, chamber_index, seed_hash)
 
       # Step 2e: Verify the outcome of the game using the provided values.
-      result = verify(public_key_pem, alpha, beta, proof, initial_hash, salt, scenario["revolver_size"])
+      result = verify(public_key_pem, alpha, beta, proof, initial_hash, salt, scenario["revolver_size"], seed_hash)
 
       # Step 2f: Assert that the verification result is True.
       self.assertTrue(result, f"VRF verification failed for revolver size {scenario['revolver_size']} and bets {scenario['bets']}!")
