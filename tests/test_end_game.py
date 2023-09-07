@@ -4,9 +4,8 @@ from unittest import mock
 from VRF import (
     end_game
 )
-from error import SeedError, VerificationError, InputError
+from error import VerificationError
 from unittest.mock import patch, MagicMock
-#         private_key.sign = MagicMock(return_value=mock_proof)
 
 class TestEndGame:
 
@@ -116,7 +115,7 @@ class TestEndGame:
         """
         # Create a mock private key
         private_key = ecdsa.SigningKey.generate()
-        private_key.verifying_key.to_string = MagicMock(return_value=b'public_key')
+        private_key.verifying_key.to_pem = MagicMock(return_value=b'public_key')
 
         # Call the end_game function with valid inputs
         result = end_game(private_key, b'alpha', 50, 'salt', 2)

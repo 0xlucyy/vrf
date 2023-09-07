@@ -3,6 +3,7 @@ import ecdsa
 import hashlib
 import secrets
 import time
+
 from log import logger
 from utils import deterministic_value
 from error import SeedError, VerificationError, InputError
@@ -18,6 +19,7 @@ PROOF_BETA_ERROR_MSG = 'Failed to generate proof or beta.'
 
 # ITERATIONS = 100000
 ITERATIONS = 100
+MAX_REVOLVER_SIZE = 50
 
 def generate_seed(_algorithm: str = 'sha512'):
     """
@@ -114,9 +116,6 @@ def generate_random_value_and_proof(private_key: ecdsa.keys.SigningKey,
 
     if not isinstance(alpha, bytes) or not isinstance(salt, str):
         raise VerificationError(ALPHA_SALT_ERROR_MSG)
-
-    if alpha is None or salt is None:
-        raise VerificationError('Alpha or Salt cannot be None.')
     
     if alpha == "" or salt == b"" or salt == "":
         raise VerificationError('Alpha or Salt cannot be empty.')
@@ -207,49 +206,54 @@ def end_game(private_key: ecdsa.keys.SigningKey, alpha: bytes,
         raise VerificationError
     if revolver_size and int(revolver_size) > 50:
         raise VerificationError('Revolver size must be 50 or lower')
-    public_key = private_key.verifying_key.to_string(encoding='uncompressed')
+
+    public_key_pem = private_key.verifying_key.to_pem()
+
     beta, proof, _ = generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
     deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
 
     derived_chamber_index = int(deterministic_value[:8], 16) % revolver_size
     logger.info(f'Chamber Index (for endGame): {derived_chamber_index}')
     # import pdb;pdb.set_trace()
-    return beta, proof, public_key, derived_chamber_index
+    return beta, proof, public_key_pem, derived_chamber_index
 
 
 def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size):
     """
-    Verify the game's outcome.
-    
+    Verify the outcome of a game.
+
     Args:
-        public_key (bytes): The public key for verification.
-        alpha (bytes): Input message.
-        beta (str): Random value.
-        proof (bytes): Proof of the random value.
-        initial_hash (str): Initial hash value.
+        public_key (bytes): The public key used for verification.
+        alpha (bytes): The input message.
+        beta (str): The random value.
+        proof (bytes): The proof of the random value.
+        initial_hash (str): The initial hash value.
         salt (str): The salt value.
         revolver_size (int): The size of the revolver.
-        
+
     Returns:
-        bool: True if verification is successful, False otherwise.
+        bool: True if the verification is successful, False otherwise.
     """
     try:
         # Digital signature verification
-        vk = ecdsa.VerifyingKey.from_string(public_key, curve=ecdsa.SECP256k1)
-        # vk = ecdsa.VerifyingKey.from_pem(public_key)
+        vk = ecdsa.VerifyingKey.from_pem(public_key)
         vk.verify(proof, alpha, hashfunc=hashlib.sha256)
         proof_validity = True
-    except ecdsa.keys.BadSignatureError:
-        raise VerificationError('Verification of the proof failed.')
+    except (ecdsa.keys.BadSignatureError, ecdsa.errors.MalformedPointError, ValueError) as error:
+        logger.error(f'Verification of the proof failed: {error}')
+        return False
+    except Exception as error:
+        logger.error(f'Verification of the proof failed: {error}')
+        return False
 
-    # deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
+    # Generate deterministic value using salt and hash function
     deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
 
     chamber_index = int(deterministic_value[:8], 16) % revolver_size
     logger.info(f'Chamber Index (from Beta): {chamber_index}')
 
-    # return proof_validity and initial_hash == hashlib.sha256((str(chamber_index) + salt).encode()).hexdigest()
-    derived_hash = hashlib.pbkdf2_hmac('sha256', f'{chamber_index}{salt}'.encode(), salt.encode(), ITERATIONS).hex()
+    # Compare initial hash with derived hash to determine verification result
+    derived_hash = hashlib.pbkdf2_hmac('sha256', (str(chamber_index) + salt).encode(), salt.encode(), ITERATIONS).hex()
     return proof_validity and initial_hash == derived_hash
 
 
@@ -271,14 +275,14 @@ def run():
     logger.info(f'Initial Hash (for newGame): {initial_hash}')
     logger.info(f'Salt: {salt}')
 
-    beta, proof, pk, _ = end_game(sk, alpha, revolver_size, salt, chamber_index)
+    beta, proof, public_key_pem, _ = end_game(sk, alpha, revolver_size, salt, chamber_index)
     logger.info(f'Alpha_Raw (Timestampe + Bets): {alpha_raw}')
     logger.info(f'Alpha (Input Message): {alpha}')
     logger.info(f'Random Value (Beta): {beta}')
     logger.info(f'Proof: {proof.hex()}')
-    logger.info(f'Public Key: {pk.hex()}')
+    logger.info(f'Public Key:\n{public_key_pem}')
 
-    result = verify(pk, alpha, beta, proof, initial_hash, salt, revolver_size)
+    result = verify(public_key_pem, alpha, beta, proof, initial_hash, salt, revolver_size)
     logger.info(f'Expected Value: {initial_hash}')
     logger.info(f'Initial Hash: {initial_hash}')
     logger.info(f'Verification Result: {result}')
