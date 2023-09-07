@@ -4,6 +4,7 @@ import hashlib
 import secrets
 import time
 from log import logger
+from utils import deterministic_value
 from error import SeedError, VerificationError, InputError
 
 HEX_BASE = 16
@@ -131,75 +132,88 @@ def generate_random_value_and_proof(private_key: ecdsa.keys.SigningKey,
     proof = generate_proof(private_key, alpha)
     beta = generate_beta(proof, salt, chamber_index)
 
-    '''
-    calculates derived_chamber_index by hashing beta to produce
-    an integer & taking the modulus with revolver_size.
-    '''
     derived_value = hashlib.pbkdf2_hmac('sha256', beta.encode(), salt.encode(), ITERATIONS).hex()
     derived_chamber_index = int(derived_value, 16) % revolver_size
 
     return beta, proof, derived_chamber_index
 
 
-def new_game(revolver_size, bets):
+def new_game(revolver_size: int, bets: list):
     """
-    Initialize a new game.
-    
+    Initialize a new game by generating a random seed and its hash,
+    validating the input parameters, and calculating the initial
+    hash, salt, and chamber index.
+
     Args:
         revolver_size (int): The size of the revolver.
-        
+        bets (list): bets made by the players.
+
     Returns:
-        tuple: A tuple containing initial hash, salt, chamber index, and seed.
+        tuple: A tuple containing the initial hash, salt, and chamber index.
+
+    Raises:
+        InputError: If the input parameters are invalid.
+
+    Example Usage:
+        revolver_size = 6
+        bets = [100, 200, 300]
+        initial_hash, salt, chamber_index = new_game(revolver_size, bets)
+        print(f"Initial Hash: {initial_hash}")
+        print(f"Salt: {salt}")
+        print(f"Chamber Index: {chamber_index}")
     """
     if not isinstance(revolver_size, int):
         raise InputError("Invalid input. revolver size must be an int.")
     if not (2 <= revolver_size <= 50):
         raise InputError("Invalid revolver size. It should be between 2 and 50.")
 
-    if not isinstance(bets, list):
+    if not isinstance(bets, list) or not bets:
         raise InputError("Invalid input. Bets must be a list.")
     for bet in bets:
         if not isinstance(bet, int):
             raise InputError("Invalid input. Bets must be a list of integers.")
 
-    if len(bets) > revolver_size:
-        raise InputError("Too many players!")
-
-    seed, seed_hash, _ = generate_seed()
-    logger.info(f'Seed Hash (shared with player): {seed_hash}')
+    # seed, seed_hash, _ = generate_seed()
+    # logger.info(f'Seed Hash (shared with player): {seed_hash}')
 
     salt = secrets.token_hex(32)
-    # deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
     deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
 
     chamber_index = int(deterministic_value[:8], 16) % revolver_size
-    # initial_hash = hashlib.sha256((str(chamber_index) + salt).encode()).hexdigest()
     initial_hash = hashlib.pbkdf2_hmac('sha256', (str(chamber_index) + salt).encode(), salt.encode(), ITERATIONS).hex()
 
     logger.info(f'Chamber Index (for newGame): {chamber_index}')
     return initial_hash, salt, chamber_index
 
 
-def end_game(private_key, alpha, revolver_size, salt, chamber_index):
+def end_game(private_key: ecdsa.keys.SigningKey, alpha: bytes,
+             revolver_size: int, salt: str, chamber_index: int):
     """
     End the game and generate necessary values.
     
     Args:
         private_key (ecdsa.keys.SigningKey): The private key for signing.
-        alpha (bytes): Input message.
+        alpha (bytes): The input message.
         revolver_size (int): The size of the revolver.
         salt (str): The salt value.
+        chamber_index (int): The chamber index.
         
     Returns:
-        tuple: A tuple containing beta, proof, public key, and derived chamber index.
+        tuple: A tuple containing the beta value, proof, public key, and derived chamber index.
     """
-    public_key = private_key.get_verifying_key().to_string(encoding='uncompressed')
+    if not alpha:
+        raise VerificationError
+    if not salt:
+        raise VerificationError
+    if revolver_size and int(revolver_size) > 50:
+        raise VerificationError('Revolver size must be 50 or lower')
+    public_key = private_key.verifying_key.to_string(encoding='uncompressed')
     beta, proof, _ = generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
-    # deterministic_value = hashlib.sha256(salt.encode()).hexdigest()
     deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
 
     derived_chamber_index = int(deterministic_value[:8], 16) % revolver_size
     logger.info(f'Chamber Index (for endGame): {derived_chamber_index}')
+    # import pdb;pdb.set_trace()
     return beta, proof, public_key, derived_chamber_index
 
 
@@ -222,6 +236,7 @@ def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size):
     try:
         # Digital signature verification
         vk = ecdsa.VerifyingKey.from_string(public_key, curve=ecdsa.SECP256k1)
+        # vk = ecdsa.VerifyingKey.from_pem(public_key)
         vk.verify(proof, alpha, hashfunc=hashlib.sha256)
         proof_validity = True
     except ecdsa.keys.BadSignatureError:
@@ -234,7 +249,7 @@ def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size):
     logger.info(f'Chamber Index (from Beta): {chamber_index}')
 
     # return proof_validity and initial_hash == hashlib.sha256((str(chamber_index) + salt).encode()).hexdigest()
-    derived_hash = hashlib.pbkdf2_hmac('sha256', (str(chamber_index) + salt).encode(), salt.encode(), ITERATIONS).hex()
+    derived_hash = hashlib.pbkdf2_hmac('sha256', f'{chamber_index}{salt}'.encode(), salt.encode(), ITERATIONS).hex()
     return proof_validity and initial_hash == derived_hash
 
 
