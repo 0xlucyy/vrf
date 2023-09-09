@@ -4,6 +4,7 @@ import hashlib
 import secrets
 import time
 
+from typing import Tuple, Union
 from log import logger
 from error import SeedError, VerificationError, InputError
 
@@ -20,274 +21,306 @@ PROOF_BETA_ERROR_MSG = 'Failed to generate proof or beta.'
 ITERATIONS = 100
 MAX_REVOLVER_SIZE = 50
 
-def generate_seed(_algorithm: str = 'sha512'):
-    """
-    Generate a random seed and its hash.
+ALGO : str = 'sha256'
 
-    This function generates a random seed and
-    its hash using the PBKDF2 key derivation function.
-    It applies a pseudorandom function to the input seed
-    along with a randomly generated salt and repeats the
-    process multiple times to produce a derived key. This
-    makes the generated seed more resistant to brute-force
-    attacks and rainbow table attacks.
+
+def generate_seed_salt_hash(_algorithm: str = 'sha512') -> Tuple[str, str, str]:
+    """
+    Generates a random seed, salt, and their hash using the
+    PBKDF2 algorithm with a specified hash algorithm and
+    number of iterations.
+
+    Args:
+        _algorithm (str, optional): A string specifying the
+            hash algorithm to use. The default value is 'sha512'.
 
     Returns:
-        tuple: A tuple containing the seed and its hash.
+        tuple: A tuple containing the generated seed, its hash, and the salt.
     """
+    if _algorithm not in hashlib.algorithms_guaranteed:
+        raise ValueError("Invalid hash algorithm. Supported algorithms are: " + ", ".join(hashlib.algorithms_guaranteed))
+    
     seed = secrets.token_hex(16)
-    salt = secrets.token_bytes(32)
-    seed_hash = hashlib.pbkdf2_hmac(_algorithm, seed.encode(), salt, ITERATIONS).hex()
+    salt = secrets.token_hex(32)
+    seed_hash = hashlib.pbkdf2_hmac(
+        _algorithm,
+        seed.encode(),
+        salt.encode(),
+        ITERATIONS
+    ).hex()
     return seed, seed_hash, salt
 
 
-def generate_proof(private_key: ecdsa.keys.SigningKey, alpha: bytes):
+def generate_proof(private_key: ecdsa.keys.SigningKey, alpha: bytes) -> bytes:
     """
     Generate a proof using the private key and input message.
 
     Args:
-        private_key: The private key for signing.
-        alpha: The input message.
+        private_key (ecdsa.keys.SigningKey): The private key for signing.
+        alpha (bytes): The input message.
 
     Returns:
-        The generated proof.
-
-    Raises:
-        VerificationError: If the proof generation fails.
+        bytes: The generated proof.
     """
+    if not alpha:
+        raise VerificationError('Alpha cannot be empty.')
+    if private_key is None:
+        raise VerificationError('Private key cannot be None.')
+
     try:
-        # if alpha == b"" or alpha == "":
-        if not alpha:
-            raise VerificationError('Alpha cannot be empty.')
-        # not hashing data, used in signature generation process.
         return private_key.sign(alpha, hashfunc=hashlib.sha256)
     except Exception as e:
         raise VerificationError('Failed to generate proof.') from e
 
 
-def generate_beta(proof: bytes, salt: str, chamber_index: int) -> str:
+def generate_beta(proof: bytes, salt: str, seed_hash: str) -> str:
     """
-    Generate beta value based on the given proof, salt, and chamber index.
+    Generates a beta value using the proof, salt, and seed hash.
 
     Args:
-        proof: The proof value.
-        salt: The salt value.
-        chamber_index: The chamber index.
+        proof (bytes): The proof of the random value.
+        salt (str): The salt value.
+        seed_hash (str): The seed hash value.
 
     Returns:
-        str: The generated beta value.
+        str: The generated beta value as a hexadecimal string.
 
+    Raises:
+        VerificationError: If failed to generate beta.
+
+    Example:
+        proof = b"proof"
+        salt = "salt"
+        seed_hash = "seed_hash"
+        beta = generate_beta(proof, salt, seed_hash)
+        print(beta) # Output: "5eb56d677d7192313903f2c88bb83037f8373b989e3ecfab29112a269b69ddaf"
     """
+    if not isinstance(proof, bytes):
+        raise ValueError("proof must be a bytes object")
+    if not isinstance(salt, str):
+        raise ValueError("salt must be a string")
+    if not isinstance(seed_hash, str):
+        raise ValueError("seed_hash must be a string")
+
     try:
-        chamber_index_bytes = str(chamber_index).encode()
-        beta = hashlib.pbkdf2_hmac('sha256', b''.join([proof, salt.encode(), chamber_index_bytes]), salt.encode(), ITERATIONS).hex()
+        beta = hashlib.pbkdf2_hmac(
+            ALGO, 
+            ((seed_hash + salt).encode() + proof),
+            salt.encode(), ITERATIONS
+        ).hex()
         return beta
     except Exception as e:
         raise VerificationError('Failed to generate beta.') from e
 
 
-def generate_random_value_and_proof(private_key: ecdsa.keys.SigningKey,
-                                    alpha: bytes, chamber_index: int,
-                                    salt: str, revolver_size: int) -> tuple:
+def generate_random_value_and_proof(
+    private_key: ecdsa.keys.SigningKey, alpha: bytes,
+    seed_hash: str, salt: str, revolver_chambers: int
+) -> Tuple[str, bytes, int]:
     """
-    Generate a random value and its proof.
+    Generate a random value and its proof based on the provided parameters.
 
     Args:
         private_key (ecdsa.keys.SigningKey): The private key for signing.
-        alpha (bytes): Input message.
-        chamber_index (int): The chamber index.
-        salt (str): The salt value.
-        revolver_size (int): The size of the revolver.
+        alpha (bytes): A game-specific parameter.
+        seed_hash (bytes): Hashed value of the seed.
+        salt (str): A random string to ensure uniqueness of the hash.
+        revolver_chambers (int): The size of the revolver.
 
     Returns:
-        tuple: A tuple containing beta, proof, and derived chamber index.
-
-    Raises:
-        VerificationError: If the private_key is not an instance of ecdsa.keys.SigningKey.
-        VerificationError: If the alpha is not of type bytes or the salt is not of type str.
-        VerificationError: If the alpha or salt is empty.
-        VerificationError: If the chamber_index or revolver_size is not of type int 
-        VerificationError: If the chamber_index is less than or equal to 1
-        VerificationError: If the revolver_size is less than or equal to 0
+        tuple: A tuple containing:
+            - beta (str): A deterministic, unpredictable value derived
+                          from the seed_hash, salt, and proof.
+            - proof (bytes): A digital signature generated using the
+                             private key and alpha.
+            - bullet_index (int): The "loaded chamber" in the game,
+                                  derived from the beta value.
     """
-    if not isinstance(private_key, ecdsa.keys.SigningKey):
-        raise VerificationError(PRIVATE_KEY_ERROR_MSG)
-
-    if not isinstance(alpha, bytes) or not isinstance(salt, str):
-        raise VerificationError(ALPHA_SALT_ERROR_MSG)
-    
     if alpha == "" or salt == b"" or salt == "":
         raise VerificationError('Alpha or Salt cannot be empty.')
 
-    if not isinstance(chamber_index, int):
-        raise VerificationError('Chamber index must be an integer.')
-    if not isinstance(revolver_size, int):
+    if not isinstance(alpha, bytes) or not isinstance(salt, str) or not isinstance(seed_hash, str):
+        raise VerificationError(ALPHA_SALT_ERROR_MSG)
+
+    if not isinstance(private_key, ecdsa.keys.SigningKey):
+        raise VerificationError(PRIVATE_KEY_ERROR_MSG)
+
+    if not isinstance(revolver_chambers, int):
         raise VerificationError('Revolver size must be an integer.')
-    if revolver_size <= 1:
+
+    if revolver_chambers <= 1:
         raise VerificationError('Revolver size must be greater than 1.')
 
-    # allow generate_proof & generate_beta to raise their own exceptions.
     proof = generate_proof(private_key, alpha)
-    beta = generate_beta(proof, salt, chamber_index)
+    beta = generate_beta(proof, salt, seed_hash)
+    
+    '''
+    Converts hexadecimal string (beta) into an int.
+    Modulus operation on int.
+    '''
+    bullet_index = int(beta, 16) % revolver_chambers
 
-    derived_value = hashlib.pbkdf2_hmac('sha256', beta.encode(), salt.encode(), ITERATIONS).hex()
-    derived_chamber_index = int(derived_value, 16) % revolver_size
-
-    return beta, proof, derived_chamber_index
+    return beta, proof, bullet_index
 
 
-def new_game(revolver_size: int, bets: list):
+def new_game(revolver_chambers: int,
+             private_key: ecdsa.keys.SigningKey,
+             alpha: bytes
+) -> Tuple[str, str, str, str, bytes, int, str, bytes]:
     """
-    Initialize a new game by generating a random seed and its hash,
-    validating the input parameters, and calculating the initial
-    hash, salt, and chamber index.
+    Initialize a new game by generating essential cryptographic
+    parameters.
+
+    This function sets up the initial state of the game by generating
+    a random seed, its hash, and other cryptographic values. It ensures
+    the game's randomness, unpredictability, and verifiability.
 
     Args:
-        revolver_size (int): The size of the revolver.
-        bets (list): bets made by the players.
+        revolver_chambers (int): The size of the revolver.
+        private_key (ecdsa.keys.SigningKey): The private key for signing.
+        alpha (bytes): timestamp + player bets.
 
     Returns:
-        tuple: A tuple containing the initial hash, salt,
-               chamber index and seed_hash.
-
-    Raises:
-        InputError: If the input parameters are invalid.
-
-    Example Usage:
-        revolver_size = 6
-        bets = [100, 200, 300]
-        initial_hash, salt, chamber_index = new_game(revolver_size, bets)
-        print(f"Initial Hash: {initial_hash}")
-        print(f"Salt: {salt}")
-        print(f"Chamber Index: {chamber_index}")
+        tuple: A tuple containing:
+            - seed (str): A randomly generated unique identifier.
+            - seed_hash (str): Hashed value of the seed.
+            - salt (str): A random string.
+            - beta (str): A deterministic, unpredictable value derived from the seed_hash, salt, and proof.
+            - proof (bytes): A digital signature generated using the private key and alpha.
+            - bullet_index (int): The "loaded chamber" in the game, derived from the beta value.
+            - bullet_index_hash (str): A commitment to the initial state of the game.
+            - public_key_pem (bytes): The public key in PEM format, extracted from the provided private key.
     """
-    if not isinstance(revolver_size, int):
+    if not isinstance(revolver_chambers, int):
         raise InputError("Invalid input. revolver size must be an int.")
-    if not (2 <= revolver_size <= 50):
+    if not (2 <= revolver_chambers <= 50):
         raise InputError("Invalid revolver size. It should be between 2 and 50.")
 
-    if not isinstance(bets, list) or not bets:
-        raise InputError("Invalid input. Bets must be a list.")
-    for bet in bets:
-        if not isinstance(bet, int):
-            raise InputError("Invalid input. Bets must be a list of integers.")
-
-    _, seed_hash, _ = generate_seed()
-    logger.info(f'Seed Hash (shared with player): {seed_hash}')
-
-    salt = secrets.token_hex(32)
-    deterministic_value = hashlib.pbkdf2_hmac('sha256', (seed_hash + salt).encode(), salt.encode(), ITERATIONS).hex()
-
-    chamber_index = int(deterministic_value[:8], 16) % revolver_size
-    initial_hash = hashlib.pbkdf2_hmac('sha256', (str(chamber_index) + salt).encode(), salt.encode(), ITERATIONS).hex()
-
-    logger.info(f'Chamber Index (for newGame): {chamber_index}')
-    return initial_hash, salt, chamber_index, seed_hash
-
-
-def end_game(private_key: ecdsa.keys.SigningKey, alpha: bytes,
-             revolver_size: int, salt: str, chamber_index: int, seed_hash):
-    """
-    End the game and generate necessary values.
+    seed, seed_hash, salt = generate_seed_salt_hash()
     
-    Args:
-        private_key (ecdsa.keys.SigningKey): The private key for signing.
-        alpha (bytes): The input message.
-        revolver_size (int): The size of the revolver.
-        salt (str): The salt value.
-        chamber_index (int): The chamber index.
-        
-    Returns:
-        tuple: A tuple containing the beta value, proof, public key, and derived chamber index.
-    """
-    if not alpha:
-        raise VerificationError
-    if not salt:
-        raise VerificationError
-    if revolver_size and int(revolver_size) > 50:
-        raise VerificationError('Revolver size must be 50 or lower')
+    beta, proof, bullet_index = generate_random_value_and_proof(
+        private_key, alpha, seed_hash, salt, revolver_chambers
+    )
+
+    bullet_index_hash = hashlib.pbkdf2_hmac(
+        ALGO,
+        (str(bullet_index) + salt + seed_hash).encode(),
+        salt.encode(),
+        ITERATIONS
+    ).hex()
 
     public_key_pem = private_key.verifying_key.to_pem()
 
-    beta, proof, _ = generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
-    # deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
-    deterministic_value = hashlib.pbkdf2_hmac('sha256', (seed_hash + salt).encode(), salt.encode(), ITERATIONS).hex()
-
-    derived_chamber_index = int(deterministic_value[:8], 16) % revolver_size
-    logger.info(f'Chamber Index (for endGame): {derived_chamber_index}')
-    # import pdb;pdb.set_trace()
-    return beta, proof, public_key_pem, derived_chamber_index
+    return seed, seed_hash, salt, beta, proof, bullet_index, bullet_index_hash, public_key_pem
 
 
-def verify(public_key, alpha, beta, proof, initial_hash, salt, revolver_size, seed_hash):
+def verify(public_key: bytes, seed_hash: str, salt: str,
+           proof: bytes, bullet_index_hash: str, alpha: bytes,
+           revolver_chambers: int) -> Union[bool, Tuple[bool, str]]:
     """
-    Verify the outcome of a game.
+    Verify the integrity and authenticity of a game's
+    cryptographic parameters.
+
+    This function checks the validity of a provided proof
+    using the public key and ensures that the derived bullet
+    index hash matches the provided hash. It ensures that the
+    game's outcome has not been tampered with and is verifiable.
 
     Args:
-        public_key (bytes): The public key used for verification.
+        public_key (bytes): The public key in PEM format for verification.
+        seed_hash (str): Hashed value of the seed.
+        salt (str): A random string.
+        proof (bytes): A digital signature generated during the game initialization.
+        bullet_index_hash (str): A commitment of initial state of the game.
         alpha (bytes): The input message.
-        beta (str): The random value.
-        proof (bytes): The proof of the random value.
-        initial_hash (str): The initial hash value.
-        salt (str): The salt value.
-        revolver_size (int): The size of the revolver.
+        revolver_chambers (int): The size of the revolver.
 
     Returns:
-        bool: True if the verification is successful, False otherwise.
+        Union[bool, Tuple[bool, str]]:
+            - False if any verification step fails.
+            - (proof_validity (bool), derived_bullet_index_hash (str)): A tuple 
+                containing the validity of the proof and the derived bullet
+                index hash if all verification steps pass.
     """
     try:
-        # Digital signature verification
+        '''
+        1a. Creating a verifying key object (vk) from public_key.
+        1a. `from_pem` is used to read public_key which is in Privacy
+            Enhanced Mail format.
+        1b. Using verifying key (vk) to verify the provided digital
+            signature (proof).
+        1b. The verify method checks if the proof is a valid signature 
+            with the message alpha using a public key (vk).
+        1c. If verification process does not raise any exceptions
+            (meaning the signature is valid), then the variable
+            proof_validity is set to True. This means that the
+            provided proof is a valid signature for the message
+            alpha, using the given public key.
+        '''
         vk = ecdsa.VerifyingKey.from_pem(public_key)
         vk.verify(proof, alpha, hashfunc=hashlib.sha256)
         proof_validity = True
     except (ecdsa.keys.BadSignatureError, ecdsa.errors.MalformedPointError, ValueError) as error:
-        logger.error(f'Verification of the proof failed: {error}')
-        return False
+        logger.error(f'1. Verification of the proof failed: {error}')
+        return False, None
     except Exception as error:
-        logger.error(f'Verification of the proof failed: {error}')
-        return False
+        logger.error(f'2. Verification of the proof failed: {error}')
+        return False, None
 
-    # Generate deterministic value using salt and hash function
-    # deterministic_value = hashlib.pbkdf2_hmac('sha256', salt.encode(), salt.encode(), ITERATIONS).hex()
-    deterministic_value = hashlib.pbkdf2_hmac('sha256', (seed_hash + salt).encode(), salt.encode(), ITERATIONS).hex()
+    # Get determinisitc beta, get bullet index, get hash of index.
+    beta = generate_beta(proof, salt, seed_hash)
+    bullet_index = int(beta, 16) % revolver_chambers
+    derived_bullet_index_hash = hashlib.pbkdf2_hmac(
+        ALGO,
+        (str(bullet_index) + salt + seed_hash).encode(),
+        salt.encode(),
+        ITERATIONS
+    ).hex()
 
-    chamber_index = int(deterministic_value[:8], 16) % revolver_size
-    logger.info(f'Chamber Index (from Beta): {chamber_index}')
-
-    # Compare initial hash with derived hash to determine verification result
-    derived_hash = hashlib.pbkdf2_hmac('sha256', (str(chamber_index) + salt).encode(), salt.encode(), ITERATIONS).hex()
-    return proof_validity and initial_hash == derived_hash
+    # Ensure derived hash is equal to new_game commit.
+    if derived_bullet_index_hash == bullet_index_hash:
+        return proof_validity, derived_bullet_index_hash
+    return False, None
 
 
 
 def test():
-    revolver_size = 50
-    timestamp = str(int(time.time()))
-    bets = [30000, 30000, 30000, 30000]
-
-    alpha_raw = (timestamp + ''.join(map(str, bets)))
-    alpha = alpha_raw.encode()
-
-    logger.info(f'Revolver Size): {revolver_size}')
+    revolver_chambers = 20
+    bets = [30000, 30000, 60000, 30000, 60000]
 
     sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
+    logger.info(f'Generated a new secret key.\n')
+    # while True:
+    #     revolver_chambers += 1
+    #     bets.append(30000)
+    logger.info(f'Revolver Size): {revolver_chambers}\n')
+    logger.info(f'Bets): {bets}\n')
 
-    initial_hash, salt, chamber_index, seed_hash = new_game(revolver_size, bets)
-    logger.info(f"Seed Hash: {seed_hash}")
-    logger.info(f'Initial Hash (for newGame): {initial_hash}')
-    logger.info(f'Salt: {salt}')
-
-    beta, proof, public_key_pem, _ = end_game(sk, alpha, revolver_size, salt, chamber_index, seed_hash)
+    timestamp = str(int(time.time()))
+    alpha_raw = (timestamp + ''.join(map(str, bets)))
+    alpha = alpha_raw.encode()
     logger.info(f'Alpha_Raw (Timestampe + Bets): {alpha_raw}')
-    logger.info(f'Alpha (Input Message): {alpha}')
-    logger.info(f'Random Value (Beta): {beta}')
-    logger.info(f'Proof: {proof.hex()}')
-    logger.info(f'Public Key:\n{public_key_pem}')
+    logger.info(f'Alpha (Input Message): {alpha}\n')
 
-    result = verify(public_key_pem, alpha, beta, proof, initial_hash, salt, revolver_size, seed_hash)
-    logger.info(f'Expected Value: {initial_hash}')
-    logger.info(f'Initial Hash: {initial_hash}')
-    logger.info(f'Verification Result: {result}')
+    # sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
+    # logger.info(f'Generated a new secret key.\n')
+    
+    seed, seed_hash, salt, beta, proof, bullet_index, bullet_index_hash, public_key_pem = new_game(revolver_chambers, sk, alpha)
+    logger.info(f"Seed: {seed}")
+    logger.info(f"Seed Hash: {seed_hash}")
+    logger.info(f"Salt: {salt}")
+    logger.info(f'Beta: {beta}')
+    logger.info(f'Proof: {proof.hex()}')
+    logger.info(f'bullet_index: {bullet_index}')
+    logger.info(f"bullet_index_hash: {bullet_index_hash}")
+    logger.info(f'Public Key: {public_key_pem.decode()}\n')
+
+    # import pdb;pdb.set_trace()
+
+    proof_validity, derived_bullet_index_hash = verify(public_key_pem, seed_hash, salt, proof, bullet_index_hash, alpha, revolver_chambers)
+    logger.info(f'Actual Bullet Index Hash: {derived_bullet_index_hash}')
+    logger.info(f'Expected Bullet Index Hash: {bullet_index_hash}')
+    logger.info(f'Verification Result: {proof_validity}')
 
 if __name__ == '__main__':
     test()

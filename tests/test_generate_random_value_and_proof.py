@@ -4,7 +4,8 @@ import hashlib
 from unittest.mock import patch, MagicMock
 from VRF import (
     generate_random_value_and_proof,
-    ITERATIONS
+    ITERATIONS,
+    ALGO
 )
 from error import VerificationError
 
@@ -39,12 +40,13 @@ class TestGenerateRandomValueAndProof:
 
         # Step 2: Define the test inputs.
         alpha = b"input message"
-        chamber_index = 0
+        bullet_index = 0
         salt = "salt"
-        revolver_size = 6
+        seed_hash = 'seed_hash'
+        revolver_chambers = 6
 
         # Step 3: Call the function under test to get the result.
-        result = generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
+        result = generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
         # Step 4: Assert that the result is a tuple.
         assert isinstance(result, tuple)
@@ -88,12 +90,13 @@ class TestGenerateRandomValueAndProof:
 
         # Step 2: Define the test inputs.
         alpha = b"input message"
-        chamber_index = 0
+        bullet_index = 0
         salt = "salt"
-        revolver_size = 6
+        seed_hash = 'seed_hash'
+        revolver_chambers = 6
 
-        # Step 3: Call the function under test.
-        result = generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
+        # Step 3: Call the function under test to get the result.
+        result = generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
         # Step 4: Extract the generated proof from the result.
         proof = result[1]
@@ -131,28 +134,32 @@ class TestGenerateRandomValueAndProof:
 
         # Step 2: Define the test inputs.
         alpha = b"input message"
-        chamber_index = 0
-        chamber_index_bytes = str(chamber_index).encode()
+        bullet_index = 0
         salt = "salt"
-        revolver_size = 6
+        seed_hash = 'seed_hash'
+        revolver_chambers = 6
 
-        # Step 3: Call the function under test.
-        result = generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
+        # Step 3: Call the function under test to get the result.
+        result = generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
         # Step 4: Extract the generated beta, proof, and derived chamber index from the result.
         beta = result[0]
         proof = result[1]
-        derived_chamber_index = result[2]
+        derived_bullet_index = result[2]
 
         # Step 5: Calculate the expected beta value based on the proof, salt, and chamber index.
-        expected_beta = hashlib.pbkdf2_hmac('sha256', b''.join([proof, salt.encode(), chamber_index_bytes]), salt.encode(), ITERATIONS).hex()
+        expected_beta = hashlib.pbkdf2_hmac(
+            ALGO, 
+            ((seed_hash + salt).encode() + proof),
+            salt.encode(), ITERATIONS
+        ).hex()
 
         # Step 6: Assert that the generated beta matches the expected value.
         assert beta == expected_beta
 
 
     @patch("hashlib.sha256")
-    def test_generate_random_value_and_proof_derives_valid_chamber_index(self, mock_sha256): 
+    def test_generate_random_value_and_proof_derives_valid_bullet_index(self, mock_sha256): 
         """
         Test the function generate_random_value_and_proof to
         ensure it correctly derives the chamber index.
@@ -169,8 +176,7 @@ class TestGenerateRandomValueAndProof:
         3. Mock the hashlib.sha256 function to return a
         deterministic hash value.
         4. Call the function under test.
-        5. Calculate the expected chamber index based on the
-        deterministic hash value.
+        5. Calculate the expected beta value based on the proof, salt, and chamber index.
         6. Assert that the derived chamber index from the function
         matches the expected value.
         """
@@ -190,19 +196,25 @@ class TestGenerateRandomValueAndProof:
 
         # Define the test inputs.
         alpha = b"input message"
-        chamber_index = 0
+        bullet_index = 1
         salt = "salt"
-        revolver_size = 6
+        seed_hash = "seed_hash"
+        revolver_chambers = 7
 
         # Step 4: Call the function under test.
-        beta, proof, derived_chamber_index = generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
+        beta, proof, derived_bullet_index = generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
-        # Extract the derived chamber index from the result.
-        derived_value = hashlib.pbkdf2_hmac('sha256', beta.encode(), salt.encode(), ITERATIONS).hex()
-        expected_chamber_index = int(derived_value, 16) % revolver_size
+        # Step 5: Calculate the expected beta value based on the proof, salt, and chamber index.
+        expected_beta = hashlib.pbkdf2_hmac(
+            ALGO, 
+            ((seed_hash + salt).encode() + proof),
+            salt.encode(), ITERATIONS
+        ).hex()
+
+        expected_bullet_index = int(beta, 16) % revolver_chambers
 
         # Step 6: Assert that the derived chamber index from the function matches the expected value.
-        assert derived_chamber_index == expected_chamber_index
+        assert derived_bullet_index == expected_bullet_index
 
 
     def test_generate_random_value_and_proof_raises_verification_error(self):
@@ -223,27 +235,27 @@ class TestGenerateRandomValueAndProof:
         3. Call the function under test within a pytest.raises
            context to check for the expected VerificationError.
         """
-
         # Step 1: Generate a private key for testing.
         private_key = ecdsa.SigningKey.generate()
         alpha = b"input message"
-        chamber_index = 0
+        bullet_index = 0
         salt = "salt"
-        revolver_size = 6
+        seed_hash = 'seed_hash'
+        revolver_chambers = 6
 
         # Step 2: Mock the sign method of the private key to raise a VerificationError.
         private_key.sign = MagicMock(side_effect=VerificationError("Mocked signing failure"))
 
         # Step 3: Call the function under test within a pytest.raises context to check for the expected VerificationError.
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
+            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
 
 
     def test_generate_random_value_and_proof_handles_large_values(self):
         """
         Test the function generate_random_value_and_proof to
-        ensure it can handle very large values for chamber_index
+        ensure it can handle very large values for bullet_index
         and revolver_size without any issues.
 
         This test focuses on the function's ability to handle and
@@ -253,23 +265,23 @@ class TestGenerateRandomValueAndProof:
 
         Steps:
         1. Generate a private key for testing.
-        2. Define very large values for chamber_index and revolver_size.
+        2. Define very large values for bullet_index and revolver_size.
         3. Call the function under test with the large values.
         4. Check the type and structure of the returned result to ensure
            it matches the expected format.
         """
-
         # Step 1: Generate a private key for testing.
         private_key = ecdsa.SigningKey.generate()
         alpha = b"input message"
 
-        # Step 2: Define very large values for chamber_index and revolver_size.
-        chamber_index = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        # Step 2: Define very large values for bullet_index and revolver_size.
+        bullet_index = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
         salt = "salt"
-        revolver_size = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        seed_hash = 'seed_hash'
+        revolver_chambers = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
         # Step 3: Call the function under test with the large values.
-        result = generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
+        result = generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
         # Step 4: Check the type and structure of the returned result to ensure it matches the expected format.
         assert isinstance(result, tuple)
@@ -297,29 +309,32 @@ class TestGenerateRandomValueAndProof:
 
         # Step 1: Generate a private key for testing.
         private_key = ecdsa.SigningKey.generate()
+
+        # Step 2: Define empty values.
         alpha = b""
-        chamber_index = 0
+        bullet_index = 0
         salt = ""
-        revolver_size = 2
+        seed_hash = ''
+        revolver_chambers = 2
 
         # Step 3: Call the function under test within a pytest.raises context to check for the expected VerificationError.
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
+            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
 
     def test_generate_random_value_and_proof_handles_negative_values(self):
         """
         Test the function generate_random_value_and_proof to ensure it raises
-        a VerificationError when provided with negative values for chamber_index
+        a VerificationError when provided with negative values for bullet_index
         and revolver_size.
 
         This test focuses on the function's ability to handle and validate negative
-        input values for chamber_index and revolver_size. It checks if the function 
+        input values for bullet_index and revolver_size. It checks if the function 
         raises the expected VerificationError when provided with negative values.
 
         Steps:
         1. Generate a private key for testing.
-        2. Define negative values for chamber_index and revolver_size.
+        2. Define negative values for bullet_index and revolver_size.
         3. Call the function under test within a pytest.raises context to check
         for the expected VerificationError.
         """
@@ -327,40 +342,42 @@ class TestGenerateRandomValueAndProof:
         # Step 1: Generate a private key for testing.
         private_key = ecdsa.SigningKey.generate()
         alpha = b"input message"
-        chamber_index = -1
+        bullet_index = -1
         salt = "salt"
-        revolver_size = -6
+        seed_hash = "seed_hash"
+        revolver_chambers = -6
 
         # Step 3: Call the function under test within a pytest.raises context to check for the expected VerificationError.
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
+            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
 
-    # Tests that generate_random_value_and_proof handles non-integer values of chamber_index and revolver_size.
+    # Tests that generate_random_value_and_proof handles non-integer values of bullet_index and revolver_size.
     def test_generate_random_value_and_proof_handles_non_integer_values(self):
         """
         Test the function generate_random_value_and_proof to ensure it raises
-        a VerificationError when provided with non-integer values for chamber_index
+        a VerificationError when provided with non-integer values for bullet_index
         and revolver_size.
 
         This test focuses on the function's ability to handle and validate non-integer
-        input values for chamber_index and revolver_size. It checks if the function 
+        input values for bullet_index and revolver_size. It checks if the function 
         raises the expected VerificationError when provided with non-integer values.
 
         Steps:
         1. Generate a private key for testing.
-        2. Define non-integer values for chamber_index and revolver_size.
+        2. Define non-integer values for bullet_index and revolver_size.
         3. Call the function under test within a pytest.raises context to check
         for the expected VerificationError.
         """
         private_key = ecdsa.SigningKey.generate()
         alpha = b"input message"
-        chamber_index = "0"
+        bullet_index = "0"
         salt = "salt"
-        revolver_size = "6"
+        seed_hash = 'seed_hash'
+        revolver_chambers = "6"
 
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
+            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
 
     # Tests that generate_random_value_and_proof handles non-string values of salt by raising a VerificationError.
@@ -381,12 +398,13 @@ class TestGenerateRandomValueAndProof:
         """
         private_key = ecdsa.SigningKey.generate()
         alpha = b"input message"
-        chamber_index = 0
+        bullet_index = 0
         salt = 12345
-        revolver_size = 6
+        seed_hash = 'seed_hash'
+        revolver_chambers = 6
 
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
+            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
 
     """
@@ -407,9 +425,10 @@ class TestGenerateRandomValueAndProof:
     def test_generate_random_value_and_proof_handles_non_bytes_alpha(self):
         private_key = ecdsa.SigningKey.generate()
         alpha = "input message"
-        chamber_index = 0
+        bullet_index = 0
         salt = "salt"
-        revolver_size = 6
+        seed_hash = 'seed_hash'
+        revolver_chambers = 6
 
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, chamber_index, salt, revolver_size)
+            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)

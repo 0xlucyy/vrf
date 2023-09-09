@@ -1,12 +1,13 @@
+import time
+import hashlib
 import unittest
 import ecdsa
 from VRF import (
-    new_game,
-    end_game,
-    verify,
-    generate_random_value_and_proof
+  new_game,
+  verify,
+  ALGO,
+  ITERATIONS
 )
-import time
 
 
 
@@ -22,15 +23,13 @@ class TestIntegration(unittest.TestCase):
     2. For each scenario:
         a. Generate a timestamp and convert the bets to a byte-encoded alpha.
         b. Generate a private key for signing.
-        c. Initialize a new game to get the initial hash, salt, and chamber index.
-        d. End the game to get the beta, proof, and public key.
-        e. Verify the outcome of the game using the provided values.
-        f. Assert that the verification result is True.
+        c. Initialize a new game to get seed, seed_hash, salt, beta, proof, bullet_index, bullet_index_hash, public_key_pem.
+        d. Verify the outcome of the game using the provided values.
+        e. Assert that the verification result is True and hashes match.
 
     Expected Outcome:
     The VRF system should correctly verify the outcome for each scenario,
     returning True for each verification.
-
     """
 
     # Step 1: Define multiple scenarios with varying revolver sizes and bets.
@@ -66,14 +65,12 @@ class TestIntegration(unittest.TestCase):
       # Step 2b: Generate a private key for signing.
       sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
 
-      # Step 2c: Initialize a new game to get the initial hash, salt, and chamber index.
-      initial_hash, salt, chamber_index, seed_hash = new_game(scenario["revolver_size"], scenario["bets"])
+      # Step 2c: Initialize a new game
+      seed, seed_hash, salt, beta, proof, bullet_index, bullet_index_hash, public_key_pem = new_game(scenario['revolver_size'], sk, alpha)
 
-      # Step 2d: End the game to get the beta, proof, and public key.
-      beta, proof, public_key_pem, _ = end_game(sk, alpha, scenario["revolver_size"], salt, chamber_index, seed_hash)
+      # Step 2d: Verify the outcome of the game using the provided values.
+      proof_validity, derived_bullet_index_hash = verify(public_key_pem, seed_hash, salt, proof, bullet_index_hash, alpha, scenario['revolver_size'])
 
-      # Step 2e: Verify the outcome of the game using the provided values.
-      result = verify(public_key_pem, alpha, beta, proof, initial_hash, salt, scenario["revolver_size"], seed_hash)
-
-      # Step 2f: Assert that the verification result is True.
-      self.assertTrue(result, f"VRF verification failed for revolver size {scenario['revolver_size']} and bets {scenario['bets']}!")
+      # Step 2e: Assert that the verification result is True.
+      self.assertTrue(proof_validity, True)
+      self.assertEqual(derived_bullet_index_hash, bullet_index_hash)

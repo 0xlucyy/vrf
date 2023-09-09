@@ -2,17 +2,17 @@
 import ecdsa
 import pytest
 from VRF import (
-    generate_seed,
+    generate_seed_salt_hash,
     generate_proof,
     generate_beta
 )
 from error import SeedError, VerificationError, InputError
 
-class TestGenerateSeedProofBeta:
+class TestGenerateSeedSaltHash:
 
-    def test_generate_seed_returns_tuple(self):
+    def test_generate_seed_salt_hash_returns_tuple(self):
       """
-      Test the function generate_seed to ensure it returns a tuple
+      Test the function generate_seed_salt_hash to ensure it returns a tuple
       containing the seed, its hash, and the salt.
 
       Steps:
@@ -25,13 +25,13 @@ class TestGenerateSeedProofBeta:
       The function should return a tuple with three elements: seed (string),
       seed_hash (string), and salt (bytes).
       """
-      seed, seed_hash, _ = generate_seed()
+      seed, seed_hash, _ = generate_seed_salt_hash()
       assert isinstance(seed, str)
       assert isinstance(seed_hash, str)
 
-    def test_generate_seed_seed_is_hexadecimal_string(self):
+    def test_generate_seed_salt_hash_seed_is_hexadecimal_string(self):
       """
-      Test the function generate_seed to ensure the generated seed
+      Test the function generate_seed_salt_hash to ensure the generated seed
       is a valid hexadecimal string.
 
       Steps:
@@ -41,28 +41,28 @@ class TestGenerateSeedProofBeta:
       Expected Outcome:
       The generated seed should be a valid hexadecimal string.
       """
-      seed, _, _ = generate_seed()
+      seed, _, _ = generate_seed_salt_hash()
       assert all(c in '0123456789abcdef' for c in seed)
 
-    def test_generate_seed_salt_is_bytes_object(self):
+    def test_generate_seed_salt_hash_salt_is_bytes_object(self):
       """
-      Test the function generate_seed to ensure the generated salt
-      is a bytes object.
+      Test the function generate_seed_salt_hash to ensure the generated salt
+      is a str object.
 
       Steps:
       1. Call the function under test to get the salt.
-      2. Assert that the salt is a bytes object.
+      2. Assert that the salt is a str object.
 
       Expected Outcome:
-      The generated salt should be a bytes object.
+      The generated salt should be a str object.
       """
-      _, _, salt = generate_seed()
-      assert isinstance(salt, bytes)
+      _, _, salt = generate_seed_salt_hash()
+      assert isinstance(salt, str)
   
 
-    def test_generate_seed_algorithm_can_be_changed(self):
+    def test_generate_seed_salt_hash_algorithm_can_be_changed(self):
       """
-      Test the function generate_seed to ensure the hashing algorithm
+      Test the function generate_seed_salt_hash to ensure the hashing algorithm
       used in the PBKDF2 function can be changed.
 
       Steps:
@@ -74,8 +74,8 @@ class TestGenerateSeedProofBeta:
       The seed_hash should be different when using a custom hashing algorithm.
       """
       algorithm = 'sha256'
-      seed, seed_hash, _ = generate_seed(_algorithm=algorithm)
-      assert seed_hash != generate_seed()[1]
+      seed, seed_hash, _ = generate_seed_salt_hash(_algorithm=algorithm)
+      assert seed_hash != generate_seed_salt_hash()[1]
 
 
     # Tests that generate_proof raises a VerificationError when given an invalid private key.
@@ -135,47 +135,47 @@ class TestGenerateSeedProofBeta:
     def test_generate_beta_returns_string(self):
         proof = b"proof"
         salt = "salt"
-        chamber_index = 1
-        result = generate_beta(proof, salt, chamber_index)
+        seed_hash = 'seed_hash'
+        result = generate_beta(proof, salt, seed_hash)
         assert isinstance(result, str)
 
     # Tests that generate_beta returns a string of length 64.
     def test_generate_beta_returns_string_of_length_64(self):
         proof = b"proof"
         salt = "salt"
-        chamber_index = 1
-        result = generate_beta(proof, salt, chamber_index)
+        seed_hash = 'seed_hash'
+        result = generate_beta(proof, salt, seed_hash)
         assert len(result) == 64
 
     # Tests that generate_beta returns a string containing only hexadecimal characters.
     def test_generate_beta_returns_string_with_only_hexadecimal_characters(self):
         proof = b"proof"
         salt = "salt"
-        chamber_index = 1
-        result = generate_beta(proof, salt, chamber_index)
+        seed_hash = 'seed_hash'
+        result = generate_beta(proof, salt, seed_hash)
         assert all(c in "0123456789abcdef" for c in result)
 
     # Tests that generate_beta returns the expected output for a given input.
     def test_generate_beta_returns_expected_output(self):
         proof = b"proof"
         salt = "salt"
-        chamber_index = 1
-        expected_output = "5eb56d677d7192313903f2c88bb83037f8373b989e3ecfab29112a269b69ddaf"
-        result = generate_beta(proof, salt, chamber_index)
+        seed_hash = 'seed_hash'
+        expected_output = "95bf8fc13c6cab0e6609b64deb34d32c10d74102763cfc35ffd4627050ba30b6"
+        result = generate_beta(proof, salt, seed_hash)
         assert result == expected_output
 
     # Tests that generate_beta raises an exception if proof is None.
     def test_generate_beta_raises_exception_if_proof_is_none(self):
         proof = None
         salt = "salt"
-        chamber_index = 1
+        seed_hash = 'seed_hash'
         with pytest.raises(Exception):
-            generate_beta(proof, salt, chamber_index)
+            generate_beta(proof, salt, bullet_index)
 
     # Tests that generate_beta raises an exception if salt is None.
     def test_generate_beta_raises_exception_if_salt_is_none(self):
         proof = b"proof"
         salt = None
-        chamber_index = 1
+        seed_hash = 'seed_hash'
         with pytest.raises(Exception):
-            generate_beta(proof, salt, chamber_index)
+            generate_beta(proof, salt, bullet_index)

@@ -1,103 +1,141 @@
+import ecdsa
 import pytest
+import time
 from VRF import (
     new_game
 )
 from error import SeedError, VerificationError, InputError
 from unittest.mock import patch
 
+@pytest.fixture(scope="class")
+def game_setup():
+    sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
+    revolver_chambers = 10
+    timestamp = str(int(time.time()))
+    bets = [30000, 30000, 30000, 30000]
+    alpha_raw = (timestamp + ''.join(map(str, bets)))
+    alpha = alpha_raw.encode()
+    
+    return sk, revolver_chambers, alpha
+
 class TestNewGame:
+    def test_happy_path_revolver_size_2_bets_1_1(self, game_setup):
+        """
+        Test the function new_game to ensure it initializes a new game with 
+        revolver size 11 and default bets.
 
-    # Tests that the function initializes a new game with revolver size 2 and bets [1, 1]
-    def test_happy_path_revolver_size_2_bets_1_1(self):
+        Steps:
+        1. Set up the game parameters using the game_setup fixture.
+        2. Call the function under test to get the result.
+        3. Assert the types of the returned values.
+
+        Expected Outcome:
+        The function should return the correct types for each of the game parameters.
         """
-        Test the function new_game with a revolver size of 2 and bets [1, 1].
-        
-        This test checks if the function can correctly initialize a new game
-        with the given parameters and return valid outputs.
-        """
-        revolver_size = 2
-        bets = [1, 1]
-        initial_hash, salt, chamber_index, _ = new_game(revolver_size, bets)
-        assert isinstance(initial_hash, str)
+        sk, revolver_chambers, alpha = game_setup
+        revolver_chambers = 11
+        seed, seed_hash, salt, beta, proof, bullet_index, bullet_index_hash, public_key_pem = new_game(revolver_chambers, sk, alpha)
+        assert isinstance(seed, str)
+        assert isinstance(seed_hash, str)
         assert isinstance(salt, str)
-        assert isinstance(chamber_index, int)
+        assert isinstance(beta, str)
+        assert isinstance(proof, bytes)
+        assert isinstance(bullet_index, int)
+        assert isinstance(bullet_index_hash, str)
+        assert isinstance(public_key_pem, bytes)
 
+    def test_happy_path_revolver_size_50_bets_1_1_1_1(self, game_setup):
+        """
+        Test the function new_game to ensure it initializes a new game with 
+        revolver size 50 and default bets.
 
-    # Tests that the function initializes a new game with revolver size 50 and bets [1, 1, 1, 1]
-    def test_happy_path_revolver_size_50_bets_1_1_1_1(self):
+        Steps:
+        1. Set up the game parameters using the game_setup fixture.
+        2. Call the function under test to get the result.
+        3. Assert the types of the returned values and the bullet index.
+
+        Expected Outcome:
+        The bullet index should be less than or equal to the revolver size.
         """
-        Test the function new_game with a revolver size of 50 and bets [1, 1, 1, 1].
-        
-        This test checks if the function can correctly initialize a new game
-        with the given parameters and return valid outputs.
-        """
+        sk, revolver_chambers, alpha = game_setup
         revolver_size = 50
-        bets = [1, 1, 1, 1]
-        initial_hash, salt, chamber_index, _ = new_game(revolver_size, bets)
-        assert isinstance(initial_hash, str)
+        seed, seed_hash, salt, beta, proof, bullet_index, bullet_index_hash, public_key_pem = new_game(revolver_chambers, sk, alpha)
+        assert isinstance(bullet_index_hash, str)
         assert isinstance(salt, str)
-        assert isinstance(chamber_index, int)
-        assert 2 <= chamber_index <= revolver_size
-
+        assert isinstance(bullet_index, int)
+        assert bullet_index <= revolver_size
 
     @patch("secrets.token_hex")
-    def test_happy_path_revolver_size_10_bets_0_0_0_0_0_0_0_0_0_0(self, mock_token_hex):
+    def test_happy_path_revolver_size_10_bets_0_0_0_0_0_0_0_0_0_0(self, mock_token_hex, game_setup):
         """
-        Test the function new_game with a revolver size of 10 and bets [0, 0, 0, 0, 0, 0, 0, 0, 0, 0].
-        
-        This test checks if the function can correctly initialize a new game
-        with the given parameters and return valid outputs. The randomness of the
-        function is mocked to ensure repeatability.
+        Test the function new_game with a mocked secrets.token_hex function 
+        to ensure consistent results.
+
+        Steps:
+        1. Mock the secrets.token_hex function to return a fixed value.
+        2. Set up the game parameters using the game_setup fixture.
+        3. Call the function under test to get the result.
+        4. Assert the types of the returned values and the bullet index.
+
+        Expected Outcome:
+        The bullet index should be less than or equal to the revolver size.
         """
-        # Mock the secrets.token_hex function to always return a fixed value
         mock_token_hex.return_value = "abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890"
-
+        sk, revolver_chambers, alpha = game_setup
         revolver_size = 10
-        bets = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        initial_hash, salt, chamber_index, _ = new_game(revolver_size, bets)
-        assert isinstance(initial_hash, str)
+        seed, seed_hash, salt, beta, proof, bullet_index, bullet_index_hash, public_key_pem = new_game(revolver_chambers, sk, alpha)
+        assert isinstance(bullet_index_hash, str)
         assert isinstance(salt, str)
-        assert isinstance(chamber_index, int)
-        assert 2 <= chamber_index <= revolver_size
+        assert isinstance(bullet_index, int)
+        assert bullet_index <= revolver_size
 
+    def test_edge_case_revolver_size_1_bets_1(self, game_setup):
+        """
+        Test the function new_game to ensure it raises an InputError when 
+        the revolver size is 1.
 
-    # Tests that the function raises an InputError when the revolver size is 1 and bets is [1]
-    def test_edge_case_revolver_size_1_bets_1(self):
+        Steps:
+        1. Set up the game parameters using the game_setup fixture.
+        2. Call the function under test and expect an InputError.
+
+        Expected Outcome:
+        The function should raise an InputError.
         """
-        Test the function new_game with a revolver size of 1 and bets [1].
-        
-        This test checks if the function raises an InputError when provided with
-        an invalid revolver size.
-        """
-        revolver_size = 1
-        bets = [1]
+        sk, revolver_chambers, alpha = game_setup
+        revolver_chambers = 1
         with pytest.raises(InputError):
-            new_game(revolver_size, bets)
+            new_game(revolver_chambers, sk, alpha)
 
+    def test_edge_case_revolver_size_51_bets_1_1_1_1(self, game_setup):
+        """
+        Test the function new_game to ensure it raises an InputError when 
+        the revolver size is 51.
 
-    # Tests that the function raises an InputError when the revolver size is 51 and bets is [1, 1, 1, 1]
-    def test_edge_case_revolver_size_51_bets_1_1_1_1(self):
+        Steps:
+        1. Set up the game parameters using the game_setup fixture.
+        2. Call the function under test and expect an InputError.
+
+        Expected Outcome:
+        The function should raise an InputError.
         """
-        Test the function new_game with a revolver size of 51 and bets [1, 1, 1, 1].
-        
-        This test checks if the function raises an InputError when provided with
-        an invalid revolver size.
-        """
-        revolver_size = 51
-        bets = [1, 1, 1, 1]
+        sk, revolver_chambers, alpha = game_setup
+        revolver_chambers = 51
         with pytest.raises(InputError):
-            new_game(revolver_size, bets)
+            new_game(revolver_chambers, sk, alpha)
 
+    def test_edge_case_revolver_size_10_alpha_empty(self, game_setup):
+        """
+        Test the function new_game to ensure it raises a VerificationError 
+        when the alpha value is empty.
 
-    # Tests that the function raises an InputError when the bets list is empty
-    def test_edge_case_revolver_size_10_bets_empty(self):
+        Steps:
+        1. Set up the game parameters using the game_setup fixture.
+        2. Call the function under test and expect a VerificationError.
+
+        Expected Outcome:
+        The function should raise a VerificationError.
         """
-        Test the function new_game with a revolver size of 10 and an empty bets list.
-        
-        This test checks if the function raises an InputError when provided with
-        an empty bets list.
-        """
-        revolver_size = 10
-        bets = []
-        with pytest.raises(InputError):
-            new_game(revolver_size, bets)
+        sk, revolver_chambers, alpha = game_setup
+        alpha = b''
+        with pytest.raises(VerificationError):
+            new_game(revolver_chambers, sk, alpha)
