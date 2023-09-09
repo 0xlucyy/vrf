@@ -222,7 +222,7 @@ def verify(public_key: bytes, seed_hash: str, salt: str,
     cryptographic parameters.
 
     This function checks the validity of a provided proof
-    using the public key and ensures that the derived bullet
+    using a public key and ensures that the derived bullet
     index hash matches the provided hash. It ensures that the
     game's outcome has not been tampered with and is verifiable.
 

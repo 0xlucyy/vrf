@@ -2,8 +2,21 @@
 VRF.py provides an implementation of a Verifiable Random Function (VRF) to ensure the randomness and fairness of a game. The script contains functions to generate seeds, proofs, and random values, and to verify the outcome of a game.
 
 
-## Initialization
-Initialization of game is achived with a `new_game` function. Belows's a detailed breakdown of the `new_game` function.
+# Table of Contents
+- [Verifiable Random Function](#verifiable-random-function)
+- [The Game](#the-game)
+  - [generate_seed_salt_hash Function](#generate_seed_salt_hash-function)
+  - [generate_random_value_and_proof Function](#generate_random_value_and_proof-function)
+  - [Final Steps of new_game Function](#final-steps-of-new_game-function)
+- [Verification](#verification)
+  - [Validating the Digital Signature](#validating-the-digital-signature)
+  - [Validating the Bullet Index Hash](#validating-the-bullet-index-hash)
+  - [Comparison Verification](#comparison-verification)
+- [TLDR](#tldr)
+
+
+## The Game
+Initialization of a game is achived with the `new_game` function. Belows's a detailed breakdown of the `new_game` function.
 
 ### generate_seed_salt_hash Function
 The `generate_seed_salt_hash` function is a foundational step in the initialization process. It's responsible for creating a random seed and its corresponding hash. Here's a breakdown of its purpose and functionality:
@@ -15,9 +28,7 @@ The `generate_seed_salt_hash` function is a foundational step in the initializat
 - Seed Hash Generation: The `seed`, combined with the `salt`, undergoes a hashing process using the PBKDF2 HMAC SHA-512 algorithm. This produces the `seed_hash`, which is a deterministic yet unpredictable value based on the seed and salt.
 
 ```python
-  seed = secrets.token_hex(16)
-  salt = secrets.token_hex(32)
-  seed_hash = hashlib.pbkdf2_hmac(_algorithm, seed.encode(), salt.encode(), ITERATIONS).hex()
+  seed, seed_hash, salt = generate_seed_salt_hash()
 ```
 
 ### generate_random_value_and_proof Function
@@ -56,51 +67,45 @@ The concluding lines of the `new_game` function solidify the game's cryptographi
 ```
 
 
-## Generating Random Values
-The generation of random values is a crucial step in the game's lifecycle, ensuring unpredictability and fairness. This process is primarily handled by the `generate_random_value_and_proof` function in the `VRF.py` script. Let's delve into its components and their significance:
+## Verification
+The `verify` function is responsible for ensuring the integrity and authenticity of the game's outcome. It does so by validating the cryptographic proofs and commitments provided during the game's initialization. Below is a detailed breakdown of the `verify` function.
 
-#### Proof Generation:
-- Function `generate_random_value_and_proof` calls function `generate_proof` to produce a cryptographic proof using the provided private key and the input message (`alpha`).
-- This proof acts as a signature, ensuring that the generated random value (`beta`) can be verified against the original input message (`alpha`).
+### Validating the Digital Signature
+The first step in the verification process is to validate the digital signature (`proof`) against the `alpha` value using the provided `public key`. This ensures that the game's parameters have not been tampered with after the game's initialization.
 
-```python
-proof = generate_proof(private_key, alpha)
-```
-
-#### Beta Value Calculation:
-- Function `generate_random_value_and_proof` calls function `generate_beta` to produce a `beta` value using the generated `proof, salt, and seed hash`.
-- The `beta` value is deterministic yet unpredictable, derived from the proof, salt, and chamber index. It ensures that each game round, even with the same input message, will have a unique outcome due to the varying proof and seed hash.
+- Public Key Extraction: The function begins by extracting the verifying key (`vk`) from the provided public key in PEM format.
+- Signature Verification: Using the extracted verifying key, the function attempts to verify the proof against the alpha value. If the verification is successful, it confirms that the proof was indeed generated using the corresponding private key.
 
 ```python
-beta = generate_beta(proof, salt, bullet_index)
+  vk = ecdsa.VerifyingKey.from_pem(public_key)
+  vk.verify(proof, alpha, hashfunc=hashlib.sha256)
 ```
 
+### Validating the Bullet Index Hash
+After successfully verifying the digital signature, the function proceeds to validate the bullet index hash that was provided during the game's initialization.
 
+- Beta Calculation: The function recalculates the `beta` value by hashing a combination of the proof, salt, and seed_hash. 
+- Bullet Index Determination: Using the recalculated beta value, the function derives the bullet_index. This index represents the starting position or the "loaded chamber" in the game.
+- Bullet Index Hash Recalculation: The function then recalculates the hash of the bullet_index, combined with the salt and seed_hash. This derived hash should match the bullet_index_hash that was provided during the game's initialization
 
+```python
+  beta = generate_beta(proof, salt, seed_hash)
+  bullet_index = int(beta, 16) % revolver_chambers
+  derived_bullet_index_hash = hashlib.pbkdf2_hmac(
+    ALGO,
+    (str(bullet_index) + salt + seed_hash).encode(),
+    salt.encode(),
+    ITERATIONS
+  ).hex()
+```
 
+### Comparison Verification
+The final step in the validation process is to compare the recalculated bullet_index_hash with the one that was provided during the game's initialization. If they match, it confirms that the game's outcome was determined randomly and has not been altered.
 
-
-
-### Significance of Generating Random Values:
-
-#### Unpredictability:
-The use of cryptographic proofs and the PBKDF2 HMAC SHA-256 hashing algorithm ensures that the generated values (`beta` and the derived chamber index) are unpredictable. This guarantees that players cannot foresee the game's outcome.
-
-#### Verifiability:
-The generated proof allows players to verify that the random values were derived from the original input message (`alpha`). This ensures that the server did not tamper with the game's outcome.
-
-#### Integrity:
-The entire process of generating random values is deterministic, meaning that for the same input parameters, the function will always produce the same output. However, due to the varying input message (`alpha`) and chamber index, the outcome is unique for each game round.
-
-### Generating Random Values Summary:
-The generation of random values in the game is a combination of cryptographic operations that ensure unpredictability, verifiability, and integrity. These values play a pivotal role in determining the game's outcome, and their generation process ensures that the game remains provably fair.
-
-
-
-
-
-
-
+```python
+  if derived_bullet_index_hash == bullet_index_hash:
+    return proof_validity, derived_bullet_index_hash
+```
 
 
 ## TLDR
