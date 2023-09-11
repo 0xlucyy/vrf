@@ -33,7 +33,7 @@ jobs:
         COVERAGE=$(grep -Eo 'TOTAL.*[0-9]{1,3}%' coverage.txt | grep -Eo '[0-9]{1,3}')
         ENCODED_COVERAGE="${COVERAGE}%25"  # URL encode the percentage
         BADGE_URL="https://img.shields.io/badge/Coverage-$ENCODED_COVERAGE-brightgreen.svg"
-        sed -i "s|https://img.shields.io/badge/Coverage-.*-brightgreen.svg|${BADGE_URL//%/\%}|g" README.md
+        sed -i.bak "s|https://img.shields.io/badge/Coverage-[^-]*-brightgreen.svg|$BADGE_URL|g" README.md
 
     - name: Commit changes
       run: |
