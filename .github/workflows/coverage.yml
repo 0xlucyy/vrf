@@ -30,15 +30,29 @@ jobs:
 
     - name: Extract coverage percentage and update README
       run: |
-        COVERAGE=$(grep -Eo 'TOTAL.*[0-9]{1,3}%' coverage.txt | grep -Eo '[0-9]{1,3}' | tr -d '\n')
+        COVERAGE=$(grep 'TOTAL' coverage.txt | awk '{print $NF}' | tr -d '%')
         ENCODED_COVERAGE="${COVERAGE}%25"  # URL encode the percentage
-        BADGE_URL="https://img.shields.io/badge/Coverage-$ENCODED_COVERAGE-brightgreen.svg"
+
+        FILENAME="VRF.py"
+        ENCODED_FILENAME=$(echo "$FILENAME" | sed 's/ /%20/g')  # URL encode the filename
+        BADGE_URL="https://img.shields.io/badge/$ENCODED_FILENAME-Coverage:$ENCODED_COVERAGE-brightgreen.svg"
 
         # Echo the BADGE_URL for debugging purposes
         echo "Generated Badge URL: $BADGE_URL"
 
         # Update the README with the new badge URL
-        sed -i.bak "s|https://img.shields.io/badge/Coverage-.*-brightgreen.svg|$BADGE_URL|g" README.md
+        sed -i.bak "s|https://img.shields.io/badge/.*-Coverage:.*-brightgreen.svg|$BADGE_URL|g" README.md
+
+
+        # COVERAGE=$(grep 'TOTAL' coverage.txt | awk '{print $NF}' | tr -d '%')
+        # ENCODED_COVERAGE="${COVERAGE}%25"  # URL encode the percentage
+        # BADGE_URL="https://img.shields.io/badge/Coverage-$ENCODED_COVERAGE-brightgreen.svg"
+
+        # # Echo the BADGE_URL for debugging purposes
+        # echo "Generated Badge URL: $BADGE_URL"
+
+        # # Update the README with the new badge URL
+        # sed -i.bak "s|https://img.shields.io/badge/Coverage-.*-brightgreen.svg|$BADGE_URL|g" README.md
 
 
 
