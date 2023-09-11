@@ -13,6 +13,9 @@ class TestVerify:
 
   # Tests that the function returns True when provided with a valid proof and known valid inputs.
   def test_verify_valid_proof_with_known_inputs(self):
+    '''
+    Tests the function with a known set of valid inputs and expects a successful verification.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAED4BkWbqMmS/jxRQKC+xJVF2PeSwEx5g5
 WrzeDT8WfdzesmMHFoP5p3yi7KPMsIwa7ZkNRbgvNX4y2wF9f4y9rA==
@@ -30,6 +33,9 @@ WrzeDT8WfdzesmMHFoP5p3yi7KPMsIwa7ZkNRbgvNX4y2wF9f4y9rA==
 
   # Tests that the function returns True when provided with a valid proof and a different set of valid inputs.
   def test_verify_valid_proof_with_different_inputs_same_pub_key(self):
+    '''
+    Tests the function with a different set of valid inputs but the same public key.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAED4BkWbqMmS/jxRQKC+xJVF2PeSwEx5g5
 WrzeDT8WfdzesmMHFoP5p3yi7KPMsIwa7ZkNRbgvNX4y2wF9f4y9rA==
@@ -46,8 +52,11 @@ WrzeDT8WfdzesmMHFoP5p3yi7KPMsIwa7ZkNRbgvNX4y2wF9f4y9rA==
     assert derived_bullet_index_hash == bullet_index_hash
 
 
-  # Tests that the function returns True when provided with different valid public key.
+  
   def test_verify_valid_proof_with_different_public_key(self):
+    '''
+    Tests the function with a different valid public key.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1DJ2RmUmTwg07t9w83Q5m4vNhqDqu2Xe
 c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
@@ -64,6 +73,9 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert derived_bullet_index_hash == bullet_index_hash
 
   def test_valid_verify_with_min_chambers(self):
+    '''
+    Tests the function with the minimum number of revolver chambers.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1DJ2RmUmTwg07t9w83Q5m4vNhqDqu2Xe
 c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
@@ -79,7 +91,10 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert proof_validity == True
     assert derived_bullet_index_hash == bullet_index_hash
 
-#   def test_valid_verify_with_small_chambers(self):
+  def test_valid_verify_with_small_chambers(self):
+    '''
+    Tests the function with a small number of revolver chambers.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1DJ2RmUmTwg07t9w83Q5m4vNhqDqu2Xe
 c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
@@ -96,6 +111,9 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert derived_bullet_index_hash == bullet_index_hash
 
   def test_valid_verify_with_same_chambers_and_bets(self):
+    '''
+    Tests the function with the same number of revolver chambers and bets.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1DJ2RmUmTwg07t9w83Q5m4vNhqDqu2Xe
 c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
@@ -112,6 +130,9 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert derived_bullet_index_hash == bullet_index_hash
 
   def test_valid_verify_with_same_chambers_and_diff_bets(self):
+    '''
+    Tests the function with the same number of revolver chambers but different bets.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1DJ2RmUmTwg07t9w83Q5m4vNhqDqu2Xe
 c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
@@ -128,6 +149,9 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert derived_bullet_index_hash == bullet_index_hash
 
   def test_invalid_revolver_size(self):
+    '''
+    Tests the function where the revolver chambers is incorrect.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1DJ2RmUmTwg07t9w83Q5m4vNhqDqu2Xe
 c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
@@ -144,6 +168,9 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert derived_bullet_index_hash == bullet_index_hash
 
   def test_invalid_alpha(self):
+    '''
+    Tests the function where the alpha is incorrect.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1DJ2RmUmTwg07t9w83Q5m4vNhqDqu2Xe
 c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
@@ -160,6 +187,9 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert derived_bullet_index_hash == bullet_index_hash
 
   def test_invalid_proof(self):
+    '''
+    Tests the function where the proof is incorrect.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1DJ2RmUmTwg07t9w83Q5m4vNhqDqu2Xe
 c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
@@ -177,6 +207,9 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert derived_bullet_index_hash == bullet_index_hash
 
   def test_invalid_salt(self):
+    '''
+    Tests the function where the salt is incorrect.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1DJ2RmUmTwg07t9w83Q5m4vNhqDqu2Xe
 c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
@@ -194,6 +227,9 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert derived_bullet_index_hash == bullet_index_hash
 
   def test_invalid_seed_hash(self):
+    '''
+    Tests the function where the seed hash is incorrect.
+    '''
     public_key = b'''-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1DJ2RmUmTwg07t9w83Q5m4vNhqDqu2Xe
 c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
@@ -210,8 +246,11 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert proof_validity == False
     assert derived_bullet_index_hash == bullet_index_hash
 
-  # Tests that the function returns True when provided with different valid public key.
+  
   def test_invalid_pub_key(self):
+    '''
+    Tests the function where the public key is incorrect.
+    '''
 #     real_public_key = b'''-----BEGIN PUBLIC KEY-----
 # MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1DJ2RmUmTwg07t9w83Q5m4vNhqDqu2Xe
 # c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
@@ -232,7 +271,6 @@ WrzeDT8WfdzesmMHFoP5p3yi7KPMsIwa7ZkNRbgvNX4y2wF9f4y9rA==
     assert derived_bullet_index_hash == bullet_index_hash
 
 
-  # Tests that the function returns True when provided with different valid public key.
   @patch('ecdsa.keys.VerifyingKey.verify', side_effect=InterruptedError)
   def test_vk_verify_exception(self, mocked_sig):
     public_key = b'''-----BEGIN PUBLIC KEY-----
@@ -252,7 +290,6 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert proof_validity == False
     assert derived_bullet_index_hash == bullet_index_hash
 
-  # Tests that the function returns True when provided with different valid public key.
   @patch('ecdsa.keys.VerifyingKey.verify', side_effect=ValueError)
   def test_vk_verify_exception_value_error(self, mocked_sig):
     public_key = b'''-----BEGIN PUBLIC KEY-----
@@ -272,7 +309,7 @@ c0S1sJX01clxnSv3PsPI7g9Lujsc5+87q6NJ05eljd8R6jMRJV7nlQ==
     assert proof_validity == False
     assert derived_bullet_index_hash == bullet_index_hash
 
-  # Tests that the function returns True when provided with different valid public key.
+  
   @patch('ecdsa.keys.VerifyingKey.verify', return_valud=True)
   def test_happy_path_not_successful(self, mocked_sig):
     public_key = b'''-----BEGIN PUBLIC KEY-----
