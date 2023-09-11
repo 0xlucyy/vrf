@@ -30,7 +30,7 @@ jobs:
 
     - name: Extract coverage percentage and update README
       run: |
-        COVERAGE=$(grep -Eo 'TOTAL.*[0-9]{1,3}%' coverage.txt | grep -Eo '[0-9]{1,3}')
+        COVERAGE=$(grep -Eo 'TOTAL.*[0-9]{1,3}%' coverage.txt | grep -Eo '[0-9]{1,3}' | tr -d '\n')
         ENCODED_COVERAGE="${COVERAGE}%25"  # URL encode the percentage
         BADGE_URL="https://img.shields.io/badge/Coverage-$ENCODED_COVERAGE-brightgreen.svg"
 
@@ -39,6 +39,7 @@ jobs:
 
         # Update the README with the new badge URL
         sed -i.bak "s|https://img.shields.io/badge/Coverage-.*-brightgreen.svg|$BADGE_URL|g" README.md
+
 
 
     - name: Commit changes
