@@ -3,7 +3,7 @@ import ecdsa
 import hashlib
 from unittest.mock import patch, MagicMock
 from VRF import (
-    generate_random_value_and_proof,
+    generate_beta_and_proof,
     ITERATIONS,
     ALGO,
     generate_proof,
@@ -13,12 +13,12 @@ from error import VerificationError
 
 
 
-class TestGenerateRandomValueAndProof:
+class TestGenerateBetaAndProof:
 
-    # Tests that generate_random_value_and_proof returns a tuple containing beta, proof, and derived chamber index.
-    def test_generate_random_value_and_proof_returns_tuple(self):
+    # Tests that generate_beta_and_proof returns a tuple containing beta, proof, and derived chamber index.
+    def test_generate_beta_and_proof_returns_tuple(self):
         """
-        Test the function generate_random_value_and_proof to ensure
+        Test the function generate_beta_and_proof to ensure
         it returns a tuple with the correct structure and types.
 
         Steps:
@@ -48,7 +48,7 @@ class TestGenerateRandomValueAndProof:
         revolver_chambers = 6
 
         # Step 3: Call the function under test to get the result.
-        result = generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+        result = generate_beta_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
         # Step 4: Assert that the result is a tuple.
         assert isinstance(result, tuple)
@@ -66,10 +66,10 @@ class TestGenerateRandomValueAndProof:
         assert isinstance(result[2], int)
 
 
-    # Tests that generate_random_value_and_proof generates a valid proof.
-    def test_generate_random_value_and_proof_generates_valid_proof(self):
+    # Tests that generate_beta_and_proof generates a valid proof.
+    def test_generate_beta_and_proof_generates_valid_proof(self):
         """
-        Test the function generate_random_value_and_proof to ensure
+        Test the function generate_beta_and_proof to ensure
         it correctly generates a valid proof.
 
         Steps:
@@ -97,7 +97,7 @@ class TestGenerateRandomValueAndProof:
         revolver_chambers = 6
 
         # Step 3: Call the function under test to get the result.
-        result = generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+        result = generate_beta_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
         # Step 4: Extract the generated proof from the result.
         proof = result[1]
@@ -109,10 +109,10 @@ class TestGenerateRandomValueAndProof:
         assert public_key.verify(proof, alpha, hashfunc=hashlib.sha256)
 
 
-    # Tests that generate_random_value_and_proof generates a valid beta.
-    def test_generate_random_value_and_proof_generates_valid_beta(self):
+    # Tests that generate_beta_and_proof generates a valid beta.
+    def test_generate_beta_and_proof_generates_valid_beta(self):
         """
-        Test the function generate_random_value_and_proof to ensure
+        Test the function generate_beta_and_proof to ensure
         it correctly generates a valid beta value.
 
         Steps:
@@ -141,7 +141,7 @@ class TestGenerateRandomValueAndProof:
         revolver_chambers = 6
 
         # Step 3: Call the function under test to get the result.
-        result = generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+        result = generate_beta_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
         # Step 4: Extract the generated beta, proof, and derived chamber index from the result.
         beta = result[0]
@@ -160,9 +160,9 @@ class TestGenerateRandomValueAndProof:
 
 
     @patch("hashlib.sha256")
-    def test_generate_random_value_and_proof_derives_valid_bullet_index(self, mock_sha256): 
+    def test_generate_beta_and_proof_derives_valid_bullet_index(self, mock_sha256): 
         """
-        Test the function generate_random_value_and_proof to
+        Test the function generate_beta_and_proof to
         ensure it correctly derives the chamber index.
 
         This test focuses on the derived chamber index calculation.
@@ -203,7 +203,7 @@ class TestGenerateRandomValueAndProof:
         revolver_chambers = 7
 
         # Step 4: Call the function under test.
-        beta, proof, derived_bullet_index = generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+        beta, proof, derived_bullet_index = generate_beta_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
         # Step 5: Calculate the expected beta value based on the proof, salt, and chamber index.
         expected_beta = hashlib.pbkdf2_hmac(
@@ -218,9 +218,9 @@ class TestGenerateRandomValueAndProof:
         assert derived_bullet_index == expected_bullet_index
 
 
-    def test_generate_random_value_and_proof_raises_verification_error(self):
+    def test_generate_beta_and_proof_raises_verification_error(self):
         """
-        Test the function generate_random_value_and_proof to ensure
+        Test the function generate_beta_and_proof to ensure
         it raises a VerificationError when there's a failure in
         generating a proof.
 
@@ -249,13 +249,13 @@ class TestGenerateRandomValueAndProof:
 
         # Step 3: Call the function under test within a pytest.raises context to check for the expected VerificationError.
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+            generate_beta_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
 
 
-    def test_generate_random_value_and_proof_handles_large_values(self):
+    def test_generate_beta_and_proof_handles_large_values(self):
         """
-        Test the function generate_random_value_and_proof to
+        Test the function generate_beta_and_proof to
         ensure it can handle very large values for bullet_index
         and revolver_size without any issues.
 
@@ -282,7 +282,7 @@ class TestGenerateRandomValueAndProof:
         revolver_chambers = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
         # Step 3: Call the function under test with the large values.
-        result = generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+        result = generate_beta_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
         # Step 4: Check the type and structure of the returned result to ensure it matches the expected format.
         assert isinstance(result, tuple)
@@ -292,9 +292,9 @@ class TestGenerateRandomValueAndProof:
         assert isinstance(result[2], int)
 
 
-    def test_generate_random_value_and_proof_handles_empty_values(self):
+    def test_generate_beta_and_proof_handles_empty_values(self):
         """
-        Test the function generate_random_value_and_proof to ensure it raises
+        Test the function generate_beta_and_proof to ensure it raises
         a VerificationError when provided with empty values for alpha and salt.
 
         This test focuses on the function's ability to handle and validate empty
@@ -320,12 +320,12 @@ class TestGenerateRandomValueAndProof:
 
         # Step 3: Call the function under test within a pytest.raises context to check for the expected VerificationError.
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+            generate_beta_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
 
-    def test_generate_random_value_and_proof_handles_negative_values(self):
+    def test_generate_beta_and_proof_handles_negative_values(self):
         """
-        Test the function generate_random_value_and_proof to ensure it raises
+        Test the function generate_beta_and_proof to ensure it raises
         a VerificationError when provided with negative values for bullet_index
         and revolver_size.
 
@@ -350,13 +350,13 @@ class TestGenerateRandomValueAndProof:
 
         # Step 3: Call the function under test within a pytest.raises context to check for the expected VerificationError.
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+            generate_beta_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
 
-    # Tests that generate_random_value_and_proof handles non-integer values of bullet_index and revolver_size.
-    def test_generate_random_value_and_proof_handles_non_integer_values(self):
+    # Tests that generate_beta_and_proof handles non-integer values of bullet_index and revolver_size.
+    def test_generate_beta_and_proof_handles_non_integer_values(self):
         """
-        Test the function generate_random_value_and_proof to ensure it raises
+        Test the function generate_beta_and_proof to ensure it raises
         a VerificationError when provided with non-integer values for bullet_index
         and revolver_size.
 
@@ -378,13 +378,13 @@ class TestGenerateRandomValueAndProof:
         revolver_chambers = "6"
 
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+            generate_beta_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
 
-    # Tests that generate_random_value_and_proof handles non-string values of salt by raising a VerificationError.
-    def test_generate_random_value_and_proof_handles_non_string_salt(self):
+    # Tests that generate_beta_and_proof handles non-string values of salt by raising a VerificationError.
+    def test_generate_beta_and_proof_handles_non_string_salt(self):
         """
-        Test the function generate_random_value_and_proof to ensure it raises
+        Test the function generate_beta_and_proof to ensure it raises
         a VerificationError when provided with non-string values for salt.
 
         This test focuses on the function's ability to handle and validate non-string
@@ -405,11 +405,11 @@ class TestGenerateRandomValueAndProof:
         revolver_chambers = 6
 
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+            generate_beta_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
 
     """
-    Test the function generate_random_value_and_proof to ensure it raises
+    Test the function generate_beta_and_proof to ensure it raises
     a VerificationError when provided with non-bytes values for alpha.
 
     This test focuses on the function's ability to handle and validate non-bytes
@@ -423,7 +423,7 @@ class TestGenerateRandomValueAndProof:
     4. Call the function under test within a pytest.raises context to check
     for the expected VerificationError.
     """
-    def test_generate_random_value_and_proof_handles_non_bytes_alpha(self):
+    def test_generate_beta_and_proof_handles_non_bytes_alpha(self):
         private_key = ecdsa.SigningKey.generate()
         alpha = "input message"
         bullet_index = 0
@@ -432,7 +432,7 @@ class TestGenerateRandomValueAndProof:
         revolver_chambers = 6
 
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+            generate_beta_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
 
     def test_generate_proof_none_key(self):
         with pytest.raises(VerificationError):
@@ -447,12 +447,12 @@ class TestGenerateRandomValueAndProof:
             generate_beta(b"proof", "salt", b"byte seed")
 
     @patch("hashlib.pbkdf2_hmac", side_effect=VerificationError)
-    def test_generate_random_value_and_proof_derives_valid_bullet_index(self, mock_pbkdf2_hmac): 
+    def test_generate_beta_and_proof_derives_valid_bullet_index(self, mock_pbkdf2_hmac): 
         with pytest.raises(VerificationError):
             generate_beta(b"proof", "salt", "seed")
 
-    # Tests that generate_random_value_and_proof generates a valid beta.
-    def test_generate_random_value_and_proof_invalid_priv_key(self):
+    # Tests that generate_beta_and_proof generates a valid beta.
+    def test_generate_beta_and_proof_invalid_priv_key(self):
         # Step 1: Generate a private key for testing.
         private_key = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
 
@@ -464,4 +464,4 @@ class TestGenerateRandomValueAndProof:
         revolver_chambers = 6
 
         with pytest.raises(VerificationError):
-            generate_random_value_and_proof('private_key', alpha, seed_hash, salt, revolver_chambers)
+            generate_beta_and_proof('private_key', alpha, seed_hash, salt, revolver_chambers)

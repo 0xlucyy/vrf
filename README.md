@@ -9,7 +9,7 @@ VRF.py provides an implementation of a Verifiable Random Function (VRF) to ensur
 - [Verifiable Random Function](#verifiable-random-function)
 - [The Game](#the-game)
   - [generate_seed_salt_hash Function](#generate_seed_salt_hash-function)
-  - [generate_random_value_and_proof Function](#generate_random_value_and_proof-function)
+  - [generate_beta_and_proof Function](#generate_beta_and_proof-function)
   - [Final Steps of new_game Function](#final-steps-of-new_game-function)
 - [Verification](#verification)
   - [Validating the Digital Signature](#validating-the-digital-signature)
@@ -36,8 +36,8 @@ The `generate_seed_salt_hash` function is a foundational step in the initializat
   seed, seed_hash, salt = generate_seed_salt_hash()
 ```
 
-### generate_random_value_and_proof Function
-The `generate_random_value_and_proof` function is a pivotal component in the game's cryptographic operations, ensuring randomness, unpredictability, and verifiability of the game's outcome. Here's a detailed breakdown of its purpose and functionality:
+### generate_beta_and_proof Function
+The `generate_beta_and_proof` function is a pivotal component in the game's cryptographic operations, ensuring randomness, unpredictability, and verifiability of the game's outcome. Here's a detailed breakdown of its purpose and functionality:
 
 - Alpha: The function takes in an `alpha` value, which is a combination of game-specific parameters; timestamps and bets.
 
@@ -48,7 +48,7 @@ The `generate_random_value_and_proof` function is a pivotal component in the gam
 - Bullet Index: The `beta` value is then used to determine the `bullet_index`. This index represents the starting position or the "loaded chamber" in the game, ensuring that the game's outcome is both random and verifiable.
 
 ```python
-  beta, proof, bullet_index = generate_random_value_and_proof(
+  beta, proof, bullet_index = generate_beta_and_proof(
     private_key, alpha, seed_hash, salt, revolver_chambers
   )
 ```
@@ -132,7 +132,7 @@ Bullet Index Determination:
 
 Bullet Index Hash Generation:
   - A `bullet index hash` of the bullet index is generated using the PBKDF2 HMAC algorithm with the bullet index, salt, and seed hash as inputs.
-  
+
 Verification:
   - A `public key` is extracted from a private key.
   - A `proof` is verified using the `public key` and an input message (`alpha`).

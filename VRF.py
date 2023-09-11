@@ -113,7 +113,7 @@ def generate_beta(proof: bytes, salt: str, seed_hash: str) -> str:
         raise VerificationError('Failed to generate beta.') from e
 
 
-def generate_random_value_and_proof(
+def generate_beta_and_proof(
     private_key: ecdsa.keys.SigningKey, alpha: bytes,
     seed_hash: str, salt: str, revolver_chambers: int
 ) -> Tuple[str, bytes, int]:
@@ -198,7 +198,7 @@ def new_game(revolver_chambers: int,
 
     seed, seed_hash, salt = generate_seed_salt_hash()
     
-    beta, proof, bullet_index = generate_random_value_and_proof(
+    beta, proof, bullet_index = generate_beta_and_proof(
         private_key, alpha, seed_hash, salt, revolver_chambers
     )
 
