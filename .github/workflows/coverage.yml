@@ -39,5 +39,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -am "Update coverage badge"
-        git push https://${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
+        git push https://${{secrets.GITHUB_TOKEN}}@github.com-0x/${{github.repository}}.git
 
