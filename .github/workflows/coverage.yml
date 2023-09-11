@@ -41,7 +41,7 @@ jobs:
         echo "Generated Badge URL: $BADGE_URL"
 
         # Update the README with the new badge URL
-        sed -i.bak "s|https://img.shields.io/badge/.*-Coverage:.*-brightgreen.svg|$BADGE_URL|g" README.md
+        sed -i.bak "s|https://img.shields.io/badge/VRF.py-Coverage:.*-brightgreen.svg|$BADGE_URL|g" README.md
 
 
         # COVERAGE=$(grep 'TOTAL' coverage.txt | awk '{print $NF}' | tr -d '%')
