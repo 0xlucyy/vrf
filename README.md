@@ -2,7 +2,7 @@
 VRF.py provides an implementation of a Verifiable Random Function (VRF) to ensure the randomness and fairness of a game. The script contains functions to generate seeds, proofs, and random values, and to verify the outcome of a game.
 
 
-VRF Code Coverage:
+![Coverage](https://img.shields.io/badge/Coverage-XX%-brightgreen.svg)
 
 
 # Table of Contents
@@ -16,6 +16,8 @@ VRF Code Coverage:
   - [Validating the Bullet Index Hash](#validating-the-bullet-index-hash)
   - [Comparison Verification](#comparison-verification)
 - [TLDR](#tldr)
+- [Testing](#testing)
+- [Run](#run)
 
 
 ## The Game
@@ -136,3 +138,12 @@ Verification:
 
 ## Testing
 - `coverage run -m pytest tests/`
+
+
+## Run
+- `git clone git@github.com:0xlucyfer/vrf.git`
+- `python3 -m venv venv`
+- `. venv/bin/activate`
+- `pip install -r requirements.txt`
+- Uncomment function `example_run` and `main` in VRF.py.
+- `python VRF.py`
