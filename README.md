@@ -138,6 +138,7 @@ Verification:
 
 ## Testing
 - `coverage run -m pytest tests/`
+- `coverage report -m > coverage.txt`
 
 
 ## Run
