@@ -2,3 +2,4 @@ venv
 .pytest_cahce
 bot.log
 /venv
+.coveragerc

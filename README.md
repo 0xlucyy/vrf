@@ -132,3 +132,7 @@ Verification:
   - The `bullet index` is derived from this beta.
   - A `derived bullet index hash` is generated using the derived bullet index, salt, and seed hash.
   - The derived bullet index hash is then compared with the bullet index hash generated during the game setup to verify the game's fairness.
+
+
+## Testing
+- `coverage run -m pytest tests/`
