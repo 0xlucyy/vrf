@@ -115,18 +115,24 @@ The final step in the validation process is to compare the recalculated bullet_i
 
 ## TLDR
 VRF Mechanism Breakdown:
+
 Seed, Salt, and Seed Hash Generation:
   - A random `seed` and `salt` are generated using the secrets module.
   - A `seed hash` is then generated using the PBKDF2 HMAC algorithm with the seed and salt as inputs.
+
 Proof Generation:
   - A `proof` is generated using the private key (sk) and an input message (`alpha`). The input message is created by concatenating the current UNIX timestamp with the array of player bets.
   - The `proof` is signed using the ECDSA algorithm with the SHA-256 hash function.
+
 Beta Generation:
   - `Beta` is generated using the PBKDF2 HMAC algorithm with the seed hash, salt, and proof as inputs.
+
 Bullet Index Determination:
   - The `bullet index` is determined by taking the integer representation of beta and then computing its modulo with the revolver size.
+
 Bullet Index Hash Generation:
   - A `bullet index hash` of the bullet index is generated using the PBKDF2 HMAC algorithm with the bullet index, salt, and seed hash as inputs.
+  
 Verification:
   - A `public key` is extracted from a private key.
   - A `proof` is verified using the `public key` and an input message (`alpha`).
