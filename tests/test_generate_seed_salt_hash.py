@@ -44,6 +44,18 @@ class TestGenerateSeedSaltHash:
       seed, _, _ = generate_seed_salt_hash()
       assert all(c in '0123456789abcdef' for c in seed)
 
+    def test_algorithm_value(self, caplog):
+        """
+        Test the function generate_seed_salt_hash to ensure only valid
+        hashing algorithm can be used
+
+        Expected Outcome:
+        ValueError
+        """
+        algorithm = 'fake_algorithm'
+        with pytest.raises(ValueError):
+            generate_seed_salt_hash(_algorithm=algorithm)
+    
     def test_generate_seed_salt_hash_salt_is_bytes_object(self):
       """
       Test the function generate_seed_salt_hash to ensure the generated salt

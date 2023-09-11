@@ -139,3 +139,9 @@ class TestNewGame:
         alpha = b''
         with pytest.raises(VerificationError):
             new_game(revolver_chambers, sk, alpha)
+
+    def test_invalid_revolver_chambers(self, game_setup):
+        sk, revolver_chambers, alpha = game_setup
+        revolver_chambers = 'INVALID'
+        with pytest.raises(InputError):
+            new_game(revolver_chambers, sk, alpha)

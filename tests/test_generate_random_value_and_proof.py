@@ -5,7 +5,9 @@ from unittest.mock import patch, MagicMock
 from VRF import (
     generate_random_value_and_proof,
     ITERATIONS,
-    ALGO
+    ALGO,
+    generate_proof,
+    generate_beta
 )
 from error import VerificationError
 
@@ -62,7 +64,6 @@ class TestGenerateRandomValueAndProof:
 
         # Step 8: Assert that the third element (derived chamber index) is an integer.
         assert isinstance(result[2], int)
-
 
 
     # Tests that generate_random_value_and_proof generates a valid proof.
@@ -432,3 +433,35 @@ class TestGenerateRandomValueAndProof:
 
         with pytest.raises(VerificationError):
             generate_random_value_and_proof(private_key, alpha, seed_hash, salt, revolver_chambers)
+
+    def test_generate_proof_none_key(self):
+        with pytest.raises(VerificationError):
+            generate_proof(private_key=None, alpha="alpha")
+
+    def test_generate_beta_invalid_prood(self):
+        with pytest.raises(ValueError):
+            generate_beta("str proof", "salt", "seed")
+        with pytest.raises(ValueError):
+            generate_beta(b"proof", b"byte salt", "seed")
+        with pytest.raises(ValueError):
+            generate_beta(b"proof", "salt", b"byte seed")
+
+    @patch("hashlib.pbkdf2_hmac", side_effect=VerificationError)
+    def test_generate_random_value_and_proof_derives_valid_bullet_index(self, mock_pbkdf2_hmac): 
+        with pytest.raises(VerificationError):
+            generate_beta(b"proof", "salt", "seed")
+
+    # Tests that generate_random_value_and_proof generates a valid beta.
+    def test_generate_random_value_and_proof_invalid_priv_key(self):
+        # Step 1: Generate a private key for testing.
+        private_key = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
+
+        # Step 2: Define the test inputs.
+        alpha = b"input message"
+        bullet_index = 0
+        salt = "salt"
+        seed_hash = 'seed_hash'
+        revolver_chambers = 6
+
+        with pytest.raises(VerificationError):
+            generate_random_value_and_proof('private_key', alpha, seed_hash, salt, revolver_chambers)
