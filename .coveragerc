@@ -1,5 +1,7 @@
 [run]
 omit =
   tests/*
-  error.py
-  log.py
+  vrf_py/error.py
+  vrf_py/log.py
+  vrf_py/__init__.py
+  setup.py
