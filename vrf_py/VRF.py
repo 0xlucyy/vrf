@@ -216,7 +216,7 @@ def new_game(revolver_chambers: int,
 
 def verify(public_key: bytes, seed_hash: str, salt: str,
            proof: bytes, bullet_index_hash: str, alpha: bytes,
-           revolver_chambers: int) -> Union[bool, Tuple[bool, str]]:
+           revolver_chambers: int) -> Union[Tuple[bool, None], Tuple[bool, str]]:
     """
     Verify the integrity and authenticity of a game's
     cryptographic parameters.
@@ -236,7 +236,7 @@ def verify(public_key: bytes, seed_hash: str, salt: str,
         revolver_chambers (int): The size of the revolver.
 
     Returns:
-        Union[bool, Tuple[bool, str]]:
+        Union[Tuple[bool, None], Tuple[bool, str]]:
             - False if any verification step fails.
             - (proof_validity (bool), derived_bullet_index_hash (str)): A tuple 
                 containing the validity of the proof and the derived bullet
