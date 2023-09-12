@@ -157,4 +157,4 @@ Verification:
 
 
 ## Install
-- https://pypi.org/project/vrf/1.0.0/#description
+- https://pypi.org/project/vrf/1.0.4/
