@@ -1,7 +1,7 @@
 import ecdsa
 from unittest.mock import patch, MagicMock
 import pytest
-from VRF import (
+from vrf_py.VRF import (
     verify
 )
 

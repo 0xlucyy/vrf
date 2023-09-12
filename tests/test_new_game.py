@@ -1,10 +1,10 @@
 import ecdsa
 import pytest
 import time
-from VRF import (
+from vrf_py.VRF import (
     new_game
 )
-from error import SeedError, VerificationError, InputError
+from vrf_py.error import SeedError, VerificationError, InputError
 from unittest.mock import patch
 
 @pytest.fixture(scope="class")

@@ -1,4 +1,7 @@
 venv
-.pytest_cahce
+.pytest*
 bot.log
 /venv
+dist
+build
+vrf.egg-info

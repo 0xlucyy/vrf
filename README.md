@@ -154,3 +154,7 @@ Verification:
 - `pip install -r requirements.txt`
 - Uncomment function `example_run` and `main` in VRF.py.
 - `python VRF.py`
+
+
+## Install
+- https://pypi.org/project/vrf/1.0.0/#description

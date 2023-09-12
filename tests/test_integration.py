@@ -2,7 +2,7 @@ import time
 import hashlib
 import unittest
 import ecdsa
-from VRF import (
+from vrf_py.VRF import (
   new_game,
   verify,
   ALGO,

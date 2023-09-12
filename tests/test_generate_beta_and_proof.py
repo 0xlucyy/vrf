@@ -2,14 +2,14 @@ import pytest
 import ecdsa
 import hashlib
 from unittest.mock import patch, MagicMock
-from VRF import (
+from vrf_py.VRF import (
     generate_beta_and_proof,
     ITERATIONS,
     ALGO,
     generate_proof,
     generate_beta
 )
-from error import VerificationError
+from vrf_py.error import VerificationError
 
 
 

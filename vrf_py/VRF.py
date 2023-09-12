@@ -5,8 +5,8 @@ import secrets
 import time
 
 from typing import Tuple, Union
-from log import logger
-from error import SeedError, VerificationError, InputError
+from vrf_py.log import logger
+from vrf_py.error import SeedError, VerificationError, InputError
 
 HEX_BASE = 16
 SUBSTRING_LENGTH = 8
@@ -284,43 +284,43 @@ def verify(public_key: bytes, seed_hash: str, salt: str,
 
 
 
-# def example_run():
-#     revolver_chambers = 20
-#     bets = [30000, 30000, 60000, 30000, 60000]
+def example_run():
+    revolver_chambers = 20
+    bets = [30000, 30000, 60000, 30000, 60000]
 
-#     sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
-#     logger.info(f'Generated a new secret key.\n')
-#     # while True:
-#     #     revolver_chambers += 1
-#     #     bets.append(30000)
-#     logger.info(f'Revolver Size): {revolver_chambers}\n')
-#     logger.info(f'Bets): {bets}\n')
+    sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
+    logger.info(f'Generated a new secret key.\n')
+    # while True:
+    #     revolver_chambers += 1
+    #     bets.append(30000)
+    logger.info(f'Revolver Size): {revolver_chambers}\n')
+    logger.info(f'Bets): {bets}\n')
 
-#     timestamp = str(int(time.time()))
-#     alpha_raw = (timestamp + ''.join(map(str, bets)))
-#     alpha = alpha_raw.encode()
-#     logger.info(f'Alpha_Raw (Timestampe + Bets): {alpha_raw}')
-#     logger.info(f'Alpha (Input Message): {alpha}\n')
+    timestamp = str(int(time.time()))
+    alpha_raw = (timestamp + ''.join(map(str, bets)))
+    alpha = alpha_raw.encode()
+    logger.info(f'Alpha_Raw (Timestampe + Bets): {alpha_raw}')
+    logger.info(f'Alpha (Input Message): {alpha}\n')
 
-#     # sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
-#     # logger.info(f'Generated a new secret key.\n')
+    # sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
+    # logger.info(f'Generated a new secret key.\n')
     
-#     seed, seed_hash, salt, beta, proof, bullet_index, bullet_index_hash, public_key_pem = new_game(revolver_chambers, sk, alpha)
-#     logger.info(f"Seed: {seed}")
-#     logger.info(f"Seed Hash: {seed_hash}")
-#     logger.info(f"Salt: {salt}")
-#     logger.info(f'Beta: {beta}')
-#     logger.info(f'Proof: {proof.hex()}')
-#     logger.info(f'bullet_index: {bullet_index}')
-#     logger.info(f"bullet_index_hash: {bullet_index_hash}")
-#     logger.info(f'Public Key: {public_key_pem.decode()}\n')
+    seed, seed_hash, salt, beta, proof, bullet_index, bullet_index_hash, public_key_pem = new_game(revolver_chambers, sk, alpha)
+    logger.info(f"Seed: {seed}")
+    logger.info(f"Seed Hash: {seed_hash}")
+    logger.info(f"Salt: {salt}")
+    logger.info(f'Beta: {beta}')
+    logger.info(f'Proof: {proof.hex()}')
+    logger.info(f'bullet_index: {bullet_index}')
+    logger.info(f"bullet_index_hash: {bullet_index_hash}")
+    logger.info(f'Public Key: {public_key_pem.decode()}\n')
 
-#     # import pdb;pdb.set_trace()
+    # import pdb;pdb.set_trace()
 
-#     proof_validity, derived_bullet_index_hash = verify(public_key_pem, seed_hash, salt, proof, bullet_index_hash, alpha, revolver_chambers)
-#     logger.info(f'Actual Bullet Index Hash: {derived_bullet_index_hash}')
-#     logger.info(f'Expected Bullet Index Hash: {bullet_index_hash}')
-#     logger.info(f'Verification Result: {proof_validity}')
+    proof_validity, derived_bullet_index_hash = verify(public_key_pem, seed_hash, salt, proof, bullet_index_hash, alpha, revolver_chambers)
+    logger.info(f'Actual Bullet Index Hash: {derived_bullet_index_hash}')
+    logger.info(f'Expected Bullet Index Hash: {bullet_index_hash}')
+    logger.info(f'Verification Result: {proof_validity}')
 
 # if __name__ == '__main__':
 #     example_run()
