@@ -158,3 +158,5 @@ Verification:
 
 ## Install
 - https://pypi.org/project/vrf/1.0.4/
+- `pip install vrf==1.0.4`
+- `from vrf_py import new_game, verify`
