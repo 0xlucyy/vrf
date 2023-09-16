@@ -2,7 +2,11 @@
 VRF.py provides an implementation of a Verifiable Random Function (VRF) to ensure the randomness and fairness of a game. The script contains functions to generate seeds, proofs, and random values, and to verify the outcome of a game.
 
 
-![Coverage](https://img.shields.io/badge/VRF.py-Coverage:100%25-brightgreen.svg)
+![Coverage](https://img.shields.io/badge/VRF.py-Coverage:XX%-brightgreen.svg)
+
+
+https://github.com/0xlucyy/vrf/assets/109987865/ff5b8fe8-0322-4543-8850-be0025d2054a
+
 
 
 # Table of Contents
