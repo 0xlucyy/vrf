@@ -5,7 +5,11 @@ VRF.py provides an implementation of a Verifiable Random Function (VRF) to ensur
 ![Coverage](https://img.shields.io/badge/VRF.py-Coverage:100%25-brightgreen.svg)
 
 ## Demo
-https://github.com/0xlucyy/vrf/assets/109987865/ff5b8fe8-0322-4543-8850-be0025d2054a
+
+
+https://github.com/0xlucyy/vrf/assets/109987865/5da41a5c-52d2-40d6-81f5-0eab4480fd3c
+
+
 
 
 # Table of Contents
