@@ -159,8 +159,8 @@ Verification:
 - `python3 -m venv venv`
 - `. venv/bin/activate`
 - `pip install -r requirements.txt`
-- Uncomment function `example_run` and `main` in VRF.py.
-- `python VRF.py`
+- Uncomment functions `example_run` and `main` in `vrf_py/VRF.py`.
+- `python vrf_py/VRF.py`
 
 
 ## Install

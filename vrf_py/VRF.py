@@ -104,9 +104,10 @@ def generate_beta(proof: bytes, salt: str, seed_hash: str) -> str:
 
     try:
         beta = hashlib.pbkdf2_hmac(
-            ALGO, 
+            ALGO,
             ((seed_hash + salt).encode() + proof),
-            salt.encode(), ITERATIONS
+            salt.encode(),
+            ITERATIONS
         ).hex()
         return beta
     except Exception as e:
@@ -216,10 +217,10 @@ def new_game(revolver_chambers: int,
 
 def verify(public_key: bytes, seed_hash: str, salt: str,
            proof: bytes, bullet_index_hash: str, alpha: bytes,
-           revolver_chambers: int) -> Union[Tuple[bool, None], Tuple[bool, str]]:
+           revolver_chambers: int, beta: str) -> bool:
     """
-    Verify the integrity and authenticity of a game's
-    cryptographic parameters.
+    Verify the integrity of the game using the information published at the end of
+    the game and the information published at the beginning of the game.
 
     This function checks the validity of a provided proof
     using a public key and ensures that the derived bullet
@@ -227,60 +228,53 @@ def verify(public_key: bytes, seed_hash: str, salt: str,
     game's outcome has not been tampered with and is verifiable.
 
     Args:
-        public_key (bytes): The public key in PEM format for verification.
-        seed_hash (str): Hashed value of the seed.
-        salt (str): A random string.
-        proof (bytes): A digital signature generated during the game initialization.
-        bullet_index_hash (str): A commitment of initial state of the game.
-        alpha (bytes): The input message.
-        revolver_chambers (int): The size of the revolver.
+        public_key (bytes): The public key in PEM format.
+        seed_hash (str): The hash of the randomly generated seed.
+        salt (str): The randomly generated salt used for hashing.
+        proof (bytes): The generated proof for the random number.
+        bullet_index_hash (str): The hash of the bullet index.
+        alpha (bytes): The input message to the VRF.
+        revolver_chambers (int): The number of chambers in the revolver.
+        beta (str): The randomly generated number in hex format.
 
     Returns:
-        Union[Tuple[bool, None], Tuple[bool, str]]:
-            - False if any verification step fails.
-            - (proof_validity (bool), derived_bullet_index_hash (str)): A tuple 
+       Union[Tuple[bool, None], Tuple[bool, str]]:
+            - (proof_validity (bool), derived_bullet_index_hash (str)): A tuple
                 containing the validity of the proof and the derived bullet
                 index hash if all verification steps pass.
     """
     try:
-        '''
-        1a. Creating a verifying key object (vk) from public_key.
-        1a. `from_pem` is used to read public_key which is in Privacy
-            Enhanced Mail format.
-        1b. Using verifying key (vk) to verify the provided digital
-            signature (proof).
-        1b. The verify method checks if the proof is a valid signature 
-            with the message alpha using a public key (vk).
-        1c. If verification process does not raise any exceptions
-            (meaning the signature is valid), then the variable
-            proof_validity is set to True. This means that the
-            provided proof is a valid signature for the message
-            alpha, using the given public key.
-        '''
+        # Verify the proof using the public key and alpha
         vk = ecdsa.VerifyingKey.from_pem(public_key)
         vk.verify(proof, alpha, hashfunc=hashlib.sha256)
-        proof_validity = True
+
+        # Verify the beta value by generating it from the proof, salt, and seed_hash
+        derived_beta = generate_beta(proof, salt, seed_hash)
+
+        if derived_beta != beta:
+            logger.error("Beta value verification failed.")
+            return False, None
+
+        # Get determinisitc beta, get bullet index, get hash of index.
+        bullet_index = int(beta, 16) % revolver_chambers
+        derived_bullet_index_hash = hashlib.pbkdf2_hmac(
+            ALGO,
+            (str(bullet_index) + salt + seed_hash).encode(),
+            salt.encode(),
+            ITERATIONS
+        ).hex()
+
+        if derived_bullet_index_hash != bullet_index_hash:
+            logger.error("Bullet index verification failed.")
+            return False, None
+
+        return True, derived_bullet_index_hash
     except (ecdsa.keys.BadSignatureError, ecdsa.errors.MalformedPointError, ValueError) as error:
-        logger.error(f'1. Verification of the proof failed: {error}')
+        logger.error(f"Verification failed: {error}")
         return False, None
     except Exception as error:
-        logger.error(f'2. Verification of the proof failed: {error}')
+        logger.error(f"Verification failed: {error}")
         return False, None
-
-    # Get determinisitc beta, get bullet index, get hash of index.
-    beta = generate_beta(proof, salt, seed_hash)
-    bullet_index = int(beta, 16) % revolver_chambers
-    derived_bullet_index_hash = hashlib.pbkdf2_hmac(
-        ALGO,
-        (str(bullet_index) + salt + seed_hash).encode(),
-        salt.encode(),
-        ITERATIONS
-    ).hex()
-
-    # Ensure derived hash is equal to new_game commit.
-    if derived_bullet_index_hash == bullet_index_hash:
-        return proof_validity, derived_bullet_index_hash
-    return False, None
 
 
 # def example_run():
@@ -290,8 +284,9 @@ def verify(public_key: bytes, seed_hash: str, salt: str,
 #     sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
 #     logger.info(f'Generated a new secret key.\n')
 #     # while True:
-#     #     revolver_chambers += 1
-#     #     bets.append(30000)
+#     #     import pdb;pdb.set_trace()
+#     revolver_chambers += 1
+#     bets.append(30000)
 #     logger.info(f'Revolver Size): {revolver_chambers}\n')
 #     logger.info(f'Bets): {bets}\n')
 
@@ -313,10 +308,8 @@ def verify(public_key: bytes, seed_hash: str, salt: str,
 #     logger.info(f'bullet_index: {bullet_index}')
 #     logger.info(f"bullet_index_hash: {bullet_index_hash}")
 #     logger.info(f'Public Key: {public_key_pem.decode()}\n')
-
-#     # import pdb;pdb.set_trace()
-
-#     proof_validity, derived_bullet_index_hash = verify(public_key_pem, seed_hash, salt, proof, bullet_index_hash, alpha, revolver_chambers)
+    
+#     proof_validity, derived_bullet_index_hash = verify(public_key_pem, seed_hash, salt, proof, bullet_index_hash, alpha, revolver_chambers, beta)
 #     logger.info(f'Actual Bullet Index Hash: {derived_bullet_index_hash}')
 #     logger.info(f'Expected Bullet Index Hash: {bullet_index_hash}')
 #     logger.info(f'Verification Result: {proof_validity}')

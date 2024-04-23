@@ -10,7 +10,6 @@ from vrf_py.VRF import (
 )
 
 
-
 class TestIntegration(unittest.TestCase):
 
   def test_vrf_various_scenarios(self):
@@ -69,7 +68,7 @@ class TestIntegration(unittest.TestCase):
       seed, seed_hash, salt, beta, proof, bullet_index, bullet_index_hash, public_key_pem = new_game(scenario['revolver_size'], sk, alpha)
 
       # Step 2d: Verify the outcome of the game using the provided values.
-      proof_validity, derived_bullet_index_hash = verify(public_key_pem, seed_hash, salt, proof, bullet_index_hash, alpha, scenario['revolver_size'])
+      proof_validity, derived_bullet_index_hash = verify(public_key_pem, seed_hash, salt, proof, bullet_index_hash, alpha, scenario['revolver_size'], beta)
 
       # Step 2e: Assert that the verification result is True.
       self.assertTrue(proof_validity, True)
