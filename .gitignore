@@ -5,3 +5,4 @@ bot.log
 dist
 build
 vrf.egg-info
+.pypirc
