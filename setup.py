@@ -16,7 +16,7 @@ install_dependencies = open_config_file('requirements.txt').read().splitlines()
 
 setup(
     name='vrf',
-    version='1.0.4',
+    version='1.0.5',
     author='lucyfer',
     description='VRF with ability to validate',
     packages=find_packages(),
