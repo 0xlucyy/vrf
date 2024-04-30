@@ -170,5 +170,7 @@ Verification:
 
 
 ## Update Version
+- `pip install --upgrade twine`
 - `python setup.py sdist bdist_wheel`
-- `twine upload --repository VRF_GAMING`
+- `twine upload --repository pypi dist/*`
+- If prompted for token, input token from pypi found in `.pypirc` file.
